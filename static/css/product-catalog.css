@@ -1,0 +1,184 @@
+#leftnav{
+	position: absolute;
+	left: 0;
+	top: 98px;
+}
+#crumbs{
+	width: 115px;
+	position: absolute;
+	left: 0;
+	top: 15px;
+	font-family: "SimHei";
+	font-size: 13px;
+}
+#crumbs a{
+	cursor: pointer;
+	text-decoration: none;
+}
+#level-diaoke, #level-shipin, #level-zhuchuan, #level-event{
+	width: 115px;
+	position: absolute;
+	left: 0;
+	top: 43px;
+	font-family: "KaiTi";
+}
+#level-about{
+	width: 115px;
+	position: absolute;
+	left: 0;
+	top: 10px;
+	font-family: "KaiTi";
+}
+.level2{
+	width: 110px;
+	height: 34px;
+	line-height: 34px;
+	font-size: 16px;
+	color: #9c9393;
+	text-align: center;
+	background-image: url(../images/product-catalog/unchosen.png);
+	cursor: pointer;
+}
+.level2chosen{
+	width: 110px;
+	height: 34px;
+	line-height: 34px;
+	font-size: 16px;
+	color: #594345;
+	text-align: center;
+	background-image: url(../images/product-catalog/chosen.png);
+}
+.hidden1, .hidden2, .hidden3{
+	text-align: center;
+}
+.level3{
+	height: 15px;
+	line-height: 15px;
+	font-size: 13px;
+	color: #9c9393;
+	cursor: pointer;
+}
+.level3 a{
+	position: absolute;
+	left: 36px;
+}
+.level3chosen{
+	color: #594345;
+}
+.square {
+	width: 5px;
+	height: 5px;
+	border: 1px solid #e6e6e6;
+	position: absolute;
+	left: 25px;
+	display: inline-block;
+}
+.square2 {
+	width: 5px;
+	height: 5px;
+	border: 1px solid #594345;
+	position: absolute;
+	left: 25px;
+	display: inline-block;
+}
+
+.box{
+	margin-left: 165px;
+}
+#banner img{
+	width: 180px;
+	height: 420px;
+	position: absolute;
+}
+#ProductShow1, #ProductShow2, #ProductShow3, #ProductShow4{
+	cursor: pointer;
+}
+#name1, #name2, #name3, #name4{
+	width: 16px;
+	position: absolute;
+	top: 25px;
+	font-size: 16px;
+	font-family: "KaiTi";
+	color: #6e4d51;
+}
+#name1{
+	left: 314px;
+}
+#name2{
+	left: 494px;
+}
+#name3{
+	left: 674px;
+}
+#name4{
+	left: 854px;
+}
+.bracket{
+	font-size: 16px;
+	font-family: "KaiTi";
+	color: #6e4d51;
+	/* Rotate div */
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* Internet Explorer */
+	-moz-transform:rotate(90deg); /* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); /* Opera */
+}
+
+.detail{
+	margin-left: 165px;
+}
+#DetailName{
+	position: absolute;
+	left: 813px;
+	top: 10px;
+}
+.DetailBracket{
+	position: absolute;
+	font-size: 24px;
+	font-family: "KaiTi";
+	color: #6e4d51;
+	/* Rotate div */
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* Internet Explorer */
+	-moz-transform:rotate(90deg); /* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); /* Opera */
+}
+#DetailName1{
+	width: 24px;
+	position: absolute;
+	left: 28px;
+	top: -11px;
+	font-size: 24px;
+	font-family: "KaiTi";
+	color: #6e4d51;
+}
+#DetailName2{
+	width: 13px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 13px;
+	font-family: "SimHei";
+	color: #9a9a9a;
+}
+#BackToCata{
+	width: 100px;
+	position: absolute;
+	left: 905px;
+	top: 10px;
+	font-size: 13px;
+	font-family: "SimHei";
+	color: #b4a8a8;
+	cursor: pointer;
+}
+#preview{
+	width: 70px;
+	height: 50px;
+	position: absolute;
+	left: 905px;
+	top: 33px;
+	border: 1px solid #e1e1e1;
+	background-color: #ffffff;
+}

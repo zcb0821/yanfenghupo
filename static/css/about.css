@@ -1,0 +1,30 @@
+.AboutWrapper{
+	width: 380px;
+	height: 420px;
+	line-height: 21px;
+	position: absolute;
+	top: 0;
+}
+
+.AboutWrapper a{
+	position: absolute; 
+}
+
+.AboutPicture{
+	width: 380px;
+	height: 250px;
+	border: 1px solid #e1e1e1;
+	background-color: #ffffff;
+}
+
+.textbody{
+	font-family: "SimHei";
+	font-size: 13px;
+	color: #9a9a9a;
+}
+
+.title{
+	font-family: "KaiTi";
+	font-size: 18px;
+	color: #6e4d51;
+}

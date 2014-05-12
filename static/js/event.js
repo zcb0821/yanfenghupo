@@ -1,0 +1,24 @@
+$(function(){
+	$("#zhanhui").click(function(){
+		$("#zhanhui").removeClass("level2").addClass("level2chosen");
+		$("#zhantinghuodong").removeClass("level2chosen").addClass("level2");
+		$("#CurrentTheme").text("展会");
+		$('#leftward').addClass("hide");
+		$('#rightward').addClass("hide");
+		$('#Event1').addClass("hide");
+		$('#Event2').addClass("hide");
+		$('#Event3').addClass("hide");
+		$('#Event1replace').removeClass("hide");
+	})
+	$("#zhantinghuodong").click(function(){
+		$("#zhantinghuodong").removeClass("level2").addClass("level2chosen");
+		$("#zhanhui").removeClass("level2chosen").addClass("level2");
+		$("#CurrentTheme").text("展厅活动");
+		$('#leftward').removeClass("hide");
+		$('#rightward').removeClass("hide");
+		$('#Event1').removeClass("hide");
+		$('#Event2').removeClass("hide");
+		$('#Event3').removeClass("hide");
+		$('#Event1replace').addClass("hide");
+	})
+});

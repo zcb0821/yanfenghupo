@@ -1,0 +1,29 @@
+.EventWrapper{
+	width: 250px;
+	height: 200px;
+	position: absolute;
+	border: 1px solid #e1e1e1;
+	background-color: #ffffff;
+}
+.EventName{
+	width: 250px;
+	position: absolute;
+	font-family: "KaiTi";
+	font-size: 20px;
+	color: #6e4d51;
+}
+.EventDate{
+	width: 250px;
+	position: absolute;
+	font-family: "SimHei";
+	font-size: 13px;
+	color: #b6b6b6;
+}
+.EventContent{
+	width: 250px;
+	position: absolute;
+	font-family: "SimHei";
+	font-size: 13px;
+	color: #9a9a9a;
+	letter-spacing: 1.7px;
+}

@@ -1,0 +1,34 @@
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: url(../images/bg.png) no-repeat center top;
+	overflow: auto;
+	text-decoration: none;
+	text-align: center;
+}
+
+#introduction{
+	width: 280px;
+	font-family: "SimHei";
+	font-size: 13px;
+	color: #9a9a9a;
+	text-align: left;
+}
+
+#address{
+	text-align: left;
+}
+#address1{
+	width: 280px;
+	font-family: "KaiTi";
+	font-size: 18px;
+	color: #6e4d51;
+}
+#address2{
+	width: 280px;
+	font-family: "SimHei";
+	font-size: 13px;
+	color: #9a9a9a;
+}
