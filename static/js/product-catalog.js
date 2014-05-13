@@ -1,60 +1,60 @@
 var img111=new Array("【云芝】·蜜蜡", "【天禄】·蜜蜡", "【珠玉满堂】·蜜蜡", 
 "【风仪】·蜜蜡", "【鹤鹤有鸣】·蜜蜡");//雕刻-摆件-波罗的海111
-var str111="images/product-catalog/product-display/雕刻/摆件/波罗的海/";
+var str111="/static/images/product-catalog/product-display/雕刻/摆件/波罗的海/";
 var img112=new Array("【凤赫于鸣】·蓝珀");//雕刻-摆件-缅甸112
-var str112="images/product-catalog/product-display/雕刻/摆件/缅甸/";
+var str112="/static/images/product-catalog/product-display/雕刻/摆件/缅甸/";
 var img113=new Array("【一笑千年】·蓝珀");//雕刻-摆件-墨西哥113
-var str113="images/product-catalog/product-display/雕刻/摆件/墨西哥/";
+var str113="/static/images/product-catalog/product-display/雕刻/摆件/墨西哥/";
 
 //雕刻-雕刻件
 var img121=new Array("【鱼跃】·蓝珀", "【长生】·蓝珀");//雕刻-雕刻件-多米尼加121
-var str121="images/product-catalog/product-display/雕刻/雕刻件/多米尼加/";
+var str121="/static/images/product-catalog/product-display/雕刻/雕刻件/多米尼加/";
 var img122=new Array("【蓝姬】·蓝珀","【子幼】·蓝珀");//雕刻-雕刻件-缅甸122
-var str122="images/product-catalog/product-display/雕刻/雕刻件/缅甸/";
+var str122="/static/images/product-catalog/product-display/雕刻/雕刻件/缅甸/";
 
 //雕刻-手把件
 var img131=new Array("【武财神】·蜜蜡","【众生】·蜜蜡");//雕刻-手把件-波罗的海131
-var str131="images/product-catalog/product-display/雕刻/手把件/波罗的海/";
+var str131="/static/images/product-catalog/product-display/雕刻/手把件/波罗的海/";
 
 
 //饰品-编织特色
 var img211=new Array("【千年】·老蜜108佛珠", "【垂衣】·老蜜鼓珠", "【夜华】·血珀", 
 "【寸光】·老蜜蜡", "【拈花】·双色108佛珠", "【明堂】·老蜜蜡", "【星耀】·血珀", 
 "【玛尼】·老蜜蜡", "【福运】·双色", "【红豆】·血珀", "【金魄】·蜜蜡");//饰品-编织特色-波罗的海211
-var str211="images/product-catalog/product-display/饰品/编织特色/波罗的海/";
+var str211="/static/images/product-catalog/product-display/饰品/编织特色/波罗的海/";
 
 //饰品-吊坠
 var img221=new Array("【冥思】·蜜蜡", "【出兜率天】·蜜蜡", "【初雨】·蜜蜡", 
 "【沁甜】·蜜蜡", "【沉鱼】·蜜蜡","【甘瓠蜜】·蜜蜡", "【蝶恋】·蜜蜡", 
 "【迷醉】·蜜蜡", "【鱼生】·白蜜蜡");//饰品-吊坠-波罗的海221
-var str221="images/product-catalog/product-display/饰品/吊坠/波罗的海/";
+var str221="/static/images/product-catalog/product-display/饰品/吊坠/波罗的海/";
 var img222=new Array("【钟情】·蓝珀");//饰品-吊坠-多米尼加222
-var str222="images/product-catalog/product-display/饰品/吊坠/多米尼加/";
+var str222="/static/images/product-catalog/product-display/饰品/吊坠/多米尼加/";
 var img223=new Array("【海蓝】·蓝珀", "【喜上梅梢】·蓝珀");//饰品-吊坠-缅甸223
-var str223="images/product-catalog/product-display/饰品/吊坠/缅甸/";
+var str223="/static/images/product-catalog/product-display/饰品/吊坠/缅甸/";
 
 //饰品-戒指和耳钉
 var img231=new Array("【为你】·蓝珀", "【一世】·蓝珀");//饰品-戒指和耳钉-多米尼加231
-var str231="images/product-catalog/product-display/饰品/戒指和耳钉/多米尼加/";
+var str231="/static/images/product-catalog/product-display/饰品/戒指和耳钉/多米尼加/";
 
 //饰品-手镯
 var img241=new Array("【缓缓归】·老蜜蜡", "【陌上花】·白蜜蜡");//饰品-手镯-波罗的海241
-var str241="images/product-catalog/product-display/饰品/手镯/波罗的海/";
+var str241="/static/images/product-catalog/product-display/饰品/手镯/波罗的海/";
 var img242=new Array("【蓝翎】·蓝珀");//饰品-手镯-墨西哥242
-var str242="images/product-catalog/product-display/饰品/手镯/墨西哥/";
+var str242="/static/images/product-catalog/product-display/饰品/手镯/墨西哥/";
 
 
 //珠串-佛珠
 var img311=new Array("【光炫】·金珀", "【莲华】·老蜜蜡", "【琴易】·双色");//珠串-佛珠-波罗的海311
-var str311="images/product-catalog/product-display/珠串/佛珠/波罗的海/";
+var str311="/static/images/product-catalog/product-display/珠串/佛珠/波罗的海/";
 var img312=new Array("【幻泪】·蓝珀");//珠串-佛珠-多米尼加312
-var str312="images/product-catalog/product-display/珠串/佛珠/多米尼加/";
+var str312="/static/images/product-catalog/product-display/珠串/佛珠/多米尼加/";
 
 //珠串-手串
 var img321=new Array("【思韵】·老蜜蜡", "【神现】·白花", "【重灵】·老蜜蜡", "【阑珊】·血珀");//珠串-手串-波罗的海321
-var str321="images/product-catalog/product-display/珠串/手串/波罗的海/";
+var str321="/static/images/product-catalog/product-display/珠串/手串/波罗的海/";
 var img322=new Array("【池眠】·蓝珀");//珠串-手串-多米尼加322
-var str322="images/product-catalog/product-display/珠串/手串/多米尼加/";
+var str322="/static/images/product-catalog/product-display/珠串/手串/多米尼加/";
 
 
 var img1=new Array(img111, img112, img113, img121, img122, img131);
@@ -68,7 +68,7 @@ var ImgStrAll=new Array();//该主题所有的图片url集合的备份
 var name1=new Array();//图片名称前半部分
 var name2=new Array();//图片名称后半部分
 var size;//集合ImgStr的大小，当前筛选出的图片数目
-var BgStr1="images/product-catalog/bg";
+var BgStr1="/static/images/product-catalog/bg";
 var BgStr2=".png";
 var index=0;
 //查看详情之前的左右按钮的模式

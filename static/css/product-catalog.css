@@ -83,7 +83,11 @@
 }
 
 .box{
-	margin-left: 165px;
+	width: 815px;
+	height: 450px;
+	overflow: hidden;
+	position: relative;
+	left: 0;
 }
 #banner img{
 	width: 180px;
@@ -102,16 +106,16 @@
 	color: #6e4d51;
 }
 #name1{
-	left: 314px;
+	left: 149px;
 }
 #name2{
-	left: 494px;
+	left: 329px;
 }
 #name3{
-	left: 674px;
+	left: 509px;
 }
 #name4{
-	left: 854px;
+	left: 689px;
 }
 .bracket{
 	font-size: 16px;
@@ -119,7 +123,7 @@
 	color: #6e4d51;
 	/* Rotate div */
 	transform:rotate(90deg);
-	-ms-transform:rotate(90deg); /* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); /* Internet Explorer */
 	-moz-transform:rotate(90deg); /* Firefox */
 	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
 	-o-transform:rotate(90deg); /* Opera */
@@ -140,7 +144,7 @@
 	color: #6e4d51;
 	/* Rotate div */
 	transform:rotate(90deg);
-	-ms-transform:rotate(90deg); /* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); /* Internet Explorer */
 	-moz-transform:rotate(90deg); /* Firefox */
 	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
 	-o-transform:rotate(90deg); /* Opera */

@@ -6,20 +6,19 @@ $(function(){
 	var t;
 	//点击焦点图会链接到相应的产品页
 	$('#focus').click(function(){
-		var focus1opacity=$('#focus1').attr("style").toString();
-		var focus2opacity=$('#focus2').attr("style").toString();	
-		var focus3opacity=$('#focus3').attr("style").toString();
-		if (focus1opacity.indexOf("opacity: 1")!=-1) {
-			window.location.href="product-catalog.html?theme=1";
+		if ($('#focus1').css('opacity') == 1 && $('#focus2').css('opacity') == 1  && $('#focus3').css('opacity') == 1 ) {
+			window.location.href="/product/?theme=3";
 			return;
-		};
-		if (focus2opacity.indexOf("opacity: 1")!=-1) {
-			window.location.href="product-catalog.html?theme=2";
+		}
+		if ($('#focus1').css('opacity') == 1) {
+			window.location.href="/product/?theme=1";
 			return;
-		};
-		if (focus3opacity.indexOf("opacity: 1")!=-1 || focus1opacity.indexOf("opacity=100")!=-1) {
-			window.location.href="product-catalog.html?theme=3";
-		};
+		}
+		if ($('#focus2').css('opacity') == 1) {
+			window.location.href="/product/?theme=2";
+			return;
+		}
+		window.location.href="/product/?theme=3";
 	})
 	$('#focus').mouseover(function() {
 		clearInterval(int);

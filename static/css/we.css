@@ -8,6 +8,7 @@ body{
 	text-decoration: none;
 	text-align: center;
 }
+img{border:0 none;}
 
 #introduction{
 	width: 280px;

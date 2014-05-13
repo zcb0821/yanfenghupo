@@ -10,6 +10,7 @@ body{
 	overflow: auto;
 	text-decoration: none;
 }
+img{border:0 none;}
 .hide{
 	display: none;
 }
@@ -84,8 +85,10 @@ body{
 }
 
 #banner{
+	width: 815px;
+	height: 450px;
 	position: absolute;
-	left: -20px;
+	left: 145px;
 	top: 98px;
 }
 #banner img{
@@ -104,9 +107,10 @@ body{
 	width: 20px;
 	height: 420px;
 	position: absolute;
-	left: 990px;
+	left: 825px;
 	top: 0;
 }
+/*可用的左箭头*/
 .btnLeft1 {
 	width: 0;
 	height: 0;
@@ -116,6 +120,7 @@ body{
 	position: absolute;
 	top: 201px;
 }
+/*可用的右箭头*/
 .btnRight1 {
 	width: 0;
 	height: 0;
@@ -125,6 +130,7 @@ body{
 	position: absolute;
 	top: 201px;
 }
+/*不可用的左箭头*/
 .btnLeft2 {
 	width: 0;
 	height: 0;
@@ -134,6 +140,7 @@ body{
 	position: absolute;
 	top: 201px;
 }
+/*不可用的右箭头*/
 .btnRight2 {
 	width: 0;
 	height: 0;

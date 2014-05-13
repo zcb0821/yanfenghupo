@@ -1,29 +1,82 @@
-.EventWrapper{
+.EventWrapperSmall{
 	width: 250px;
 	height: 200px;
 	position: absolute;
 	border: 1px solid #e1e1e1;
 	background-color: #ffffff;
 }
-.EventName{
+.EventNameSmall{
 	width: 250px;
 	position: absolute;
 	font-family: "KaiTi";
 	font-size: 20px;
 	color: #6e4d51;
 }
-.EventDate{
+.EventDateSmall{
 	width: 250px;
 	position: absolute;
 	font-family: "SimHei";
 	font-size: 13px;
 	color: #b6b6b6;
 }
-.EventContent{
+.EventContentSmall{
 	width: 250px;
 	position: absolute;
 	font-family: "SimHei";
 	font-size: 13px;
 	color: #9a9a9a;
 	letter-spacing: 1.7px;
+}
+.EventWrapper{
+	width: 350px;
+	height: 268px;
+	position: absolute;
+	border: 1px solid #e1e1e1;
+	background-color: #ffffff;
+}
+.EventName{
+	width: 380px;
+	position: absolute;
+	font-family: "KaiTi";
+	font-size: 20px;
+	color: #6e4d51;
+}
+.EventDate{
+	width: 380px;
+	position: absolute;
+	font-family: "SimHei";
+	font-size: 13px;
+	color: #b6b6b6;
+}
+.EventContent{
+	width: 380px;
+	position: absolute;
+	font-family: "SimHei";
+	font-size: 13px;
+	color: #9a9a9a;
+	letter-spacing: 1.7px;
+}
+.EventContent p{
+	font-family: "SimHei";
+	font-size: 15px;
+	color: #9a9a9a;
+	letter-spacing: 1.7px;
+	font-weight: bold;
+}
+#EventReplace11,#EventReplace12,#EventReplace13,#EventReplace14,#EventReplace15,
+#EventReplace21,#EventReplace22,#EventReplace23,#EventReplace24,#EventReplace25,
+#EventReplace26,#EventReplace27,#EventReplace28,#EventReplace29{
+	position: absolute;
+	margin-left: 0;
+}
+
+table
+{
+	width: 350px;
+	border-collapse:collapse;
+}
+
+table, td, th
+{
+	border:1px solid black;
 }
