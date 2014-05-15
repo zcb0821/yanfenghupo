@@ -171,48 +171,7 @@
 			<div id="banner">
 				<div id="leftward" style="margin-left: -20px"><a class="btnLeft2" id="btnLeft"></a></div>
 				<div id="rightward" style="left: 825px"><a class="btnRight2" id="btnRight"></a></div>
-				<!-- 用于产品目录页 -->
-				<div class="box">
-					<!-- Column1 -->
-					<img id="bg1" style="left: 0" src="/static/images/product-catalog/bg1.png" />
-					<img id="ProductShow1" style="left: 0">
-					<div id="name1">
-						<div class="bracket"><a>【</a></div>
-						<a id="name11"></a>
-						<div class="bracket"><a>】</a></div>
-						<a id="name12"></a>
-					</div>
-					<!-- Column2 -->
-					<img id="bg2" style="left: 180px" src="/static/images/product-catalog/bg2.png" />
-					<img id="ProductShow2" style="left: 180px">
-					<div id="name2">
-						<div class="bracket"><a>【</a></div>
-						<a id="name21"></a>
-						<div class="bracket"><a>】</a></div>
-						<a id="name22"></a>
-					</div>
-					<!-- Column3 -->
-					<img id="bg3" style="left: 360px" src="/static/images/product-catalog/bg3.png" />
-					<img id="ProductShow3" style="left: 360px">
-					<div id="name3">
-						<div class="bracket"><a>【</a></div>
-						<a id="name31"></a>
-						<div class="bracket"><a>】</a></div>
-						<a id="name32"></a>
-					</div>
-					<!-- Column4 -->
-					<img id="bg4" style="left: 540px" src="/static/images/product-catalog/bg4.png" />
-					<img id="ProductShow4" style="left: 540px">
-					<div id="name4">
-						<div class="bracket"><a>【</a></div>
-						<a id="name41"></a>
-						<div class="bracket"><a>】</a></div>
-						<a id="name42"></a>
-					</div>
-					<!-- Column5 -->
-					<img id="bg5" style="left: 720px; clip:rect(auto 95px auto auto)" src="/static/images/product-catalog/bg1.png" />
-					<img id="ProductShow5" style="left: 720px; clip:rect(auto 95px auto auto)">
-				</div>
+                <div class="box" id="display">{% include 'html/product-display.html' %}</div>
 				<!-- 用于产品详情页 -->
 				<div class="detail" style="display: none; width: 980px; left: -165px">
 					<img style="left: 0; width: 720px; height: 420px" src="/static/images/product-detail/bg.png" />

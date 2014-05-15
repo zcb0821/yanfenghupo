@@ -11,3 +11,5 @@ class Product(models.Model):
     function = models.CharField(max_length=50)	     # 功能
     origin = models.CharField(max_length=50)	     # 产地
 
+    def __unicode__(self):
+        return u'%s %s %s %s %s %s' % (self.display_name, self.detail_name, self.material, self.series, self.function, self.origin)

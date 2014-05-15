@@ -7,18 +7,18 @@ $(function(){
 	//点击焦点图会链接到相应的产品页
 	$('#focus').click(function(){
 		if ($('#focus1').css('opacity') == 1 && $('#focus2').css('opacity') == 1  && $('#focus3').css('opacity') == 1 ) {
-			window.location.href="/product/?theme=3";
+			window.location.href="/product/theme/3/";
 			return;
 		}
 		if ($('#focus1').css('opacity') == 1) {
-			window.location.href="/product/?theme=1";
+			window.location.href="/product/theme/1/";
 			return;
 		}
 		if ($('#focus2').css('opacity') == 1) {
-			window.location.href="/product/?theme=2";
+			window.location.href="/product/theme/2/";
 			return;
 		}
-		window.location.href="/product/?theme=3";
+		window.location.href="/product/theme/3/";
 	})
 	$('#focus').mouseover(function() {
 		clearInterval(int);

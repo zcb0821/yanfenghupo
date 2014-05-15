@@ -94,28 +94,16 @@
 	height: 420px;
 	position: absolute;
 }
-#ProductShow1, #ProductShow2, #ProductShow3, #ProductShow4{
+.ProductShow{
 	cursor: pointer;
 }
-#name1, #name2, #name3, #name4{
+.DisplayName{
 	width: 16px;
 	position: absolute;
 	top: 25px;
 	font-size: 16px;
 	font-family: "KaiTi";
 	color: #6e4d51;
-}
-#name1{
-	left: 149px;
-}
-#name2{
-	left: 329px;
-}
-#name3{
-	left: 509px;
-}
-#name4{
-	left: 689px;
 }
 .bracket{
 	font-size: 16px;
