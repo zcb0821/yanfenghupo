@@ -1,6 +1,6 @@
 <!-- 用于产品目录页 -->
 {% for product_info in product_list %}
-    <img style={{ product_info.bgStyle }} src={{ product_info.bgSRC }} />
+    <img class="ProductBg"  style={{ product_info.bgStyle }} src={{ product_info.bgSRC }} />
     <img class="ProductShow" style={{ product_info.bgStyle }} src={{ product_info.displaySRC }} />
     <div class="DisplayName" style={{ product_info.NameStyle }}>
         <div class="bracket"><a>【</a></div>

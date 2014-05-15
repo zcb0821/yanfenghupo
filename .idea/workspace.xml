@@ -30,19 +30,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yanfenghupo/urls.py">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+            <state line="32" column="25" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product-catalog.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="product-catalog.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/html/product-catalog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="31" selection-start="6997" selection-end="6997" vertical-scroll-proportion="0.15479876">
+            <state line="204" column="5" selection-start="8364" selection-end="8364" vertical-scroll-proportion="-8.928572">
               <folding />
             </state>
           </provider>
@@ -51,18 +51,27 @@
       <file leaf-file-name="product-display.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/html/product-display.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="20" selection-start="314" selection-end="314" vertical-scroll-proportion="-3.392857">
+            <state line="4" column="28" selection-start="71" selection-end="276" vertical-scroll-proportion="-2.7142856">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/views.py">
+      <file leaf-file-name="product-catalog.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/product-catalog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="21" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+            <state line="307" column="82" selection-start="10272" selection-end="10272" vertical-scroll-proportion="0.45454547">
               <folding>
-                <element signature="e#24#76#0" expanded="true" />
+                <element signature="n#!!block;n#init#0" expanded="false" />
+                <element signature="n#!!block;n#screen1#0" expanded="false" />
+                <element signature="n#!!block;n#screen2#0" expanded="false" />
+                <element signature="n#!!block;n#screen3#0" expanded="false" />
+                <element signature="e#2961#3408#0" expanded="false" />
+                <element signature="e#3459#4545#0" expanded="false" />
+                <element signature="e#4581#5667#0" expanded="false" />
+                <element signature="e#5703#6789#0" expanded="false" />
+                <element signature="e#6825#7638#0" expanded="false" />
+                <element signature="e#7688#8469#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,7 +90,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../MesmerWeb/mesmerxml/views.py" />
         <option value="$PROJECT_DIR$/templates/html/weixin.html" />
         <option value="$PROJECT_DIR$/templates/html/contact.html" />
         <option value="$PROJECT_DIR$/templates/html/about.html" />
@@ -92,11 +100,12 @@
         <option value="$PROJECT_DIR$/static/js/BannerSlider.js" />
         <option value="$PROJECT_DIR$/templates/html/three-column.html" />
         <option value="$PROJECT_DIR$/main/models.py" />
-        <option value="$PROJECT_DIR$/templates/html/product-display.html" />
         <option value="$PROJECT_DIR$/yanfenghupo/urls.py" />
         <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/static/js/temp.js" />
         <option value="$PROJECT_DIR$/templates/html/product-catalog.html" />
+        <option value="$PROJECT_DIR$/templates/html/product-display.html" />
+        <option value="$PROJECT_DIR$/static/js/product-catalog.js" />
       </list>
     </option>
   </component>
@@ -254,13 +263,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.25833333" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -350,6 +359,25 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="yanfenghupo" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -369,25 +397,6 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="yanfenghupo" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -530,11 +539,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7817259" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25833333" sideWeight="0.70219964" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29780033" sideWeight="0.4969697" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27121213" sideWeight="0.7935702" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29780033" sideWeight="0.4969697" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5211506" sideWeight="0.49772727" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20642978" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20642978" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -606,6 +615,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/html/product-display.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="10" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/html/event.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="53" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" />
@@ -653,45 +669,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yanfenghupo/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="21" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.7537037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/product-catalog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.3837472">
-          <folding />
-        </state>
+        <state line="99" column="21" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.7537037" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yanfenghupo/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="0.31619537" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#24#76#0" expanded="true" />
-          </folding>
+        <state line="32" column="25" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/html/product-display.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="314" selection-end="314" vertical-scroll-proportion="-3.392857">
+        <state line="4" column="28" selection-start="71" selection-end="276" vertical-scroll-proportion="-2.7142856">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/html/product-catalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="31" selection-start="6997" selection-end="6997" vertical-scroll-proportion="0.15479876">
+        <state line="204" column="5" selection-start="8364" selection-end="8364" vertical-scroll-proportion="-8.928572">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/product-catalog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="307" column="82" selection-start="10272" selection-end="10272" vertical-scroll-proportion="0.45454547">
+          <folding>
+            <element signature="n#!!block;n#init#0" expanded="false" />
+            <element signature="n#!!block;n#screen1#0" expanded="false" />
+            <element signature="n#!!block;n#screen2#0" expanded="false" />
+            <element signature="n#!!block;n#screen3#0" expanded="false" />
+            <element signature="e#2961#3408#0" expanded="false" />
+            <element signature="e#3459#4545#0" expanded="false" />
+            <element signature="e#4581#5667#0" expanded="false" />
+            <element signature="e#5703#6789#0" expanded="false" />
+            <element signature="e#6825#7638#0" expanded="false" />
+            <element signature="e#7688#8469#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

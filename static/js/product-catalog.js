@@ -43,6 +43,12 @@ function init() {
             break;
         }
     }
+    if ($("#display").children("img").length > 8) {
+        enableRight();
+    }
+    else {
+        disableRight();
+    }
 }
 
 //用于回到该系列全部图片的目录页
@@ -53,6 +59,12 @@ function screen1(level1){
         data: "series="+level1,
         success: function(result) {
             $("#display").html(result);
+            if ($("#display").children("img").length > 8) {
+                enableRight();
+            }
+            else {
+                disableRight();
+            }
         }
     });
 }
@@ -65,6 +77,12 @@ function screen2(level1, level2){
         data: "series="+level1+"&function="+level2,
         success: function(result) {
             $("#display").html(result);
+            if ($("#display").children("img").length > 8) {
+                enableRight();
+            }
+            else {
+                disableRight();
+            }
         }
     });
 }
@@ -77,6 +95,12 @@ function screen3(level1, level2, level3){
         data: "series="+level1+"&function="+level2+"&origin="+level3,
         success: function(result) {
             $("#display").html(result);
+            if ($("#display").children("img").length > 8) {
+                enableRight();
+            }
+            else {
+                disableRight();
+            }
         }
     });
 }
@@ -85,6 +109,7 @@ function screen3(level1, level2, level3){
 $(function(){
     //点击“系列”则回到该系列全部图片的目录页
     $("#CurrentTheme").click(function(){
+        disableLeft();
         //强行此时为目录模式而非详情模式
         $(".detail").attr("style", "display: none");
         $(".box").removeAttr("style");
@@ -100,6 +125,7 @@ $(function(){
 
     //二级导航的筛选
     $('.level21').click(function(){
+        disableLeft();
         if (CataOrDeta==1) {
             $(".detail").attr("style", "display: none");
             $(".box").removeAttr("style");
@@ -126,6 +152,7 @@ $(function(){
         screen2(Level1Series, Level2Function);
     })
     $('.level22').click(function(){
+        disableLeft();
         if (CataOrDeta==1) {
             $(".detail").attr("style", "display: none");
             $(".box").removeAttr("style");
@@ -152,6 +179,7 @@ $(function(){
         screen2(Level1Series, Level2Function);
     })
     $('.level23').click(function(){
+        disableLeft();
         if (CataOrDeta==1) {
             $(".detail").attr("style", "display: none");
             $(".box").removeAttr("style");
@@ -178,6 +206,7 @@ $(function(){
         screen2(Level1Series, Level2Function);
     })
     $('.level24').click(function(){
+        disableLeft();
         if (CataOrDeta==1) {
             $(".detail").attr("style", "display: none");
             $(".box").removeAttr("style");
@@ -198,6 +227,7 @@ $(function(){
 
     //三级导航的筛选
     $(".level3").click(function(){
+        disableLeft();
         if (CataOrDeta==1) {
             $(".detail").attr("style", "display: none");
             $(".box").removeAttr("style");
@@ -240,6 +270,53 @@ $(function(){
             }
         }
     })
+
+    //点击左右小三角，滑动查看
+	//点击左边按钮
+	$('#btnLeft').click(function(){
+        if (CataOrDeta==0) {
+            //当前在目录页
+            if ($('#btnLeft').attr("class")=="btnLeft2") {
+                return;
+            };
+	        var flag = 0;
+	        //已保证可以向左滑动
+            var LeftMost = $("#display>.ProductBg:first").css("left").replace(/px/, "");
+            if (Number(LeftMost) == -360) {
+                flag = 1;
+            }
+            $(".ProductBg").animate({left:'+=360px'});
+            $(".ProductShow").animate({left:'+=360px'});
+            $(".DisplayName").animate({left:'+=360px'});
+	        enableRight();
+	        if (flag == 1) {
+	        	disableLeft();
+	        }
+        }
+	});
+	//点击右边按钮
+	$('#btnRight').click(function(){
+        if (CataOrDeta==0) {
+            //当前在目录页
+            if ($('#btnRight').attr("class")=="btnRight2") {
+                return;
+            };
+	        var flag = 0;
+	        //已保证可以向左滑动
+            var LeftMost = $("#display>.ProductBg:first").css("left").replace(/px/, "");
+            var standard = -($("#display").children("img").length/2-3)*180;
+            if (Number(LeftMost) == standard || Number(LeftMost) == standard + 180) {
+                flag = 1;
+            }
+            $(".ProductBg").animate({left:'-=360px'});
+            $(".ProductShow").animate({left:'-=360px'});
+            $(".DisplayName").animate({left:'-=360px'});
+	        enableLeft();
+	        if (flag == 1) {
+	        	disableRight();
+	        }
+        }
+	});
 });
 
 //点击图片进入详情页
