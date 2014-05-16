@@ -118,9 +118,15 @@
 }
 
 .detail{
-	margin-left: 165px;
+	width: 815px;
+	height: 450px;
+	position: relative;
+	left: 0;
 }
-#DetailName{
+#detail{
+	overflow: hidden;
+}
+.DetailName{
 	position: absolute;
 	left: 813px;
 	top: 10px;
@@ -130,14 +136,14 @@
 	font-size: 24px;
 	font-family: "KaiTi";
 	color: #6e4d51;
-	/* Rotate div */
+	 Rotate div
 	transform:rotate(90deg);
 	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); /* Internet Explorer */
 	-moz-transform:rotate(90deg); /* Firefox */
 	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
 	-o-transform:rotate(90deg); /* Opera */
 }
-#DetailName1{
+.DetailName1{
 	width: 24px;
 	position: absolute;
 	left: 28px;
@@ -146,7 +152,7 @@
 	font-family: "KaiTi";
 	color: #6e4d51;
 }
-#DetailName2{
+.DetailName2{
 	width: 13px;
 	position: absolute;
 	top: 0;

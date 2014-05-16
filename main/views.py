@@ -30,13 +30,33 @@ def getProductFromDB(request, products, url):
     displaySRCs = []
     LeftBracket = "【".decode('UTF-8')
     RightBracket = "】·".decode('UTF-8')
+    DetailStyles1 = []
+    DetailStyles2 = []
+    detailSRCs = []
+    DetailStyles3 = []
     for i in range(len(products)):
+        # 为产品目录页准备数据
         bgSRCs.append("/static/images/product-catalog/bg" + str(i%4+1) + ".png")
         bgStyles.append("left:" + str(i*180) + "px")
         NameStyles.append("left:" + str(i*180+149) + "px")
         displaySRCs.append("/static/images/product-catalog/product-display/"+products[i].series+"/"+products[i].function+"/"+products[i].origin+"/"+LeftBracket+products[i].display_name+RightBracket+products[i].material+".png")
+        # 为产品详情页准备数据
+        DetailStyles1.append("left:" + str(i*815) + "px;width:720px;height:420px")
+        DetailStyles2.append("left:" + str(10+i*815) + "px;top:10px;width:600px;height:400px")
+        detailSRCs.append("/static/images/product-detail/product-display/"+products[i].series+"/"+products[i].function+"/"+products[i].origin+"/"+LeftBracket+products[i].display_name+RightBracket+products[i].material+".jpg")
+        DetailStyles3.append("left:" + str(648+i*815) + "px")
     for i in range(len(products)):
-        product_list.append({'product': products[i], 'bgSRC': bgSRCs[i], 'bgStyle': bgStyles[i], 'NameStyle': NameStyles[i], 'displaySRC': displaySRCs[i]})
+        product_list.append({
+            'product': products[i],
+            'bgSRC': bgSRCs[i],
+            'bgStyle': bgStyles[i],
+            'NameStyle': NameStyles[i],
+            'displaySRC': displaySRCs[i],
+            'detailSRC': detailSRCs[i],
+            'DetailStyle1': DetailStyles1[i],
+            'DetailStyle2': DetailStyles2[i],
+            'DetailStyle3': DetailStyles3[i]
+        })
     return render_to_response(url, {'product_list': product_list})
 
 
