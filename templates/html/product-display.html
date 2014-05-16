@@ -1,11 +1,30 @@
-<!-- 用于产品目录页 -->
-{% for product_info in product_list %}
-    <img style={{ product_info.bgStyle }} src={{ product_info.bgSRC }} />
-    <img class="ProductShow" style={{ product_info.bgStyle }} src={{ product_info.displaySRC }} />
-    <div class="DisplayName" style={{ product_info.NameStyle }}>
-        <div class="bracket"><a>【</a></div>
-        <a>{{ product_info.product.display_name }}</a>
-        <div class="bracket"><a>】</a></div>
-        <a>·{{ product_info.product.material }}</a>
+<div class="box" id="display">
+    <!-- 用于产品目录页 -->
+    {% for product_info in product_list %}
+        <img class="ProductBg"  style={{ product_info.bgStyle }} src={{ product_info.bgSRC }} />
+        <img class="ProductShow" style={{ product_info.bgStyle }} src={{ product_info.displaySRC }} />
+        <div class="DisplayName" style={{ product_info.NameStyle }}>
+            <div class="bracket"><a>【</a></div>
+            <a class="ShowDisplayName">{{ product_info.product.display_name }}</a>
+            <div class="bracket"><a>】</a></div>
+            <a>·{{ product_info.product.material }}</a>
+        </div>
+    {% endfor %}
+</div>
+<div class="detail" id="detail" style="display: none; width: 980px; left: -165px">
+    <!-- 用于产品详情页 -->
+    <div class="detail" id="InnnerDetail" style="display: none; width: 980px; left: -165px">
+    {% for product_info in product_list %}
+        <img class="DetailBg" style={{ product_info.DetailStyle1 }} src="/static/images/product-detail/bg.png" />
+        <img class="DetailPicture" style={{ product_info.DetailStyle2 }}  src={{ product_info.detailSRC }} />
+        <div class="DetailName" style={{ product_info.DetailStyle3 }}>
+            <div class="DetailName1">
+                <div class="DetailBracket"><a>【</a></div>
+                <br/><a>{{ product_info.product.display_name }}</a><br/>
+                <div class="DetailBracket"><a>】</a></div>
+            </div>
+            <div class="DetailName2"><a>{{ product_info.product.detail_name }}</a></div>
+        </div>
+    {% endfor %}
     </div>
-{% endfor %}
+</div>

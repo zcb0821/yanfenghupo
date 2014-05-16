@@ -171,22 +171,10 @@
 			<div id="banner">
 				<div id="leftward" style="margin-left: -20px"><a class="btnLeft2" id="btnLeft"></a></div>
 				<div id="rightward" style="left: 825px"><a class="btnRight2" id="btnRight"></a></div>
-                <div class="box" id="display">{% include 'html/product-display.html' %}</div>
-				<!-- 用于产品详情页 -->
-				<div class="detail" style="display: none; width: 980px; left: -165px">
-					<img style="left: 0; width: 720px; height: 420px" src="/static/images/product-detail/bg.png" />
-					<img id="DetailProductPicture" style="left: 10px; top:10px; width: 600px; height: 400px" />
-					<div id="DetailName" style="left: 648px">
-						<div id="DetailName1">
-							<div class="DetailBracket"><a>【</a></div>
-							<br/><a></a><br/>
-							<div class="DetailBracket"><a>】</a></div>
-						</div>
-						<div id="DetailName2"><a></a></div>
-					</div>
-					<div id="BackToCata" style="left: 740px"><a>返回目录>></a></div>
-					<div id="preview" style="left: 740px"><img id="DetailProductPreview" style="left: 5px; top:5px; width: 60px; height: 40px"></div>
-				</div>
+                <!-- 产品目录&详情页 -->
+                <div id="CataAndDeta">{% include 'html/product-display.html' %}</div>
+                <div id="BackToCata" style="left: 740px" class="hide"><a>返回目录>></a></div>
+                <div id="preview" style="left: 740px" class="hide"><img id="DetailProductPreview" style="left: 5px; top:5px; width: 60px; height: 40px"></div>
 			</div>
 			<!-- banner ends -->
 			<!-- footer starts -->
