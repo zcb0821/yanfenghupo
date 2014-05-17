@@ -1,0 +1,17 @@
+<table style="position: absolute; top: 200px;">
+<tr>
+<th>名称</th><th>详情</th><th>材质</th><th>系列</th><th>功能</th><th>产地</th>
+</tr>
+
+{% for search_result in result_list %}
+<tr class="isResult">
+<td>{{ search_result.display_name }}</td>
+<td>{{ search_result.detail_name }}</td>
+<td>{{ search_result.material }}</td>
+<td>{{ search_result.series }}</td>
+<td>{{ search_result.function }}</td>
+<td>{{ search_result.origin }}</td>
+</tr>
+{% endfor %}
+
+</table>
