@@ -189,3 +189,7 @@ def weixin(request):
 @csrf_exempt
 def event(request):
     return render(request, 'html/event.html', {})
+
+
+def admin(request):
+    return render(request, 'html/admin.html', {})
