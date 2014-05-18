@@ -140,6 +140,43 @@ def SearchResult(request):
 
 
 @csrf_exempt
+def EditProduct(request):
+    return render(request, 'html/EditProduct.html', {})
+
+@csrf_exempt
+def EditDetail(request):
+    products = Product.objects.all()
+    if request.POST.has_key('series'):
+        SearchSeries = request.POST['series']
+        products = products.filter(series=SearchSeries)
+    if request.POST.has_key('function'):
+        SearchFunction = request.POST['function']
+        products = products.filter(function=SearchFunction)
+    if request.POST.has_key('origin'):
+        SearchOrigin = request.POST['origin']
+        products = products.filter(origin=SearchOrigin)
+    if request.POST.has_key('material'):
+        SearchMaterial = request.POST['material']
+        # 只要不是"蓝珀"、"血珀"、"金珀"、"白花"，就是"蜜蜡"
+        if SearchMaterial == u"蜜蜡":
+            PrePro = []
+            for item in products:
+                if item.material != u"蓝珀" and item.material != u"血珀" and item.material != u"金珀" and item.material != u"白花":
+                    PrePro.append(item)
+            products = PrePro
+        else:
+            products = products.filter(material=SearchMaterial)
+    if request.POST.has_key('KeyName'):
+        SearchKeyName = request.POST['KeyName'].encode()
+        finalPro = []
+        for item in products:
+            if item.display_name.encode().find(SearchKeyName)>=0:
+                finalPro.append(item)
+        products = finalPro
+    return render_to_response("html/EditDetail.html", {'result_list': products})
+
+
+@csrf_exempt
 def three_column(request):
     return render(request, 'html/three-column.html', {})
 

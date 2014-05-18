@@ -32,3 +32,13 @@ table, td, th {
     color: #9a9a9a;
     letter-spacing: 1.7px;
 }
+.SetTd {
+    background-image: url("../images/product-catalog/Set.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+.DelTd {
+    background-image: url("../images/product-catalog/Del.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}

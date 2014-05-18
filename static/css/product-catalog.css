@@ -27,7 +27,12 @@
 	top: 290px;
 	font-family: "KaiTi";
 }
-#SearchProduct a{
+#EditProduct {
+	position: absolute;
+	top: 335px;
+	font-family: "KaiTi";
+}
+#SearchProduct a, #EditProduct a{
     width: 48px;
     height: 16px;
     text-decoration: none;
