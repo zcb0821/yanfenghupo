@@ -4,6 +4,9 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
 from models import Product
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 # Create your views here.
 @csrf_exempt
@@ -96,6 +99,44 @@ def ProductDetail(request):
     if len(products) != 1:
         return None
     return HttpResponse(products[0].detail_name, mimetype="application/text")
+
+
+@csrf_exempt
+def SearchProduct(request):
+    return render(request, 'html/SearchProduct.html', {})
+
+
+@csrf_exempt
+def SearchResult(request):
+    products = Product.objects.all()
+    if request.POST.has_key('series'):
+        SearchSeries = request.POST['series']
+        products = products.filter(series=SearchSeries)
+    if request.POST.has_key('function'):
+        SearchFunction = request.POST['function']
+        products = products.filter(function=SearchFunction)
+    if request.POST.has_key('origin'):
+        SearchOrigin = request.POST['origin']
+        products = products.filter(origin=SearchOrigin)
+    if request.POST.has_key('material'):
+        SearchMaterial = request.POST['material']
+        # 只要不是"蓝珀"、"血珀"、"金珀"、"白花"，就是"蜜蜡"
+        if SearchMaterial == u"蜜蜡":
+            PrePro = []
+            for item in products:
+                if item.material != u"蓝珀" and item.material != u"血珀" and item.material != u"金珀" and item.material != u"白花":
+                    PrePro.append(item)
+            products = PrePro
+        else:
+            products = products.filter(material=SearchMaterial)
+    if request.POST.has_key('KeyName'):
+        SearchKeyName = request.POST['KeyName'].encode()
+        finalPro = []
+        for item in products:
+            if item.display_name.encode().find(SearchKeyName)>=0:
+                finalPro.append(item)
+        products = finalPro
+    return render_to_response("html/SearchResult.html", {'result_list': products})
 
 
 @csrf_exempt

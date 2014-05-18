@@ -22,6 +22,18 @@
 	top: 43px;
 	font-family: "KaiTi";
 }
+#SearchProduct{
+	position: absolute;
+	top: 290px;
+	font-family: "KaiTi";
+}
+#SearchProduct a{
+    width: 48px;
+    height: 16px;
+    text-decoration: none;
+    color: #9C9393;
+    cursor: pointer;
+}
 #level-about{
 	width: 115px;
 	position: absolute;
@@ -136,7 +148,7 @@
 	font-size: 24px;
 	font-family: "KaiTi";
 	color: #6e4d51;
-	 Rotate div
+	 /*Rotate div*/
 	transform:rotate(90deg);
 	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); /* Internet Explorer */
 	-moz-transform:rotate(90deg); /* Firefox */
