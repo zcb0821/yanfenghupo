@@ -1,7 +1,9 @@
 from django.conf.urls import patterns, include, url
-from django.contrib.auth.views import login, logout
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
+
+admin.autodiscover()
 
 urlpatterns = patterns('main.views',
     (r'^$', 'index'),
@@ -17,9 +19,19 @@ urlpatterns = patterns('main.views',
     (r'^weixin/$', 'weixin'),
     (r'^event/$', 'event'),
     (r'^admin/$', 'admin'),
-    (r'^accounts/login/$',  login, {'template_name': 'html/login.html'}),
-    (r'^accounts/logout/$', logout),
+    (r'^django-admin/$', include(admin.site.urls)),
+    (r'^logout/$', 'logout'),
+    (r'^upload/$', 'upload'),
+    (r'^cktest/$', 'cktest'),
 )
 
 # serve media files
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# serve media files
+urlpatterns += patterns('django.contrib.auth.views',
+    (r'^login/$',  'login', {
+        'template_name': 'html/login.html',
+        'extra_context': {'next':'/admin/'}
+    }),
+)
