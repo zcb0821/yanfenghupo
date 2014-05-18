@@ -1,0 +1,14 @@
+.SetTd {
+    background-image: url("../images/product-catalog/Set.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    cursor: pointer;
+}
+.DelTd {
+    background-image: url("../images/product-catalog/Del.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    cursor: pointer;
+}

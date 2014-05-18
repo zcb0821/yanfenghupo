@@ -18,6 +18,7 @@
 
     <!-- SB Admin CSS - Include with every page -->
     <link href="/static/admin/css/sb-admin.css" rel="stylesheet">
+    <link href="/static/css/EditProduct.css" rel="stylesheet">
 
 </head>
 
@@ -320,6 +321,7 @@
                                                 <th>功能</th>
                                                 <th>产地</th>
                                                 <th>修改</th>
+                                                <th>删除</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -331,7 +333,8 @@
                                                 <td>{{ p.series }}</td>
                                                 <td>{{ p.function }}</td>
                                                 <td>{{ p.origin }}</td>
-                                                <td></td>
+                                                <td data-toggle="modal" href="#SetModal" class="SetTd"></td>
+                                                <td data-toggle="modal" href="#SetModal" class="DelTd"></td>
                                             </tr>
                                             {% endfor %}
                                         </tbody>
@@ -360,6 +363,56 @@
         </div>
         <!-- /#page-wrapper -->
 
+  <!-- Button trigger modal -->
+{#<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">#}
+{#  Launch demo modal#}
+{#</button>#}
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div>
+            <a>名称：</a>
+            <input id="EditDisplayName" type="text" placeholder=""/>
+        </div>
+        <div>
+            <a>描述：</a>
+            <input id="EditDetailName" type="text" placeholder=""/>
+        </div>
+        <div>
+            <a>材质：</a>
+            <input id="EditMaterial" type="text" placeholder=""/>
+        </div>
+        <div>
+            <a>系列：</a>
+            <input id="EditSeries" type="text" placeholder=""/>
+        </div>
+        <div>
+            <a>功能：</a>
+            <input id="EditFunction" type="text" placeholder=""/>
+        </div>
+        <div>
+            <a>产地：</a>
+            <input id="EditOrigin" type="text" placeholder=""/>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
     </div>
     <!-- /#wrapper -->
 
@@ -377,6 +430,7 @@
 
     <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
     <script src="/static/admin/js/demo/dashboard-demo.js"></script>
+    <script src="/static/js/admin.js"></script>
 
 </body>
 

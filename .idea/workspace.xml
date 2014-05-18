@@ -30,84 +30,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EditProduct.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/html/EditProduct.html">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="41" selection-start="3375" selection-end="3391" vertical-scroll-proportion="-9.678572">
+            <state line="179" column="24" selection-start="6603" selection-end="6603" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/html/admin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="365" column="31" selection-start="18521" selection-end="18521" vertical-scroll-proportion="-4.464286">
               <folding>
-                <marker date="1400394781719" expanded="true" signature="21:3609" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="29:465" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="473:3505" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="494:3496" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="541:1062" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="560:1052" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="584:690" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="713:1041" placeholder="..." />
-                <marker date="1400394781719" expanded="false" signature="770:784" placeholder="..." />
-                <marker date="1400394781719" expanded="false" signature="807:821" placeholder="..." />
-                <marker date="1400394781719" expanded="false" signature="1147:1178" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="1179:3190" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="1189:1509" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="1268:1498" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="1532:2174" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="1613:2163" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="2197:2566" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="2264:2555" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="2589:3001" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="2658:2990" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="3012:3109" placeholder="..." />
-                <marker date="1400394781719" expanded="false" signature="3283:3314" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="3383:3390" placeholder="..." />
-                <marker date="1400394781719" expanded="true" signature="3391:3463" placeholder="..." />
+                <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#4;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#6;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchProduct.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/html/SearchProduct.html">
+      <file leaf-file-name="EditProduct.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/EditProduct.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="57" selection-start="3391" selection-end="3391" vertical-scroll-proportion="-11.5">
-              <folding>
-                <marker date="1400395306711" expanded="true" signature="21:3614" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="29:466" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="474:3507" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="495:3498" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="542:1063" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="561:1053" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="585:691" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="714:1042" placeholder="..." />
-                <marker date="1400395306711" expanded="false" signature="771:785" placeholder="..." />
-                <marker date="1400395306711" expanded="false" signature="808:822" placeholder="..." />
-                <marker date="1400395306711" expanded="false" signature="1148:1179" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="1180:3190" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="1190:1510" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="1269:1499" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="1533:2175" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="1614:2164" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="2198:2567" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="2265:2556" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="2590:3002" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="2659:2991" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="3013:3110" placeholder="..." />
-                <marker date="1400395306711" expanded="false" signature="3283:3314" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="3383:3390" placeholder="..." />
-                <marker date="1400395306711" expanded="true" signature="3391:3465" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditDetail.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/html/EditDetail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="211" selection-end="441" vertical-scroll-proportion="0.283054">
-              <folding>
-                <marker date="1400395557213" expanded="false" signature="14:45" placeholder="..." />
-                <marker date="1400395557213" expanded="true" signature="46:517" placeholder="..." />
-                <marker date="1400395557213" expanded="true" signature="51:147" placeholder="..." />
-                <marker date="1400395557213" expanded="true" signature="209:494" placeholder="..." />
-              </folding>
+            <state line="13" column="1" selection-start="389" selection-end="389" vertical-scroll-proportion="0.45072994">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,30 +85,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/static/js/product-catalog.js" />
-        <option value="$PROJECT_DIR$/templates/html/SearchResult.html" />
-        <option value="$PROJECT_DIR$/static/js/SearchProduct.js" />
         <option value="$PROJECT_DIR$/static/js/kf.js" />
         <option value="$PROJECT_DIR$/templates/html/three-column.html" />
         <option value="$PROJECT_DIR$/templates/html/index.html" />
         <option value="$PROJECT_DIR$/templates/html/event.html" />
-        <option value="$PROJECT_DIR$/templates/html/product-catalog.html" />
         <option value="$PROJECT_DIR$/static/css/product-catalog.css" />
-        <option value="$PROJECT_DIR$/yanfenghupo/urls.py" />
         <option value="$PROJECT_DIR$/static/js/EditDetail.js" />
-        <option value="$PROJECT_DIR$/main/views.py" />
-        <option value="$PROJECT_DIR$/static/css/SearchProduct.css" />
         <option value="$PROJECT_DIR$/templates/html/EditProduct.html" />
         <option value="$PROJECT_DIR$/templates/html/SearchProduct.html" />
         <option value="$PROJECT_DIR$/templates/html/EditDetail.html" />
+        <option value="$PROJECT_DIR$/templates/html/product-catalog.html" />
+        <option value="$PROJECT_DIR$/static/css/SearchProduct.css" />
+        <option value="$PROJECT_DIR$/yanfenghupo/urls.py" />
+        <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/static/css/EditProduct.css" />
+        <option value="$PROJECT_DIR$/static/js/admin.js" />
+        <option value="$PROJECT_DIR$/templates/html/admin.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="x" value="198" />
+    <option name="y" value="114" />
+    <option name="width" value="1109" />
+    <option name="height" value="737" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -176,7 +136,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -293,18 +252,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.25833333" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iCVSite-master" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iCVSite-master" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -394,25 +354,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="yanfenghupo" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -432,6 +373,25 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="yanfenghupo" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -587,15 +547,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="198" y="114" width="1109" height="737" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7817259" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23333333" sideWeight="0.6395939" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.61421317" sideWeight="0.4969697" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2989494" sideWeight="0.6395939" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54483926" sideWeight="0.4969697" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20642978" sideWeight="0.49772727" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3604061" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
@@ -666,166 +626,115 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="52" />
+      <option name="time" value="55" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/js/event.js">
+    <entry file="file://$PROJECT_DIR$/static/css/EditProduct.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="13" column="1" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/three-column.html">
+    <entry file="file://$PROJECT_DIR$/templates/html/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="391" selection-end="518" vertical-scroll-proportion="-6.785714" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/event.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="11" selection-start="650" selection-end="650" vertical-scroll-proportion="0.5968586" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.4973822" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/product-catalog.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="11" selection-start="484" selection-end="484" vertical-scroll-proportion="0.6909091" />
+        <state line="367" column="0" selection-start="18605" selection-end="18605" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#4;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#6;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://D:/Python27/Lib/site-packages/django/views/decorators/csrf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2684" selection-end="2684" vertical-scroll-proportion="0.32984293">
-          <folding />
-        </state>
+        <state line="76" column="0" selection-start="2684" selection-end="2684" vertical-scroll-proportion="0.32984293" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/html/SearchResult.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="424" selection-end="424" vertical-scroll-proportion="0.603912">
-          <folding />
-        </state>
+        <state line="13" column="5" selection-start="424" selection-end="424" vertical-scroll-proportion="0.603912" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/html/SearchProduct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="57" selection-start="3391" selection-end="3391" vertical-scroll-proportion="0.59962755" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/SearchProduct.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="28" selection-start="610" selection-end="610" vertical-scroll-proportion="-0.3043478">
+        <state line="33" column="23" selection-start="1032" selection-end="1032" vertical-scroll-proportion="1.1097345" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/about.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yanfenghupo/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="27" selection-start="517" selection-end="517" vertical-scroll-proportion="0.53977275">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/html/product-catalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="27" selection-start="6947" selection-end="6947" vertical-scroll-proportion="0.036259543">
-          <folding />
-        </state>
+        <state line="64" column="50" selection-start="2719" selection-end="2719" vertical-scroll-proportion="-6.660839" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yanfenghupo/urls.py">
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap-modal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="512" selection-end="512" vertical-scroll-proportion="0.43716815">
-          <folding>
-            <element signature="e#52#103#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="12" selection-start="5173" selection-end="5173" vertical-scroll-proportion="0.0">
+        <state line="179" column="24" selection-start="6603" selection-end="6603" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/EditDetail.js">
+    <entry file="file://$PROJECT_DIR$/static/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="18" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.6637168">
+        <state line="13" column="0" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/SearchProduct.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="821" selection-end="947" vertical-scroll-proportion="0.899115">
+        <state line="25" column="30" selection-start="526" selection-end="526" vertical-scroll-proportion="0.52920353">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/EditProduct.html">
+    <entry file="file://$PROJECT_DIR$/templates/html/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="41" selection-start="3375" selection-end="3391" vertical-scroll-proportion="-9.678572">
+        <state line="365" column="31" selection-start="18521" selection-end="18521" vertical-scroll-proportion="-4.464286">
           <folding>
-            <marker date="1400394781719" expanded="true" signature="21:3609" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="29:465" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="473:3505" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="494:3496" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="541:1062" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="560:1052" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="584:690" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="713:1041" placeholder="..." />
-            <marker date="1400394781719" expanded="false" signature="770:784" placeholder="..." />
-            <marker date="1400394781719" expanded="false" signature="807:821" placeholder="..." />
-            <marker date="1400394781719" expanded="false" signature="1147:1178" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="1179:3190" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="1189:1509" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="1268:1498" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="1532:2174" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="1613:2163" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="2197:2566" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="2264:2555" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="2589:3001" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="2658:2990" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="3012:3109" placeholder="..." />
-            <marker date="1400394781719" expanded="false" signature="3283:3314" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="3383:3390" placeholder="..." />
-            <marker date="1400394781719" expanded="true" signature="3391:3463" placeholder="..." />
+            <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#4;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#6;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/SearchProduct.html">
+    <entry file="file://$PROJECT_DIR$/static/css/EditProduct.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="57" selection-start="3391" selection-end="3391" vertical-scroll-proportion="-11.5">
-          <folding>
-            <marker date="1400395306711" expanded="true" signature="21:3614" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="29:466" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="474:3507" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="495:3498" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="542:1063" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="561:1053" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="585:691" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="714:1042" placeholder="..." />
-            <marker date="1400395306711" expanded="false" signature="771:785" placeholder="..." />
-            <marker date="1400395306711" expanded="false" signature="808:822" placeholder="..." />
-            <marker date="1400395306711" expanded="false" signature="1148:1179" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="1180:3190" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="1190:1510" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="1269:1499" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="1533:2175" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="1614:2164" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="2198:2567" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="2265:2556" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="2590:3002" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="2659:2991" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="3013:3110" placeholder="..." />
-            <marker date="1400395306711" expanded="false" signature="3283:3314" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="3383:3390" placeholder="..." />
-            <marker date="1400395306711" expanded="true" signature="3391:3465" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/EditDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="211" selection-end="441" vertical-scroll-proportion="0.283054">
-          <folding>
-            <marker date="1400395557213" expanded="false" signature="14:45" placeholder="..." />
-            <marker date="1400395557213" expanded="true" signature="46:517" placeholder="..." />
-            <marker date="1400395557213" expanded="true" signature="51:147" placeholder="..." />
-            <marker date="1400395557213" expanded="true" signature="209:494" placeholder="..." />
-          </folding>
+        <state line="13" column="1" selection-start="389" selection-end="389" vertical-scroll-proportion="0.45072994">
+          <folding />
         </state>
       </provider>
     </entry>
