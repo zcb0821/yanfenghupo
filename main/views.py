@@ -2,9 +2,11 @@
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from django.shortcuts import render_to_response
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib import auth
 from models import Product
-import sys
+from yanfenghupo import settings
+import sys, os, time
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -212,7 +214,38 @@ def weixin(request):
 def event(request):
     return render(request, 'html/event.html', {})
 
-
+@csrf_exempt
 def admin(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/login/')
     products = Product.objects.all()
     return render_to_response("html/admin.html", {'products': products})
+
+
+@csrf_exempt
+def logout(request):
+    auth.logout(request)
+    return HttpResponseRedirect('/login/')
+
+@csrf_exempt
+def upload(request):
+    if request.method == 'POST':
+        try:
+            uploadfile =  request.FILES['upload']
+            filename = str(time.time()) + '_' +  uploadfile.name
+            filepath = os.path.abspath(os.path.join(settings.BASE_DIR, 'media/images/' + filename))
+            with open(filepath, 'wb') as destination:
+                for chunk in uploadfile.chunks():
+                    destination.write(chunk)
+                destination.close()
+            return HttpResponse('<script type="text/javascript">'
+                                'window.parent.CKEDITOR.tools.callFunction(%s, "%s");'
+                                '</script>' % (request.GET['CKEditorFuncNum'], '/media/images/' + filename))
+        except:
+            return HttpResponse('{"error": "error"}')
+    else:
+        return HttpResponse('{"error": "error"}')
+
+@csrf_exempt
+def cktest(request):
+    return render(request, 'html/cktest.html', {})
