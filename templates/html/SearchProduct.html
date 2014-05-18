@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>衍峰琥珀|产品搜索 </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lt IE 9]> <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> <![endif]-->
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="/static/css/overall.css" />
+		<link rel="stylesheet" href="/static/css/SearchProduct.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<!-- header starts -->
+			<div id="header">
+				<div id="nav">
+					<div class="logo">
+						<a href="/index/"><img src="/static/images/logo.png" width="150px" height="73px" /></a>
+					</div>
+					<ul class="menu">
+						<li><a class="sink" href="/three-column/" style="color: #684643">产品<br /><span style="color: #684643">Our Products</span></a></li>
+						<li><a class="sink" href="/event/">活动<br /><span>Our Events</span></a></li>
+						<li class="li-last"><a class="sink" href="/about/">关于我们<br /><span>About us</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- header ends -->
+			<!-- SearchBar starts -->
+			<div id="SearchBar" style="position: absolute; top: 100px;">
+				<div>
+                    <a>系列：</a>
+                    <select id="select_series">
+                    <option value=""></option>
+                    <option value="雕刻">雕刻</option>
+                    <option value="饰品">饰品</option>
+                    <option value="珠串">珠串</option>
+                    </select>
+				</div>
+
+                <div>
+                    <a>功能：</a>
+                    <select id="select_function">
+                    <option value=""></option>
+                    <option value="摆件">摆件</option>
+                    <option value="雕刻件">雕刻件</option>
+                    <option value="手把件">手把件</option>
+                    <option value="编织特色">编织特色</option>
+                    <option value="吊坠">吊坠</option>
+                    <option value="戒指和耳钉">戒指和耳钉</option>
+                    <option value="手镯">手镯</option>
+                    <option value="佛珠">佛珠</option>
+                    <option value="手串">手串</option>
+                    </select>
+				</div>
+
+                <div>
+    				<a>产地：</a>
+                    <select id="select_origin">
+                    <option value=""></option>
+                    <option value="波罗的海">波罗的海</option>
+                    <option value="缅甸">缅甸</option>
+                    <option value="墨西哥">墨西哥</option>
+                    <option value="多米尼加">多米尼加</option>
+                    </select>
+				</div>
+
+                <div>
+    				<a>材质：</a>
+                    <select id="select_material">
+                    <option value=""></option>
+                    <option value="蜜蜡">蜜蜡</option>
+                    <option value="蓝珀">蓝珀</option>
+                    <option value="血珀">血珀</option>
+                    <option value="金珀">金珀</option>
+                    <option value="白花">白花</option>
+                    </select>
+				</div>
+
+				<div>
+                    <a>名称关键字：<input type="text" name="KeyName" id="KeyName"/></a><br>
+				</div>
+                <div id="SearchBtn"><a id="SubmitSearch">搜索</a></div>
+			</div>
+			<!-- SearchBar ends -->
+			<!-- banner starts -->
+            <p id="ShowResult" style="position: absolute; top: 260px;" class="hide">您可能想要找的是：</p>
+			<div id="banner" class="hide">
+                {% include 'html/SearchResult.html' %}
+            </div>
+			<!-- banner ends -->
+		</div>
+	</body>
+	<script src="/static/js/jquery.js"></script>
+	<script src="/static/js/SearchProduct.js"></script>
+</html>

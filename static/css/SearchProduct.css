@@ -1,0 +1,34 @@
+#SearchBar, #ShowResult {
+    color: #7B7B7B;
+    font-family: "SimHei";
+    font-size: 16px;
+}
+select {
+    width: 100px;
+    color: #684643;
+    font-family: "SimHei";
+    font-size: 16px;
+}
+#SearchBtn {
+    background-image: url("../images/product-catalog/unchosen.png");
+    width: 110px;
+    position: absolute;
+    top: 130px;
+    font-family: "KaiTi";
+    color: #9C9393;
+    font-size: 16px;
+    cursor: pointer;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+}
+table, td, th {
+	border:1px solid black;
+    font-family: "SimHei";
+    font-size: 13px;
+    color: #9a9a9a;
+    letter-spacing: 1.7px;
+}
