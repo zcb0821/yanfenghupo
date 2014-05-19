@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Start Bootstrap - SB Admin Version 2.0 Demo</title>
+    <title>衍峰琥珀|管理</title>
 
     <!-- Core CSS - Include with every page -->
     <link href="/static/admin/css/bootstrap.min.css" rel="stylesheet">
@@ -34,14 +34,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">后台管理</a>
+                <a class="navbar-brand">后台管理</a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
@@ -63,40 +63,40 @@
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
                         <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
+{#                            <div class="input-group custom-search-form">#}
+{#                                <input type="text" class="form-control" placeholder="Search...">#}
+{#                                <span class="input-group-btn">#}
+{#                                <button class="btn btn-default" type="button">#}
+{#                                    <i class="fa fa-search"></i>#}
+{#                                </button>#}
+{#                            </span>#}
+{#                            </div>#}
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> 产品<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="flot.html">雅念-雕刻</a>
-                                </li>
-                                <li>
-                                    <a href="morris.html">雅念-装饰</a>
-                                </li>
-                                <li>
-                                    <a href="morris.html">雅念-珠串</a>
-                                </li>
-                            </ul>
+                            <a><i class="fa fa-dashboard fa-fw"></i> 产品<span class="fa arrow"></span></a>
+{#                            <ul class="nav nav-second-level">#}
+{#                                <li>#}
+{#                                    <a href="flot.html">雅念-雕刻</a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="morris.html">雅念-装饰</a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="morris.html">雅念-珠串</a>#}
+{#                                </li>#}
+{#                            </ul>#}
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-table fa-fw"></i> 活动<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="flot.html">Flot Charts</a>
-                                </li>
-                                <li>
-                                    <a href="morris.html">Morris.js Charts</a>
-                                </li>
-                            </ul>
+                            <a><i class="fa fa-table fa-fw"></i> 活动<span class="fa arrow"></span></a>
+{#                            <ul class="nav nav-second-level">#}
+{#                                <li>#}
+{#                                    <a href="flot.html">Flot Charts</a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="morris.html">Morris.js Charts</a>#}
+{#                                </li>#}
+{#                            </ul>#}
                             <!-- /.nav-second-level -->
                         </li>
                     </ul>
@@ -113,6 +113,14 @@
                     <h1 class="page-header">产品管理</h1>
                 </div>
                 <!-- /.col-lg-12 -->
+                <!-- Button For Add-->
+                <div style="position: absolute; right: 30px; top: 100px">
+                    <img width="30px" height="30px" src="/static/images/product-catalog/Add.png"/>
+                    <button id="AddBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3" >新增产品</button>
+                    <a href="/index/" class="btn btn-default" >返回主页</a>
+                </div>
+                <div style="height: 8px"></div>
+
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -135,7 +143,7 @@
                                                 <th>删除</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="ProductList">
                                             {%  for p in products %}
                                             <tr class="odd gradeX">
                                                 <td>{{ p.display_name }}</td>
@@ -144,25 +152,12 @@
                                                 <td>{{ p.series }}</td>
                                                 <td>{{ p.function }}</td>
                                                 <td>{{ p.origin }}</td>
-                                                <td data-toggle="modal" href="#SetModal" class="SetTd"></td>
-                                                <td data-toggle="modal" href="#SetModal" class="DelTd"></td>
+                                                <td class="SetTd"></td>
+                                                <td data-toggle="modal" data-target="#myModal" class="DelTd"></td>
                                             </tr>
                                             {% endfor %}
                                         </tbody>
                                     </table>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <ul class="pagination">
-                                              <li><a href="#">&laquo;</a></li>
-                                              <li class="active"><a href="#">1</a></li>
-                                              <li><a href="#">2</a></li>
-                                              <li><a href="#">3</a></li>
-                                              <li><a href="#">4</a></li>
-                                              <li><a href="#">5</a></li>
-                                              <li><a href="#">&raquo;</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -174,55 +169,177 @@
         </div>
         <!-- /#page-wrapper -->
 
-  <!-- Button trigger modal -->
-{#<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">#}
-{#  Launch demo modal#}
-{#</button>#}
+        <!-- Modal For Delete-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel2">删除产品</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>确认删除本产品？</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="ConfirmDel" type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <div>
-            <a>名称：</a>
-            <input id="EditDisplayName" type="text" placeholder=""/>
-        </div>
-        <div>
-            <a>描述：</a>
-            <input id="EditDetailName" type="text" placeholder=""/>
-        </div>
-        <div>
-            <a>材质：</a>
-            <input id="EditMaterial" type="text" placeholder=""/>
-        </div>
-        <div>
-            <a>系列：</a>
-            <input id="EditSeries" type="text" placeholder=""/>
-        </div>
-        <div>
-            <a>功能：</a>
-            <input id="EditFunction" type="text" placeholder=""/>
-        </div>
-        <div>
-            <a>产地：</a>
-            <input id="EditOrigin" type="text" placeholder=""/>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+        <!-- Modal For Edit-->
+        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel3">新增产品</h4>
+                    </div>
+                    <div id="ModalForAdd" class="modal-body">
+                        <div>
+                            <a>名称：</a>
+                            <input id="AddDisplayName" type="text" placeholder="输入产品名称"/>
+                        </div>
 
+                        <div>
+                            <a>描述：</a>
+                            <input id="AddDetailName" type="text" placeholder="输入产品描述"/>
+                        </div>
 
+                        <div>
+                            <a>材质：</a>
+                            <select id="select_material2">
+                            <option value="蜜蜡">蜜蜡</option>
+                            <option value="蓝珀">蓝珀</option>
+                            <option value="血珀">血珀</option>
+                            <option value="金珀">金珀</option>
+                            <option value="白花">白花</option>
+                            </select>
+                        </div>
 
+                        <div>
+                            <a>系列：</a>
+                            <select id="select_series2">
+                            <option value="雕刻">雕刻</option>
+                            <option value="饰品">饰品</option>
+                            <option value="珠串">珠串</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <a>功能：</a>
+                            <select id="select_function2">
+                            <option value="摆件">摆件</option>
+                            <option value="雕刻件">雕刻件</option>
+                            <option value="手把件">手把件</option>
+                            <option value="编织特色">编织特色</option>
+                            <option value="吊坠">吊坠</option>
+                            <option value="戒指和耳钉">戒指和耳钉</option>
+                            <option value="手镯">手镯</option>
+                            <option value="佛珠">佛珠</option>
+                            <option value="手串">手串</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <a>产地：</a>
+                            <select id="select_origin2">
+                            <option value="波罗的海">波罗的海</option>
+                            <option value="缅甸">缅甸</option>
+                            <option value="墨西哥">墨西哥</option>
+                            <option value="多米尼加">多米尼加</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="SaveAdd" type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- Modal For Edit-->
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">修改产品</h4>
+                    </div>
+                    <div id="ModalForEdit" class="modal-body">
+                        <div>
+                            <a>名称：</a>
+                            <input id="EditDisplayName" type="text" placeholder=""/>
+                        </div>
+
+                        <div>
+                            <a>描述：</a>
+                            <input id="EditDetailName" type="text" placeholder=""/>
+                        </div>
+
+                        <div>
+                            <a>材质：</a>
+                            <select id="select_material">
+                            <option value="蜜蜡">蜜蜡</option>
+                            <option value="蓝珀">蓝珀</option>
+                            <option value="血珀">血珀</option>
+                            <option value="金珀">金珀</option>
+                            <option value="白花">白花</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <a>系列：</a>
+                            <select id="select_series">
+                            <option value="雕刻">雕刻</option>
+                            <option value="饰品">饰品</option>
+                            <option value="珠串">珠串</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <a>功能：</a>
+                            <select id="select_function">
+                            <option value="摆件">摆件</option>
+                            <option value="雕刻件">雕刻件</option>
+                            <option value="手把件">手把件</option>
+                            <option value="编织特色">编织特色</option>
+                            <option value="吊坠">吊坠</option>
+                            <option value="戒指和耳钉">戒指和耳钉</option>
+                            <option value="手镯">手镯</option>
+                            <option value="佛珠">佛珠</option>
+                            <option value="手串">手串</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <a>产地：</a>
+                            <select id="select_origin">
+                            <option value="波罗的海">波罗的海</option>
+                            <option value="缅甸">缅甸</option>
+                            <option value="墨西哥">墨西哥</option>
+                            <option value="多米尼加">多米尼加</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="SaveChanges" type="button" class="btn btn-primary" data-dismiss="modal">保存修改</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
     </div>
     <!-- /#wrapper -->

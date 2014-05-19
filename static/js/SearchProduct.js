@@ -4,7 +4,7 @@ $("#SubmitSearch").click(function(){
     var checkFunction=$("#select_function").val();
     var checkOrigin=$("#select_origin").val();
     var checkMaterial=$("#select_material").val();
-    var CheckKeyName=$("#KeyName").val();
+    var checkKeyName=$("#KeyName").val();
     var AjaxData = "";
     if (checkSeries != "")
         AjaxData += "series="+checkSeries;
@@ -23,25 +23,25 @@ $("#SubmitSearch").click(function(){
             AjaxData += "&";
         AjaxData += "material=" + checkMaterial;
     }
-    if (CheckKeyName != "") {
+    if (checkKeyName != "") {
         if (AjaxData != "")
             AjaxData += "&";
-        AjaxData += "KeyName=" + CheckKeyName;
+        AjaxData += "KeyName=" + checkKeyName;
     }
     $.ajax({
         type: "POST",
         url: "/SearchResult/",
         data: AjaxData,
         success: function(result) {
-            $("#banner").html(result);
+            $("#SearchResult").html(result);
             if ($(".isResult").length > 0) {
-                $("#banner").removeClass("hide");
+                $("#SearchResult").removeClass("hide");
                 $("#ShowResult").removeClass("hide");
             }
             else {
                 $("#ShowResult").text("没有找到相关产品");
                 $("#ShowResult").removeClass("hide");
-                $("#banner").html("");
+                $("#SearchResult").html("");
             }
         }
     });

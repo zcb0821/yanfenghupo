@@ -141,63 +141,130 @@ def SearchResult(request):
     return render_to_response("html/SearchResult.html", {'result_list': products})
 
 
-#@csrf_exempt
-#def EditProduct(request):
-#    return render(request, 'html/EditProduct.html', {})
-#
-#@csrf_exempt
-#def EditDetail(request):
-#    products = Product.objects.all()
-#    if request.POST.has_key('series'):
-#        SearchSeries = request.POST['series']
-#        products = products.filter(series=SearchSeries)
-#    if request.POST.has_key('function'):
-#        SearchFunction = request.POST['function']
-#        products = products.filter(function=SearchFunction)
-#    if request.POST.has_key('origin'):
-#        SearchOrigin = request.POST['origin']
-#        products = products.filter(origin=SearchOrigin)
-#    if request.POST.has_key('material'):
-#        SearchMaterial = request.POST['material']
-#        # 只要不是"蓝珀"、"血珀"、"金珀"、"白花"，就是"蜜蜡"
-#        if SearchMaterial == u"蜜蜡":
-#            PrePro = []
-#            for item in products:
-#                if item.material != u"蓝珀" and item.material != u"血珀" and item.material != u"金珀" and item.material != u"白花":
-#                    PrePro.append(item)
-#            products = PrePro
-#        else:
-#            products = products.filter(material=SearchMaterial)
-#    if request.POST.has_key('KeyName'):
-#        SearchKeyName = request.POST['KeyName'].encode()
-#        finalPro = []
-#        for item in products:
-#            if item.display_name.encode().find(SearchKeyName)>=0:
-#                finalPro.append(item)
-#        products = finalPro
-#    return render_to_response("html/EditDetail.html", {'result_list': products})
-
-
+#修改产品信息
 @csrf_exempt
 def SetProduct(request):
-#    if request.POST.has_key('display_name'):
-#        DisplayName = request.POST['display_name']
-#    else:
-#        return  None
-#    Product.objects.get(display_name=DisplayName).delete();
-#    products = Product.objects.all();
-    return HttpResponse(products, mimetype="application/text")
+    if request.POST.has_key('origin_name'):
+        OrigName = request.POST['origin_name']
+    if request.POST.has_key('origin_detail'):
+        OrigDetail = request.POST['origin_detail']
+    if request.POST.has_key('origin_material'):
+        OrigMaterial = request.POST['origin_material']
+    if request.POST.has_key('origin_series'):
+        OrigSeries = request.POST['origin_series']
+    if request.POST.has_key('origin_function'):
+        OrigFunction = request.POST['origin_function']
+    if request.POST.has_key('origin_origin'):
+        OrigOrigin = request.POST['origin_origin']
+    product = Product.objects.filter(
+        display_name=OrigName,
+        detail_name=OrigDetail,
+        material=OrigMaterial,
+        series=OrigSeries,
+        function=OrigFunction,
+        origin=OrigOrigin
+    )
+
+    if request.POST.has_key('display_name'):
+        NewDisplayName = request.POST['display_name']
+    if request.POST.has_key('detail_name'):
+        NewDetailName = request.POST['detail_name']
+    if request.POST.has_key('material'):
+        NewMaterial = request.POST['material']
+    if request.POST.has_key('series'):
+        NewSeries = request.POST['series']
+    if request.POST.has_key('function'):
+        NewFunction = request.POST['function']
+    if request.POST.has_key('origin'):
+        NewOrigin = request.POST['origin']
+    AlreadyExist = Product.objects.filter(
+        display_name=NewDisplayName,
+        detail_name=NewDetailName,
+        material=NewMaterial,
+        series=NewSeries,
+        function=NewFunction,
+        origin=NewOrigin
+    )
+    if len(AlreadyExist) != 0:
+        #该产品已存在
+        result="AlreadyExist"
+        return HttpResponse(result, mimetype="application/text")
+    product.update(
+        display_name=NewDisplayName,
+        detail_name=NewDetailName,
+        material=NewMaterial,
+        series=NewSeries,
+        function=NewFunction,
+        origin=NewOrigin
+    )
+    return HttpResponse(product, mimetype="application/text")
 
 
+#删除产品
 @csrf_exempt
 def DelProduct(request):
     if request.POST.has_key('display_name'):
-        DisplayName = request.POST['display_name']
-    else:
-        return  None
-    Product.objects.get(display_name=DisplayName).delete();
-    products = Product.objects.all();
-    return HttpResponse(products, mimetype="application/text")
+        OrigName = request.POST['display_name']
+    if request.POST.has_key('detail_name'):
+        OrigDetail = request.POST['detail_name']
+    if request.POST.has_key('material'):
+        OrigMaterial = request.POST['material']
+    if request.POST.has_key('series'):
+        OrigSeries = request.POST['series']
+    if request.POST.has_key('function'):
+        OrigFunction = request.POST['function']
+    if request.POST.has_key('origin'):
+        OrigOrigin = request.POST['origin']
+    productToDel = Product.objects.get(
+        display_name=OrigName,
+        detail_name=OrigDetail,
+        material=OrigMaterial,
+        series=OrigSeries,
+        function=OrigFunction,
+        origin=OrigOrigin
+    )
+    productToDel.delete()
+    products = Product.objects.all()
+    return HttpResponse("1", mimetype="application/text")
+
+
+#新增产品
+@csrf_exempt
+def AddProduct(request):
+    if request.POST.has_key('display_name'):
+        NewDisplayName = request.POST['display_name']
+    if request.POST.has_key('detail_name'):
+        NewDetailName = request.POST['detail_name']
+    if request.POST.has_key('material'):
+        NewMaterial = request.POST['material']
+    if request.POST.has_key('series'):
+        NewSeries = request.POST['series']
+    if request.POST.has_key('function'):
+        NewFunction = request.POST['function']
+    if request.POST.has_key('origin'):
+        NewOrigin = request.POST['origin']
+    AlreadyExist = Product.objects.filter(
+        display_name=NewDisplayName,
+        detail_name=NewDetailName,
+        material=NewMaterial,
+        series=NewSeries,
+        function=NewFunction,
+        origin=NewOrigin
+    )
+    if len(AlreadyExist) != 0:
+        #该产品已存在
+        result="AlreadyExist"
+        return HttpResponse(result, mimetype="application/text")
+    productToAdd = Product(
+        display_name=NewDisplayName,
+        detail_name=NewDetailName,
+        material=NewMaterial,
+        series=NewSeries,
+        function=NewFunction,
+        origin=NewOrigin
+    )
+    productToAdd.save()
+    return HttpResponse(productToAdd, mimetype="application/text")
 
 
 @csrf_exempt
