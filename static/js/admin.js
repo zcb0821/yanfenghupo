@@ -1,3 +1,12 @@
+$("#PRODUCT").click(function(){
+    $("#PRODUCTROW").removeAttr("style");
+    $("#EVENTROW").attr("style", "display: none");
+})
+$("#EVENT").click(function(){
+    $("#EVENTROW").removeAttr("style");
+    $("#PRODUCTROW").attr("style", "display: none");
+})
+
 var toSet;
 var OrigName, OrigDetail, OrigMaterial, OrigSeries, OrigFunction, OrigOrigin;
 //修改该产品
@@ -62,8 +71,8 @@ $("#SaveChanges").click(function(){
     });
 })
 
-var toDel;
 //删除该产品
+var toDel;
 $(".DelTd").click(function(){
     toDel = $(this).parent();
 })
@@ -90,17 +99,17 @@ $("#ConfirmDel").click(function(){
     });
 })
 
+//新增产品
 $("#AddBtn").click(function(){
-    $("#AddDisplayName").attr("placeholder", "输入产品名称");
+    $("#AddDisplayName").attr("placeholder", "请输入产品名称");
     $("#AddDisplayName").val("");
-    $("#AddDetailName").attr("placeholder", "输入产品描述");
+    $("#AddDetailName").attr("placeholder", "请输入产品描述");
     $("#AddDetailName").val("");
     $("#select_material2").val("");
     $("#select_series2").val("");
     $("#select_function2").val("");
     $("#select_origin2").val("");
 })
-//新增产品
 $("#SaveAdd").click(function(){
     var newName = $("#AddDisplayName").val()
     var newDetail = $("#AddDetailName").val()
@@ -135,3 +144,72 @@ $("#SaveAdd").click(function(){
         }
     });
 })
+
+//删除该活动
+var toDel2;
+$(".DelTd2").click(function(){
+    toDel2 = $(this).parent();
+})
+$("#ConfirmDelEve").click(function(){
+    var OrigNameEve = toDel2.children().eq(0).text();
+    var OrigIntroEve = toDel2.children().eq(1).text();
+    var OrigDetailEve = toDel2.children().eq(2).text();
+    var AjaxData="name="+OrigNameEve+
+        "&introduction="+OrigIntroEve+
+        "&detail="+OrigDetailEve;
+    $.ajax({
+        type: "POST",
+        url: "/DelEvent/",
+        data: AjaxData,
+        success: function(result) {
+            toDel2.remove();
+        }
+    });
+})
+
+//新增活动
+$("#AddBtn2").click(function(){
+//    window.location.href="/cktest/";
+    //编辑活动名称和简介
+    $("#AddName").attr("placeholder", "请输入活动名称");
+    $("#AddName").val("");
+    $("#AddIntro").attr("placeholder", "请输入活动简介");
+    $("#AddIntro").val("");
+})
+$("#SaveAddEve").click(function(){
+    var newName = $("#AddName").val()
+    var newIntro = $("#AddIntro").val()
+    var AjaxData="&name="+newName+
+        "&introduction="+newIntro;
+    $.ajax({
+        type: "POST",
+        url: "/AddEvent/",
+        data: AjaxData,
+        success: function(result) {
+            if(result=="AlreadyExist") {
+                alert("该活动信息已存在！新增失败！");
+            }
+            else {
+                NewEventInfo = "<tr class=\"odd gradeX\"><td>"+
+                    newName+"</td><td>"+
+                    newIntro+"</td><td><a class=\"GoToEditDetail\">点击编辑活动详情</a></td><td class=\"SetTd\"></td><td data-toggle=\"modal\" data-target=\"#myModal\" class=\"DelTd\"></td></tr>"
+                $("#EventList").append(NewEventInfo);
+            }
+        }
+    });
+})
+
+//点击编辑活动详情的函数
+$("#EventList").on('click', '.GoToEditDetail', function(){
+    //查询数据库，获取当前所编辑的活动的id
+    var CurrentEventName = $(this).parent().parent().children().eq(0).text();
+    $.ajax({
+        type: "POST",
+        url: "/GetEventId/",
+        data: "name="+CurrentEventName,
+        success: function(result) {
+            //将该id发到cktest页面，进行特定活动的编辑
+            window.location.href="/cktest/event/"+result+"/"
+        }
+    });
+});

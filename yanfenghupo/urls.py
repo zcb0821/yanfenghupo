@@ -16,6 +16,9 @@ urlpatterns = patterns('main.views',
     (r'^SetProduct/$', 'SetProduct'),
     (r'^DelProduct/$', 'DelProduct'),
     (r'^AddProduct/$', 'AddProduct'),
+    (r'^DelEvent/$', 'DelEvent'),
+    (r'^AddEvent/$', 'AddEvent'),
+    (r'^GetEventId/$', 'GetEventId'),
     (r'^about/$', 'about'),
     (r'^contact/$', 'contact'),
     (r'^three-column/$', 'three_column'),
@@ -25,7 +28,7 @@ urlpatterns = patterns('main.views',
     (r'^django-admin/$', include(admin.site.urls)),
     (r'^logout/$', 'logout'),
     (r'^upload/$', 'upload'),
-    (r'^cktest/$', 'cktest'),
+    (r'^cktest/event/(\d{1,3})/$', 'cktest'),
 )
 
 # serve media files

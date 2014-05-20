@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import auth
-from models import Product
+from models import Product, Event
 from yanfenghupo import settings
 import sys, os, time
 reload(sys)
@@ -267,6 +267,46 @@ def AddProduct(request):
     return HttpResponse(productToAdd, mimetype="application/text")
 
 
+#删除产品
+@csrf_exempt
+def DelEvent(request):
+    if request.POST.has_key('name'):
+        OrigName = request.POST['name']
+    if request.POST.has_key('introduction'):
+        OrigIntro = request.POST['introduction']
+    if request.POST.has_key('detail'):
+        OrigDetail = request.POST['detail']
+    eventToDel = Event.objects.get(
+        name=OrigName,
+        introduction=OrigIntro,
+        detail=OrigDetail
+    )
+    eventToDel.delete()
+    events = Event.objects.all()
+    return HttpResponse("1", mimetype="application/text")
+
+
+#新增活动
+@csrf_exempt
+def AddEvent(request):
+    if request.POST.has_key('name'):
+        NewName = request.POST['name']
+    if request.POST.has_key('introduction'):
+        NewIntro = request.POST['introduction']
+    AlreadyExist = Event.objects.filter(name=NewName)
+    if len(AlreadyExist) != 0:
+        #该活动已存在
+        result="AlreadyExist"
+        return HttpResponse(result, mimetype="application/text")
+    eventToAdd = Event(
+        name=NewName,
+        introduction=NewIntro,
+        detail=""
+    )
+    eventToAdd.save()
+    return HttpResponse(eventToAdd,mimetype="application/text")
+
+
 @csrf_exempt
 def three_column(request):
     return render(request, 'html/three-column.html', {})
@@ -281,12 +321,53 @@ def weixin(request):
 def event(request):
     return render(request, 'html/event.html', {})
 
+
+@csrf_exempt
+def GetEventId(request):
+    if request.POST.has_key('name'):
+        CurrentEventName = request.POST['name']
+    EventToAdd = Event.objects.filter(name=CurrentEventName)
+    return HttpResponse(EventToAdd[0].id, mimetype="application/text")
+
+
 @csrf_exempt
 def admin(request):
-    if not request.user.is_authenticated():
-        return HttpResponseRedirect('/login/')
+#    if not request.user.is_authenticated():
+#        return HttpResponseRedirect('/login/')
+    #可能接受到的活动ID
+    if 'CurrentEventId' in request.POST:
+        EventId = int(request.POST['CurrentEventId'])
+        EventToEdit = Event.objects.filter(id=EventId)
+        #可能接受到活动详情的文本内容
+        if 'editor1' in request.POST:
+            EventDetail = request.POST['editor1']
+            if len(EventDetail) > 30:
+                EventDetail = EventDetail[0:29]+"……"
+        #可能接受到活动详情的HTML
+        if 'editor2' in request.POST:
+            EventDetailHTML = request.POST['editor2']
+        #写入数据库
+        EventToEdit.update(
+            detail=EventDetail,
+            detailHTML=EventDetailHTML
+        )
     products = Product.objects.all()
-    return render_to_response("html/admin.html", {'products': products})
+    events = Event.objects.all()
+    event_list = []
+    for item in events:
+        if item.detail == "":
+            event_list.append({
+                'name': item.name,
+                'introduction': item.introduction,
+                'detailToShow': "点击右侧修改图标，继续编辑本活动"
+            })
+        else:
+            event_list.append({
+                'name': item.name,
+                'introduction': item.introduction,
+                'detailToShow': item.detail
+            })
+    return render_to_response("html/admin.html", {'products': products, 'events': event_list})
 
 
 @csrf_exempt
@@ -313,6 +394,7 @@ def upload(request):
     else:
         return HttpResponse('{"error": "error"}')
 
+
 @csrf_exempt
-def cktest(request):
-    return render(request, 'html/cktest.html', {})
+def cktest(request, event):
+    return render(request, 'html/cktest.html', {'CurrentEventId': event})

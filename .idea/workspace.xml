@@ -30,11 +30,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="admin.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/html/admin.html">
+      <file leaf-file-name="cktest.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/html/cktest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="48" selection-start="4983" selection-end="4987" vertical-scroll-proportion="1.1113281">
-              <folding />
+            <state line="12" column="60" selection-start="538" selection-end="538" vertical-scroll-proportion="0.3140496">
+              <folding>
+                <element signature="n#style#0;n#textarea#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,22 +54,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/html/EditProduct.html" />
-        <option value="$PROJECT_DIR$/templates/html/EditDetail.html" />
-        <option value="$PROJECT_DIR$/templates/html/product-catalog.html" />
-        <option value="$PROJECT_DIR$/static/css/SearchProduct.css" />
-        <option value="$PROJECT_DIR$/static/js/EditProduct.js" />
-        <option value="$PROJECT_DIR$/static/css/EditProduct.css" />
-        <option value="$PROJECT_DIR$/yanfenghupo/urls.py" />
-        <option value="$PROJECT_DIR$/static/js/admin.js" />
-        <option value="$PROJECT_DIR$/templates/html/SearchProduct.html" />
         <option value="$PROJECT_DIR$/static/js/SearchProduct.js" />
         <option value="$PROJECT_DIR$/templates/html/SearchResult.html" />
-        <option value="$PROJECT_DIR$/templates/html/admin.html" />
         <option value="$PROJECT_DIR$/templates/html/index.html" />
         <option value="$PROJECT_DIR$/static/css/overall.css" />
-        <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/templates/html/login.html" />
+        <option value="$PROJECT_DIR$/static/css/EditProduct.css" />
+        <option value="$PROJECT_DIR$/static/css/cktest.css" />
+        <option value="$PROJECT_DIR$/templates/html/EditEventDetail.html" />
+        <option value="$PROJECT_DIR$/main/models.py" />
+        <option value="$PROJECT_DIR$/yanfenghupo/urls.py" />
+        <option value="$PROJECT_DIR$/templates/html/product-catalog.html" />
+        <option value="$PROJECT_DIR$/static/js/admin.js" />
+        <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/static/js/cktest.js" />
+        <option value="$PROJECT_DIR$/templates/html/admin.html" />
+        <option value="$PROJECT_DIR$/templates/html/cktest.html" />
       </list>
     </option>
   </component>
@@ -243,13 +245,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.25833333" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iCVSite-master" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iCVSite-master" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -339,25 +341,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="yanfenghupo" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -377,6 +360,25 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="yanfenghupo" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -533,23 +535,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7817259" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20757575" sideWeight="0.65143824" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40947548" sideWeight="0.4969697" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2469697" sideWeight="0.70558375" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49069375" sideWeight="0.4939394" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20642978" sideWeight="0.49772727" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34856176" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49069375" sideWeight="0.5007576" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29441625" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3282572" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940617" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -611,109 +613,101 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="71" />
+      <option name="time" value="88" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://D:/Python27/Lib/site-packages/django/contrib/staticfiles/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="2371" selection-end="2371" vertical-scroll-proportion="0.5294118" />
+      </provider>
+    </entry>
     <entry file="file://D:/Python27/Lib/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="0" selection-start="6401" selection-end="6401" vertical-scroll-proportion="0.33333334" />
+        <state line="192" column="0" selection-start="9082" selection-end="9082" vertical-scroll-proportion="0.33126935" />
       </provider>
     </entry>
     <entry file="file://D:/Python27/Lib/site-packages/django/views/decorators/csrf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2684" selection-end="2684" vertical-scroll-proportion="0.0" />
+        <state line="76" column="0" selection-start="2684" selection-end="2684" vertical-scroll-proportion="0.47058824" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/SearchProduct.css">
+    <entry file="file://$PROJECT_DIR$/static/css/admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0088495575" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/EditProduct.css">
+    <entry file="file://$PROJECT_DIR$/templates/html/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="57" selection-start="494" selection-end="494" vertical-scroll-proportion="0.41304347" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/event.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="21" selection-start="40" selection-end="46" vertical-scroll-proportion="0.108778626" />
+        <state line="7" column="37" selection-start="365" selection-end="365" vertical-scroll-proportion="0.054285713" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/SearchProduct.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="22" selection-end="23" vertical-scroll-proportion="0.035185184" />
+        <state line="8" column="26" selection-start="340" selection-end="340" vertical-scroll-proportion="-0.89514065" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/SearchResult.html">
+    <entry file="file://$PROJECT_DIR$/templates/html/three-column.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="40" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="32" column="46" selection-start="1486" selection-end="1503" vertical-scroll-proportion="0.3323077" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/SearchProduct.html">
+    <entry file="file://$PROJECT_DIR$/static/css/cktest.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="63" selection-start="3307" selection-end="3307" vertical-scroll-proportion="0.51582867">
-          <folding />
-        </state>
+        <state line="9" column="21" selection-start="214" selection-end="214" vertical-scroll-proportion="0.4168798" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/index.html">
+    <entry file="file://$PROJECT_DIR$/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="39" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.21643287">
-          <folding />
-        </state>
+        <state line="20" column="46" selection-start="871" selection-end="871" vertical-scroll-proportion="0.56265986" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/overall.css">
+    <entry file="file://$PROJECT_DIR$/templates/html/product-catalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="0" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.69734514">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="26" selection-start="523" selection-end="523" vertical-scroll-proportion="0.45996276">
-          <folding />
-        </state>
+        <state line="171" column="76" selection-start="7024" selection-end="7024" vertical-scroll-proportion="0.21643287" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yanfenghupo/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="599" selection-end="599" vertical-scroll-proportion="0.38703704">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="287" column="0" selection-start="9688" selection-end="9779" vertical-scroll-proportion="0.0">
+        <state line="3" column="32" selection-start="160" selection-end="160" vertical-scroll-proportion="-0.5132743">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yanfenghupo/settings.py">
+    <entry file="file://$PROJECT_DIR$/static/js/cktest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="10" selection-start="1543" selection-end="1543" vertical-scroll-proportion="-4.52">
+        <state line="5" column="1" selection-start="265" selection-end="265" vertical-scroll-proportion="0.16814159">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/html/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="48" selection-start="4983" selection-end="4987" vertical-scroll-proportion="1.1113281">
+        <state line="71" column="0" selection-start="2964" selection-end="2964" vertical-scroll-proportion="-12.232775">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="25" selection-start="6760" selection-end="6760" vertical-scroll-proportion="0.6058201">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="333" column="19" selection-start="11084" selection-end="11084" vertical-scroll-proportion="0.5555556">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/html/cktest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="60" selection-start="538" selection-end="538" vertical-scroll-proportion="0.3140496">
+          <folding>
+            <element signature="n#style#0;n#textarea#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

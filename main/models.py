@@ -13,3 +13,12 @@ class Product(models.Model):
 
     def __unicode__(self):
         return u'%s %s %s %s %s %s' % (self.display_name, self.detail_name, self.material, self.series, self.function, self.origin)
+
+class Event(models.Model):
+    name = models.CharField(max_length=50)	         # 活动名称
+    introduction = models.CharField(max_length=1000) # 活动简介
+    detail = models.CharField(max_length=10000)	     # 活动详情
+    detailHTML = models.CharField(max_length=10000)	 # 活动详情
+
+    def __unicode__(self):
+        return u'%s %s %s %s' % (self.name, self.introduction, self.detail, self.detailHTML)

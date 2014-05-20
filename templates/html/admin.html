@@ -18,7 +18,7 @@
 
     <!-- SB Admin CSS - Include with every page -->
     <link href="/static/admin/css/sb-admin.css" rel="stylesheet">
-    <link href="/static/css/EditProduct.css" rel="stylesheet">
+    <link href="/static/css/admin.css" rel="stylesheet">
 
 </head>
 
@@ -62,42 +62,11 @@
             <div class="navbar-default navbar-static-side" role="navigation">
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-{#                            <div class="input-group custom-search-form">#}
-{#                                <input type="text" class="form-control" placeholder="Search...">#}
-{#                                <span class="input-group-btn">#}
-{#                                <button class="btn btn-default" type="button">#}
-{#                                    <i class="fa fa-search"></i>#}
-{#                                </button>#}
-{#                            </span>#}
-{#                            </div>#}
-                            <!-- /input-group -->
+                        <li>
+                            <a id="PRODUCT"><i class="fa fa-dashboard fa-fw"></i> 产品<span class="fa arrow"></span></a>
                         </li>
                         <li>
-                            <a><i class="fa fa-dashboard fa-fw"></i> 产品<span class="fa arrow"></span></a>
-{#                            <ul class="nav nav-second-level">#}
-{#                                <li>#}
-{#                                    <a href="flot.html">雅念-雕刻</a>#}
-{#                                </li>#}
-{#                                <li>#}
-{#                                    <a href="morris.html">雅念-装饰</a>#}
-{#                                </li>#}
-{#                                <li>#}
-{#                                    <a href="morris.html">雅念-珠串</a>#}
-{#                                </li>#}
-{#                            </ul>#}
-                        </li>
-                        <li>
-                            <a><i class="fa fa-table fa-fw"></i> 活动<span class="fa arrow"></span></a>
-{#                            <ul class="nav nav-second-level">#}
-{#                                <li>#}
-{#                                    <a href="flot.html">Flot Charts</a>#}
-{#                                </li>#}
-{#                                <li>#}
-{#                                    <a href="morris.html">Morris.js Charts</a>#}
-{#                                </li>#}
-{#                            </ul>#}
-                            <!-- /.nav-second-level -->
+                            <a id="EVENT"><i class="fa fa-table fa-fw"></i> 活动<span class="fa arrow"></span></a>
                         </li>
                     </ul>
                     <!-- /#side-menu -->
@@ -108,7 +77,8 @@
         </nav>
 
         <div id="page-wrapper">
-            <div class="row">
+            {#产品管理页面#}
+            <div id="PRODUCTROW" class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">产品管理</h1>
                 </div>
@@ -166,10 +136,62 @@
                 </div>
             </div>
 
+            {#活动管理页面#}
+            <div id="EVENTROW" class="row" style="display: none">
+                <div class="col-lg-12">
+                    <h1 class="page-header">活动管理</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+                <!-- Button For Add-->
+                <div style="position: absolute; right: 30px; top: 100px">
+                    <img width="30px" height="30px" src="/static/images/product-catalog/Add.png"/>
+                    <button id="AddBtn2" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3Eve" >新增活动</button>
+                    <a href="/index/" class="btn btn-default" >返回主页</a>
+                </div>
+                <div style="height: 8px"></div>
+
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            产品目录
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <div id="dataTables-example_wrapper2" class="dataTables_wrapper form-inline" role="grid">
+                                    <table class="table table-striped table-bordered table-hover" id="dataTables-example2">
+                                        <thead>
+                                            <tr>
+                                                <th>活动名称</th>
+                                                <th>活动简介</th>
+                                                <th>活动详情</th>
+                                                <th>修改</th>
+                                                <th>删除</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="EventList">
+                                            {%  for p in events %}
+                                            <tr class="odd gradeX">
+                                                <td>{{ p.name }}</td>
+                                                <td>{{ p.introduction }}</td>
+                                                <td class="detailToShow">{{ p.detailToShow }}</td>
+                                                <td class="SetTd2"></td>
+                                                <td data-toggle="modal" data-target="#myModalEve" class="DelTd2"></td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /#page-wrapper -->
 
-        <!-- Modal For Delete-->
+        <!-- Modal For Delete Product-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -191,7 +213,29 @@
         </div>
         <!-- /.modal -->
 
-        <!-- Modal For Edit-->
+        <!-- Modal For Delete Event-->
+        <div class="modal fade" id="myModalEve" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabelEve">删除活动</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>确认删除本活动？</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="ConfirmDelEve" type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- Modal For Add Product-->
         <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -202,12 +246,12 @@
                     <div id="ModalForAdd" class="modal-body">
                         <div>
                             <a>名称：</a>
-                            <input id="AddDisplayName" type="text" placeholder="输入产品名称"/>
+                            <input id="AddDisplayName" type="text" placeholder="请输入产品名称"/>
                         </div>
 
                         <div>
                             <a>描述：</a>
-                            <input id="AddDetailName" type="text" placeholder="输入产品描述"/>
+                            <input id="AddDetailName" type="text" placeholder="请输入产品描述"/>
                         </div>
 
                         <div>
@@ -266,7 +310,37 @@
         </div>
         <!-- /.modal -->
 
-        <!-- Modal For Edit-->
+        <!-- Modal For Add Event-->
+        <div class="modal fade" id="myModal3Eve" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel3Eve">新增活动</h4>
+                    </div>
+                    <div id="ModalForAddEve" class="modal-body">
+                        <div>
+                            <a>名称：</a>
+                            <input id="AddName" type="text" placeholder="请输入活动名称"/>
+                        </div>
+
+                        <div>
+                            <a>简介：</a>
+                            <input id="AddIntro" type="text" placeholder="请输入活动简介"/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="SaveAddEve" type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- Modal For Edit Product-->
         <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
