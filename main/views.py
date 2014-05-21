@@ -6,6 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import auth
 from models import Product, Event
 from yanfenghupo import settings
+
 import sys, os, time
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -358,8 +359,7 @@ def admin(request):
         #可能接受到活动详情的文本内容
         if 'editor1' in request.POST:
             EventDetail = request.POST['editor1']
-            if len(EventDetail) > 30:
-                EventDetail = EventDetail[0:29]+"……"
+            EventDetailToShow = EventDetail
         #可能接受到活动详情的HTML
         if 'editor2' in request.POST:
             EventDetailHTML = request.POST['editor2']
@@ -378,11 +378,18 @@ def admin(request):
                 'introduction': item.introduction,
                 'detailToShow': "点击右侧修改图标，继续编辑本活动"
             })
-        else:
+        elif len(item.detail) <= 30:
             event_list.append({
                 'name': item.name,
                 'introduction': item.introduction,
                 'detailToShow': item.detail
+            })
+        else:
+            EventDetailToShow = item.detail[0:29]+"……"
+            event_list.append({
+                'name': item.name,
+                'introduction': item.introduction,
+                'detailToShow': EventDetailToShow
             })
     return render_to_response("html/admin.html", {'products': products, 'events': event_list})
 
@@ -414,4 +421,8 @@ def upload(request):
 
 @csrf_exempt
 def cktest(request, event):
-    return render(request, 'html/cktest.html', {'CurrentEventId': event})
+    #编辑活动的时候可能活动详情本身就有原始输入
+    #从数据库中读取原始Detail
+    eventToEdit = Event.objects.get(id=int(event))
+    #将原始Detail显示到编辑框
+    return render(request, 'html/cktest.html', {'CurrentEventId': event, 'CurrentEventDetail': eventToEdit.detail})

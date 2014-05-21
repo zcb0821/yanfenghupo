@@ -9,12 +9,12 @@
     </head>
     <body>
         <form action="/admin/" method="post">
-            <textarea name="editor1" id="editor1" rows="10" cols="80" placeholder="请输入活动详情"></textarea>
+            <textarea name="editor1" id="editor1" rows="10" cols="80" placeholder="请输入活动详情">{{ CurrentEventDetail }}</textarea>
             <iframe id="test" style="width: 400px; height: 600px;"></iframe>
             <a id="myPreview" onclick="preview()">预览</a>
             <textarea name="editor2" id="editor2" style="display: none"></textarea>
             <textarea name="CurrentEventId" id="CurrentEventId" style="display: none">{{ CurrentEventId }}</textarea>
-            <input type="submit" value="保存此次编辑">
+            <input onclick="preview()" type="submit" value="保存此次编辑">
             <script>
                 // Replace the <textarea id="editor1"> with a CKEditor
                 // instance, using default configuration.

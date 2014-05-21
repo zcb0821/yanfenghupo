@@ -20,6 +20,8 @@
     <link href="/static/admin/css/sb-admin.css" rel="stylesheet">
     <link href="/static/css/admin.css" rel="stylesheet">
 
+    <link href="/static/plugin/uploadify/uploadify.css" type="text/css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -111,6 +113,7 @@
                                                 <th>产地</th>
                                                 <th>修改</th>
                                                 <th>删除</th>
+                                                <th>图片</th>
                                             </tr>
                                         </thead>
                                         <tbody id="ProductList">
@@ -124,6 +127,7 @@
                                                 <td>{{ p.origin }}</td>
                                                 <td class="SetTd"></td>
                                                 <td data-toggle="modal" data-target="#myModal" class="DelTd"></td>
+                                                <td>修改图片</td>
                                             </tr>
                                             {% endfor %}
                                         </tbody>
@@ -464,6 +468,8 @@
     <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
     <script src="/static/admin/js/demo/dashboard-demo.js"></script>
     <script src="/static/js/admin.js"></script>
+    <script type="text/javascript" src="/static/plugin/uploadify/jquery.uploadify.js"></script>
+    <script type="text/javascript" src="/static/plugin/uploadify/jquery.uploadify.min.js"></script>
 
 </body>
 

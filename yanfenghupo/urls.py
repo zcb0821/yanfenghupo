@@ -30,6 +30,8 @@ urlpatterns = patterns('main.views',
     (r'^logout/$', 'logout'),
     (r'^upload/$', 'upload'),
     (r'^cktest/event/(\d{1,3})/$', 'cktest'),
+
+    (r'^uploadHeadshot/$', 'uploadHeadshot'),
 )
 
 # serve media files
