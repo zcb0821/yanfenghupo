@@ -19,7 +19,9 @@ $(".SetTd").click(function(){
     OrigFunction=toSet.eq(4).text();
     OrigOrigin=toSet.eq(5).text();
     $("#EditDisplayName").attr("placeholder", OrigName);
+    $("#EditDisplayName").val("");
     $("#EditDetailName").attr("placeholder", OrigDetail);
+    $("#EditDetailName").val("");
     $("#select_material").val(OrigMaterial);
     $("#select_series").val(OrigSeries);
     $("#select_function").val(OrigFunction);
@@ -27,9 +29,9 @@ $(".SetTd").click(function(){
     $('#myModal2').modal('show');
 })
 $("#SaveChanges").click(function(){
-    var newName = $("#EditDisplayName").attr("placeholder")
+    var newName = $("#EditDisplayName").val();
     if(newName == "") newName = OrigName;
-    var newDetail = $("#EditDetailName").attr("placeholder")
+    var newDetail = $("#EditDetailName").val();
     if(newDetail == "") newDetail = OrigDetail;
     var newMaterial = $("#select_material").val()
     if(newMaterial == null) newMaterial = OrigMaterial;
@@ -152,15 +154,10 @@ $(".DelTd2").click(function(){
 })
 $("#ConfirmDelEve").click(function(){
     var OrigNameEve = toDel2.children().eq(0).text();
-    var OrigIntroEve = toDel2.children().eq(1).text();
-    var OrigDetailEve = toDel2.children().eq(2).text();
-    var AjaxData="name="+OrigNameEve+
-        "&introduction="+OrigIntroEve+
-        "&detail="+OrigDetailEve;
     $.ajax({
         type: "POST",
         url: "/DelEvent/",
-        data: AjaxData,
+        data: "name="+OrigNameEve,
         success: function(result) {
             toDel2.remove();
         }
@@ -213,3 +210,37 @@ $("#EventList").on('click', '.GoToEditDetail', function(){
         }
     });
 });
+
+var toSet2;
+var OrigNameEve, OrigIntroEve;
+//修改该活动
+$(".SetTd2").click(function(){
+    toSet2 = $(this).parent().children();
+    OrigNameEve=toSet2.eq(0).text();
+    OrigIntroEve=toSet2.eq(1).text();
+    $("#EditName").attr("placeholder", OrigNameEve);
+    $("#EditName").val("");
+    $("#EditIntro").attr("placeholder", OrigIntroEve);
+    $("#EditIntro").val("");
+    $('#myModal2Eve').modal('show');
+})
+$("#SaveChangesEve").click(function(){
+    var newName = $("#EditName").val();
+    if(newName == "") newName = OrigNameEve;
+    var newIntro = $("#EditIntro").val();
+    if(newIntro == "") newIntro = OrigIntroEve;
+    $.ajax({
+        type: "POST",
+        url: "/SetEvent/",
+        data: "origin_name="+OrigNameEve+"&name="+newName+"&introduction="+newIntro,
+        success: function(result) {
+            if(result=="AlreadyExist") {
+                alert("修改后的该活动信息已存在！修改失败！");
+            }
+            else {
+                toSet2.eq(0).text(newName);
+                toSet2.eq(1).text(newIntro);
+            }
+        }
+    });
+})

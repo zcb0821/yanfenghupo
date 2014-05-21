@@ -267,20 +267,37 @@ def AddProduct(request):
     return HttpResponse(productToAdd, mimetype="application/text")
 
 
-#删除产品
+#修改产品信息
+@csrf_exempt
+def SetEvent(request):
+    if request.POST.has_key('origin_name'):
+        OrigName = request.POST['origin_name']
+    event = Event.objects.filter(name=OrigName)
+    if request.POST.has_key('name'):
+        NewName = request.POST['name']
+    if request.POST.has_key('introduction'):
+        NewIntro = request.POST['introduction']
+    AlreadyExist = Event.objects.filter(
+        name=NewName,
+        introduction=NewIntro
+    )
+    if len(AlreadyExist) != 0:
+        #该产品已存在
+        result="AlreadyExist"
+        return HttpResponse(result, mimetype="application/text")
+    event.update(
+        name=NewName,
+        introduction=NewIntro
+    )
+    return HttpResponse(event, mimetype="application/text")
+
+
+#删除活动
 @csrf_exempt
 def DelEvent(request):
     if request.POST.has_key('name'):
         OrigName = request.POST['name']
-    if request.POST.has_key('introduction'):
-        OrigIntro = request.POST['introduction']
-    if request.POST.has_key('detail'):
-        OrigDetail = request.POST['detail']
-    eventToDel = Event.objects.get(
-        name=OrigName,
-        introduction=OrigIntro,
-        detail=OrigDetail
-    )
+    eventToDel = Event.objects.get(name=OrigName)
     eventToDel.delete()
     events = Event.objects.all()
     return HttpResponse("1", mimetype="application/text")

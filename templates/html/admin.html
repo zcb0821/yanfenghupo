@@ -219,7 +219,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabelEve">删除活动</h4>
+                        <h4 class="modal-title" id="myModalLabelEve2">删除活动</h4>
                     </div>
                     <div class="modal-body">
                         <p>确认删除本活动？</p>
@@ -406,6 +406,36 @@
                     </div>
                     <div class="modal-footer">
                         <button id="SaveChanges" type="button" class="btn btn-primary" data-dismiss="modal">保存修改</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- Modal For Edit Event-->
+        <div class="modal fade" id="myModal2Eve" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabelEve">修改产品</h4>
+                    </div>
+                    <div id="ModalForEditEve" class="modal-body">
+                        <div>
+                            <a>名称：</a>
+                            <input id="EditName" type="text" placeholder=""/>
+                        </div>
+
+                        <div>
+                            <a>简介：</a>
+                            <input id="EditIntro" type="text" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="SaveChangesEve" type="button" class="btn btn-primary" data-dismiss="modal">保存修改</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     </div>
                 </div>
