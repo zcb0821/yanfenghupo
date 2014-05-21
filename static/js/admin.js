@@ -166,7 +166,6 @@ $("#ConfirmDelEve").click(function(){
 
 //新增活动
 $("#AddBtn2").click(function(){
-//    window.location.href="/cktest/";
     //编辑活动名称和简介
     $("#AddName").attr("placeholder", "请输入活动名称");
     $("#AddName").val("");
@@ -224,6 +223,7 @@ $(".SetTd2").click(function(){
     $("#EditIntro").val("");
     $('#myModal2Eve').modal('show');
 })
+//修改活动名称和详情
 $("#SaveChangesEve").click(function(){
     var newName = $("#EditName").val();
     if(newName == "") newName = OrigNameEve;
@@ -241,6 +241,19 @@ $("#SaveChangesEve").click(function(){
                 toSet2.eq(0).text(newName);
                 toSet2.eq(1).text(newIntro);
             }
+        }
+    });
+})
+//前往编辑活动详情
+$("#GotoEditDetail").click(function(){
+    //查询数据库，获取当前所编辑的活动的id
+    $.ajax({
+        type: "POST",
+        url: "/GetEventId/",
+        data: "name="+OrigNameEve,
+        success: function(result) {
+            //将该id发到cktest页面，进行特定活动的编辑
+            window.location.href="/cktest/event/"+result+"/"
         }
     });
 })
