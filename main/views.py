@@ -255,7 +255,7 @@ def AddProduct(request):
         origin=NewOrigin
     )
     productToAdd.save()
-    return HttpResponse(productToAdd, mimetype="application/text")
+    return HttpResponse(productToAdd.id, mimetype="application/text")
 
 #获取产品id
 @csrf_exempt
@@ -328,20 +328,20 @@ def GetEventId(request):
     return HttpResponse(EventToAdd[0].id, mimetype="application/text")
 
 @csrf_exempt
-def UploadPicture(request, product):
+def UploadEditPro(request, product):
     ProductToEdit = Product.objects.filter(id=int(product))[0]
     #获取产品图片
     LeftBracket = "【".decode('UTF-8')
     RightBracket = "】·".decode('UTF-8')
     displaySRC = "/static/images/product-catalog/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".png"
     detailSRC = "/static/images/product-detail/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".jpg"
-    return render(request, 'html/UploadPicture.html', {'displaySRC': displaySRC, 'detailSRC': detailSRC, 'CurrentProductId': product})
+    return render(request, 'html/UploadEditPro.html', {'displaySRC': displaySRC, 'detailSRC': detailSRC, 'CurrentProductId': product})
 
 @csrf_exempt
-def UploadPicture2(request, product):
+def UploadAddPro(request, product):
     ProductToEdit = Product.objects.filter(id=int(product))[0]
     #获取产品图片
-    return render(request, 'html/UploadPicture2.html', {'CurrentProductId': product})
+    return render(request, 'html/UploadAddPro.html', {'CurrentProductId': product})
 
 @csrf_exempt
 def three_column(request):

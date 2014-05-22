@@ -80,7 +80,7 @@ $("#SaveAdd").click(function ProductSaveAdd(){
         }
     });
 })
-//前往修改产品图片
+//上传产品图片
 $("#GotoAddPicture").click(function(){
     var newName = $("#AddDisplayName").val()
     var newDetail = $("#AddDetailName").val()
@@ -111,17 +111,9 @@ $("#GotoAddPicture").click(function(){
                     newFunction+"</td><td>"+
                     newOrigin+"</td><td class=\"SetTd\"></td><td data-toggle=\"modal\" data-target=\"#myModal\" class=\"DelTd\"></td></tr>"
                 $("#ProductList").append(NewProductInfo);
-                //将该id发到UploadPicture页面，进行特定产品的图片上传
-                window.location.href="/UploadPicture2/product/"+result.id+"/"
+                //将该id发到UploadAddPro页面，进行特定产品的图片上传
+                window.location.href="/UploadAddPro/product/"+result+"/"
             }
-        }
-    });
-    //查询数据库，获取当前所编辑的图片的id
-    $.ajax({
-        type: "POST",
-        url: "/GetProductId/",
-        data: "display_name="+newName,
-        success: function(result) {
         }
     });
 })
@@ -200,8 +192,8 @@ $("#GotoEditPicture").click(function(){
         url: "/GetProductId/",
         data: "display_name="+OrigName,
         success: function(result) {
-            //将该id发到UploadPicture页面，进行特定产品的图片上传
-            window.location.href="/UploadPicture/product/"+result+"/"
+            //将该id发到UploadEditPro页面，进行特定产品的图片上传
+            window.location.href="/UploadEditPro/product/"+result+"/"
         }
     });
 })
