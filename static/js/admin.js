@@ -7,27 +7,147 @@ $("#EVENT").click(function(){
     $("#PRODUCTROW").attr("style", "display: none");
 })
 
+//删除该产品
+var toDel;
+$("#ProductList").on('click', '.DelTd', function(){
+    toDel = $(this).parent();
+})
+$("#ConfirmDel").click(function(){
+    OrigName = toDel.children().eq(0).text();
+    OrigDetail = toDel.children().eq(1).text();
+    OrigMaterial = toDel.children().eq(2).text();
+    OrigSeries = toDel.children().eq(3).text();
+    OrigFunction = toDel.children().eq(4).text();
+    OrigOrigin = toDel.children().eq(5).text();
+    var AjaxData="display_name="+OrigName+
+        "&detail_name="+OrigDetail+
+        "&material="+OrigMaterial+
+        "&series="+OrigSeries+
+        "&function="+OrigFunction+
+        "&origin="+OrigOrigin;
+    $.ajax({
+        type: "POST",
+        url: "/DelProduct/",
+        data: AjaxData,
+        success: function(result) {
+            toDel.remove();
+        }
+    });
+})
+
+//新增产品
+$("#AddBtn").click(function(){
+    $("#AddDisplayName").attr("placeholder", "请输入产品名称");
+    $("#AddDisplayName").val("");
+    $("#AddDetailName").attr("placeholder", "请输入产品描述");
+    $("#AddDetailName").val("");
+    $("#select_material2").val("");
+    $("#select_series2").val("");
+    $("#select_function2").val("");
+    $("#select_origin2").val("");
+})
+$("#SaveAdd").click(function ProductSaveAdd(){
+    var newName = $("#AddDisplayName").val()
+    var newDetail = $("#AddDetailName").val()
+    var newMaterial = $("#select_material2").val()
+    var newSeries = $("#select_series2").val()
+    var newFunction = $("#select_function2").val()
+    var newOrigin = $("#select_origin2").val();
+    var AjaxData="&display_name="+newName+
+        "&detail_name="+newDetail+
+        "&material="+newMaterial+
+        "&series="+newSeries+
+        "&function="+newFunction+
+        "&origin="+newOrigin;
+    $.ajax({
+        type: "POST",
+        url: "/AddProduct/",
+        data: AjaxData,
+        success: function(result) {
+            if(result=="AlreadyExist") {
+                alert("该产品信息已存在！新增失败！");
+            }
+            else {
+                NewProductInfo = "<tr class=\"odd gradeX\"><td>"+
+                    newName+"</td><td>"+
+                    newDetail+"</td><td>"+
+                    newMaterial+"</td><td>"+
+                    newSeries+"</td><td>"+
+                    newFunction+"</td><td>"+
+                    newOrigin+"</td><td class=\"SetTd\"></td><td data-toggle=\"modal\" data-target=\"#myModal\" class=\"DelTd\"></td></tr>"
+                $("#ProductList").append(NewProductInfo);
+            }
+        }
+    });
+})
+//前往修改产品图片
+$("#GotoAddPicture").click(function(){
+    var newName = $("#AddDisplayName").val()
+    var newDetail = $("#AddDetailName").val()
+    var newMaterial = $("#select_material2").val()
+    var newSeries = $("#select_series2").val()
+    var newFunction = $("#select_function2").val()
+    var newOrigin = $("#select_origin2").val();
+    var AjaxData="&display_name="+newName+
+        "&detail_name="+newDetail+
+        "&material="+newMaterial+
+        "&series="+newSeries+
+        "&function="+newFunction+
+        "&origin="+newOrigin;
+    $.ajax({
+        type: "POST",
+        url: "/AddProduct/",
+        data: AjaxData,
+        success: function(result) {
+            if(result=="AlreadyExist") {
+                alert("该产品信息已存在！新增失败！");
+            }
+            else {
+                NewProductInfo = "<tr class=\"odd gradeX\"><td>"+
+                    newName+"</td><td>"+
+                    newDetail+"</td><td>"+
+                    newMaterial+"</td><td>"+
+                    newSeries+"</td><td>"+
+                    newFunction+"</td><td>"+
+                    newOrigin+"</td><td class=\"SetTd\"></td><td data-toggle=\"modal\" data-target=\"#myModal\" class=\"DelTd\"></td></tr>"
+                $("#ProductList").append(NewProductInfo);
+                //将该id发到UploadPicture页面，进行特定产品的图片上传
+                window.location.href="/UploadPicture2/product/"+result.id+"/"
+            }
+        }
+    });
+    //查询数据库，获取当前所编辑的图片的id
+    $.ajax({
+        type: "POST",
+        url: "/GetProductId/",
+        data: "display_name="+newName,
+        success: function(result) {
+        }
+    });
+})
+
+//修改该产品
 var toSet;
 var OrigName, OrigDetail, OrigMaterial, OrigSeries, OrigFunction, OrigOrigin;
-//修改该产品
-$(".SetTd").click(function(){
-    toSet = $(this).parent().children();
-    OrigName=toSet.eq(0).text();
-    OrigDetail=toSet.eq(1).text();
-    OrigMaterial=toSet.eq(2).text();
-    OrigSeries=toSet.eq(3).text();
-    OrigFunction=toSet.eq(4).text();
-    OrigOrigin=toSet.eq(5).text();
-    $("#EditDisplayName").attr("placeholder", OrigName);
-    $("#EditDisplayName").val("");
-    $("#EditDetailName").attr("placeholder", OrigDetail);
-    $("#EditDetailName").val("");
-    $("#select_material").val(OrigMaterial);
-    $("#select_series").val(OrigSeries);
-    $("#select_function").val(OrigFunction);
-    $("#select_origin").val(OrigOrigin);
-    $('#myModal2').modal('show');
-})
+$("#ProductList").on('click', '.SetTd', function(){
+        toSet = $(this).parent().children();
+        OrigName=toSet.eq(0).text();
+        OrigDetail=toSet.eq(1).text();
+        OrigMaterial=toSet.eq(2).text();
+        OrigSeries=toSet.eq(3).text();
+        OrigFunction=toSet.eq(4).text();
+        OrigOrigin=toSet.eq(5).text();
+        $("#EditDisplayName").attr("placeholder", OrigName);
+        $("#EditDisplayName").val("");
+        $("#EditDetailName").attr("placeholder", OrigDetail);
+        $("#EditDetailName").val("");
+        $("#select_material").val(OrigMaterial);
+        $("#select_series").val(OrigSeries);
+        $("#select_function").val(OrigFunction);
+        $("#select_origin").val(OrigOrigin);
+        $('#myModal2').modal('show');
+    })
+//修改产品基本信息
 $("#SaveChanges").click(function(){
     var newName = $("#EditDisplayName").val();
     if(newName == "") newName = OrigName;
@@ -72,84 +192,23 @@ $("#SaveChanges").click(function(){
         }
     });
 })
-
-//删除该产品
-var toDel;
-$(".DelTd").click(function(){
-    toDel = $(this).parent();
-})
-$("#ConfirmDel").click(function(){
-    OrigName = toDel.children().eq(0).text();
-    OrigDetail = toDel.children().eq(1).text();
-    OrigMaterial = toDel.children().eq(2).text();
-    OrigSeries = toDel.children().eq(3).text();
-    OrigFunction = toDel.children().eq(4).text();
-    OrigOrigin = toDel.children().eq(5).text();
-    var AjaxData="display_name="+OrigName+
-        "&detail_name="+OrigDetail+
-        "&material="+OrigMaterial+
-        "&series="+OrigSeries+
-        "&function="+OrigFunction+
-        "&origin="+OrigOrigin;
+//前往修改产品图片
+$("#GotoEditPicture").click(function(){
+    //查询数据库，获取当前所编辑的图片的id
     $.ajax({
         type: "POST",
-        url: "/DelProduct/",
-        data: AjaxData,
+        url: "/GetProductId/",
+        data: "display_name="+OrigName,
         success: function(result) {
-            toDel.remove();
-        }
-    });
-})
-
-//新增产品
-$("#AddBtn").click(function(){
-    $("#AddDisplayName").attr("placeholder", "请输入产品名称");
-    $("#AddDisplayName").val("");
-    $("#AddDetailName").attr("placeholder", "请输入产品描述");
-    $("#AddDetailName").val("");
-    $("#select_material2").val("");
-    $("#select_series2").val("");
-    $("#select_function2").val("");
-    $("#select_origin2").val("");
-})
-$("#SaveAdd").click(function(){
-    var newName = $("#AddDisplayName").val()
-    var newDetail = $("#AddDetailName").val()
-    var newMaterial = $("#select_material2").val()
-    var newSeries = $("#select_series2").val()
-    var newFunction = $("#select_function2").val()
-    var newOrigin = $("#select_origin2").val();
-    var AjaxData="&display_name="+newName+
-        "&detail_name="+newDetail+
-        "&material="+newMaterial+
-        "&series="+newSeries+
-        "&function="+newFunction+
-        "&origin="+newOrigin;
-    $.ajax({
-        type: "POST",
-        url: "/AddProduct/",
-        data: AjaxData,
-        success: function(result) {
-            if(result=="AlreadyExist") {
-                alert("该产品信息已存在！新增失败！");
-            }
-            else {
-                NewProductInfo = "<tr class=\"odd gradeX\"><td>"+
-                    newName+"</td><td>"+
-                    newDetail+"</td><td>"+
-                    newMaterial+"</td><td>"+
-                    newSeries+"</td><td>"+
-                    newFunction+"</td><td>"+
-                    newOrigin+"</td><td class=\"SetTd\"></td><td data-toggle=\"modal\" data-target=\"#myModal\" class=\"DelTd\"></td></tr>"
-                $("#ProductList").append(NewProductInfo);
-            }
+            //将该id发到UploadPicture页面，进行特定产品的图片上传
+            window.location.href="/UploadPicture/product/"+result+"/"
         }
     });
 })
 
 //删除该活动
 var toDel2;
-$(".DelTd2").click(function(){
+$("#EventList").on('click', '.DelTd2', function(){
     toDel2 = $(this).parent();
 })
 $("#ConfirmDelEve").click(function(){
@@ -188,7 +247,7 @@ $("#SaveAddEve").click(function(){
             else {
                 NewEventInfo = "<tr class=\"odd gradeX\"><td>"+
                     newName+"</td><td>"+
-                    newIntro+"</td><td><a class=\"GoToEditDetail\">点击编辑活动详情</a></td><td class=\"SetTd\"></td><td data-toggle=\"modal\" data-target=\"#myModal\" class=\"DelTd\"></td></tr>"
+                    newIntro+"</td><td><a class=\"GoToEditDetail\">点击编辑活动详情</a></td><td class=\"SetTd2\"></td><td data-toggle=\"modal\" data-target=\"#myModalEve\" class=\"DelTd2\"></td></tr>"
                 $("#EventList").append(NewEventInfo);
             }
         }
@@ -204,7 +263,7 @@ $("#EventList").on('click', '.GoToEditDetail', function(){
         url: "/GetEventId/",
         data: "name="+CurrentEventName,
         success: function(result) {
-            //将该id发到cktest页面，进行特定活动的编辑
+            //将该id发到cktest页面，进行特定活动的详情编辑
             window.location.href="/cktest/event/"+result+"/"
         }
     });
@@ -213,7 +272,7 @@ $("#EventList").on('click', '.GoToEditDetail', function(){
 var toSet2;
 var OrigNameEve, OrigIntroEve;
 //修改该活动
-$(".SetTd2").click(function(){
+$("#EventList").on('click', '.SetTd2', function(){
     toSet2 = $(this).parent().children();
     OrigNameEve=toSet2.eq(0).text();
     OrigIntroEve=toSet2.eq(1).text();

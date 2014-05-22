@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>衍峰琥珀|编辑活动信息</title>
+        <title>衍峰琥珀|编辑活动详情</title>
         <!-- Make sure the path to CKEditor is correct. -->
         <script src="/static/ckeditor/ckeditor.js"></script>
         <link href="/static/css/cktest.css" rel="stylesheet">
@@ -9,6 +9,7 @@
     </head>
     <body>
         <form action="/admin/" method="post">
+            {% csrf_token %}
             <textarea name="editor1" id="editor1" rows="10" cols="80" placeholder="请输入活动详情">{{ CurrentEventDetail }}</textarea>
             <iframe id="test" style="width: 400px; height: 600px;"></iframe>
             <a id="myPreview" onclick="preview()">预览</a>

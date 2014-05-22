@@ -20,8 +20,6 @@
     <link href="/static/admin/css/sb-admin.css" rel="stylesheet">
     <link href="/static/css/admin.css" rel="stylesheet">
 
-    <link href="/static/plugin/uploadify/uploadify.css" type="text/css" rel="stylesheet" />
-
 </head>
 
 <body>
@@ -113,7 +111,6 @@
                                                 <th>产地</th>
                                                 <th>修改</th>
                                                 <th>删除</th>
-                                                <th>图片</th>
                                             </tr>
                                         </thead>
                                         <tbody id="ProductList">
@@ -127,7 +124,6 @@
                                                 <td>{{ p.origin }}</td>
                                                 <td class="SetTd"></td>
                                                 <td data-toggle="modal" data-target="#myModal" class="DelTd"></td>
-                                                <td>修改图片</td>
                                             </tr>
                                             {% endfor %}
                                         </tbody>
@@ -171,6 +167,7 @@
                                                 <th>活动详情</th>
                                                 <th>修改</th>
                                                 <th>删除</th>
+                                                <th>图片</th>
                                             </tr>
                                         </thead>
                                         <tbody id="EventList">
@@ -181,6 +178,7 @@
                                                 <td class="detailToShow">{{ p.detailToShow }}</td>
                                                 <td class="SetTd2"></td>
                                                 <td data-toggle="modal" data-target="#myModalEve" class="DelTd2"></td>
+                                                <td>修改图片</td>
                                             </tr>
                                             {% endfor %}
                                         </tbody>
@@ -304,6 +302,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
+                        <button id="GotoAddPicture" type="button" class="btn btn-primary">上传产品图片</button>
                         <button id="SaveAdd" type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     </div>
@@ -409,6 +408,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
+                        <button id="GotoEditPicture" type="button" class="btn btn-primary">前往修改产品图片</button>
                         <button id="SaveChanges" type="button" class="btn btn-primary" data-dismiss="modal">保存修改</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     </div>
@@ -451,6 +451,7 @@
         <!-- /.modal -->
 
     </div>
+
     <!-- /#wrapper -->
 
     <!-- Core Scripts - Include with every page -->
@@ -468,8 +469,6 @@
     <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
     <script src="/static/admin/js/demo/dashboard-demo.js"></script>
     <script src="/static/js/admin.js"></script>
-    <script type="text/javascript" src="/static/plugin/uploadify/jquery.uploadify.js"></script>
-    <script type="text/javascript" src="/static/plugin/uploadify/jquery.uploadify.min.js"></script>
 
 </body>
 

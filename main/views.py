@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import auth
 from models import Product, Event
@@ -16,16 +17,13 @@ sys.setdefaultencoding('utf-8')
 def index(request):
     return render(request, 'html/index.html', {})
 
-
 @csrf_exempt
 def about(request):
     return render(request, 'html/about.html', {})
 
-
 @csrf_exempt
 def contact(request):
     return render(request, 'html/contact.html', {})
-
 
 @csrf_exempt
 def getProductFromDB(request, products, url):
@@ -65,7 +63,6 @@ def getProductFromDB(request, products, url):
         })
     return render_to_response(url, {'product_list': product_list})
 
-
 @csrf_exempt
 def product(request, theme):
     if theme == "1":
@@ -76,7 +73,6 @@ def product(request, theme):
         level1 = "珠串"
     products = Product.objects.filter(series=level1)
     return getProductFromDB(request, products, 'html/product-catalog.html')
-
 
 @csrf_exempt
 def ProductDisplay(request):
@@ -91,7 +87,6 @@ def ProductDisplay(request):
         products = Product.objects.filter(series=level1,function=level2, origin=level3)
     return getProductFromDB(request, products, 'html/product-display.html')
 
-
 @csrf_exempt
 def ProductDetail(request):
     if request.POST.has_key('display_name'):
@@ -103,11 +98,9 @@ def ProductDetail(request):
         return None
     return HttpResponse(products[0].detail_name, mimetype="application/text")
 
-
 @csrf_exempt
 def SearchProduct(request):
     return render(request, 'html/SearchProduct.html', {})
-
 
 @csrf_exempt
 def SearchResult(request):
@@ -140,7 +133,6 @@ def SearchResult(request):
                 finalPro.append(item)
         products = finalPro
     return render_to_response("html/SearchResult.html", {'result_list': products})
-
 
 #修改产品信息
 @csrf_exempt
@@ -200,7 +192,6 @@ def SetProduct(request):
     )
     return HttpResponse(product, mimetype="application/text")
 
-
 #删除产品
 @csrf_exempt
 def DelProduct(request):
@@ -227,7 +218,6 @@ def DelProduct(request):
     productToDel.delete()
     products = Product.objects.all()
     return HttpResponse("1", mimetype="application/text")
-
 
 #新增产品
 @csrf_exempt
@@ -267,8 +257,15 @@ def AddProduct(request):
     productToAdd.save()
     return HttpResponse(productToAdd, mimetype="application/text")
 
+#获取产品id
+@csrf_exempt
+def GetProductId(request):
+    if request.POST.has_key('display_name'):
+        CurrentProductName = request.POST['display_name']
+    ProductToAdd = Product.objects.filter(display_name=CurrentProductName)
+    return HttpResponse(ProductToAdd[0].id, mimetype="application/text")
 
-#修改产品信息
+#修改活动信息
 @csrf_exempt
 def SetEvent(request):
     if request.POST.has_key('origin_name'):
@@ -292,7 +289,6 @@ def SetEvent(request):
     )
     return HttpResponse(event, mimetype="application/text")
 
-
 #删除活动
 @csrf_exempt
 def DelEvent(request):
@@ -302,7 +298,6 @@ def DelEvent(request):
     eventToDel.delete()
     events = Event.objects.all()
     return HttpResponse("1", mimetype="application/text")
-
 
 #新增活动
 @csrf_exempt
@@ -324,22 +319,7 @@ def AddEvent(request):
     eventToAdd.save()
     return HttpResponse(eventToAdd,mimetype="application/text")
 
-
-@csrf_exempt
-def three_column(request):
-    return render(request, 'html/three-column.html', {})
-
-
-@csrf_exempt
-def weixin(request):
-    return render(request, 'html/weixin.html', {})
-
-
-@csrf_exempt
-def event(request):
-    return render(request, 'html/event.html', {})
-
-
+#获取活动id
 @csrf_exempt
 def GetEventId(request):
     if request.POST.has_key('name'):
@@ -347,8 +327,36 @@ def GetEventId(request):
     EventToAdd = Event.objects.filter(name=CurrentEventName)
     return HttpResponse(EventToAdd[0].id, mimetype="application/text")
 
+@csrf_exempt
+def UploadPicture(request, product):
+    ProductToEdit = Product.objects.filter(id=int(product))[0]
+    #获取产品图片
+    LeftBracket = "【".decode('UTF-8')
+    RightBracket = "】·".decode('UTF-8')
+    displaySRC = "/static/images/product-catalog/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".png"
+    detailSRC = "/static/images/product-detail/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".jpg"
+    return render(request, 'html/UploadPicture.html', {'displaySRC': displaySRC, 'detailSRC': detailSRC, 'CurrentProductId': product})
 
 @csrf_exempt
+def UploadPicture2(request, product):
+    ProductToEdit = Product.objects.filter(id=int(product))[0]
+    #获取产品图片
+    return render(request, 'html/UploadPicture2.html', {'CurrentProductId': product})
+
+@csrf_exempt
+def three_column(request):
+    return render(request, 'html/three-column.html', {})
+
+@csrf_exempt
+def weixin(request):
+    return render(request, 'html/weixin.html', {})
+
+@csrf_exempt
+def event(request):
+    return render(request, 'html/event.html', {})
+
+@csrf_exempt
+@csrf_protect
 def admin(request):
 #    if not request.user.is_authenticated():
 #        return HttpResponseRedirect('/login/')
@@ -368,31 +376,52 @@ def admin(request):
             detail=EventDetail,
             detailHTML=EventDetailHTML
         )
-    products = Product.objects.all()
     events = Event.objects.all()
     event_list = []
-    for item in events:
-        if item.detail == "":
+    for EventItem in events:
+        if EventItem.detail == "":
             event_list.append({
-                'name': item.name,
-                'introduction': item.introduction,
+                'name': EventItem.name,
+                'introduction': EventItem.introduction,
                 'detailToShow': "点击右侧修改图标，继续编辑本活动"
             })
-        elif len(item.detail) <= 30:
+        elif len(EventItem.detail) <= 30:
             event_list.append({
-                'name': item.name,
-                'introduction': item.introduction,
-                'detailToShow': item.detail
+                'name': EventItem.name,
+                'introduction': EventItem.introduction,
+                'detailToShow': EventItem.detail
             })
         else:
-            EventDetailToShow = item.detail[0:29]+"……"
+            EventDetailToShow = EventItem.detail[0:29]+"……"
             event_list.append({
-                'name': item.name,
-                'introduction': item.introduction,
+                'name': EventItem.name,
+                'introduction': EventItem.introduction,
                 'detailToShow': EventDetailToShow
             })
-    return render_to_response("html/admin.html", {'products': products, 'events': event_list})
+    products = Product.objects.all()
+    from django import forms
+    class UploadFileForm(forms.Form):
+        title = forms.CharField(max_length=1000000)
+        file = forms.FileField()
+    if request.method == "POST":
+        LeftBracket = "【".decode('UTF-8')
+        RightBracket = "】·".decode('UTF-8')
+        ProductId = int(request.POST['CurrentProductId'])
+        ProductToEdit = Product.objects.filter(id=ProductId)[0]
+        display_path = "static/images/product-catalog/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".png"
+        detail_path = "static/images/product-detail/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".jpg"
+        display_picture = handle_uploaded_file(request.FILES['display_picture'], display_path)
+        detail_picture = handle_uploaded_file(request.FILES['detail_picture'], detail_path)
+    return render_to_response("html/admin.html", {'products': products, 'events': event_list}, context_instance=RequestContext(request))
 
+@csrf_exempt
+def handle_uploaded_file(f, f_path):
+    with open(f_path, 'wb+') as info:
+        print f.name
+        for chunk in f.chunks():
+            info.write(chunk)
+    return f
+#上传文件结束
 
 @csrf_exempt
 def logout(request):
@@ -417,7 +446,6 @@ def upload(request):
             return HttpResponse('{"error": "error"}')
     else:
         return HttpResponse('{"error": "error"}')
-
 
 @csrf_exempt
 def cktest(request, event):

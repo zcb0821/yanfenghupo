@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>衍峰琥珀|编辑产品图片</title>
+    </head>
+    <body>
+        {#上传产品图片#}
+        <form action="/admin/" method="post" enctype="multipart/form-data" accept="image/*">
+            {% csrf_token %}
+            <h3>产品的展示图片，是显示在产品目录页，作为产品简介的图片</h3>
+            <h4>本产品的当前展示图片如下</h4>
+            <img width="180px" height="420px" style="border:5px solid #ffCCCC" src={{ displaySRC }} />
+            <h4>您可以上传其他图片代替该图</h4>
+            <input type="file" name="display_picture" value="" />
+            <h3>产品的详情图片，是显示在产品详情页，呈现产品详情的图片</h3>
+            <h4>本产品的当前详情图片如下</h4>
+            <img width="600px" height="400px" style="border:5px solid #ffCCCC" src={{ detailSRC }} />
+            <h4>您可以上传其他图片代替该图</h4>
+            <input type="file" name="detail_picture" value="" />
+            <textarea name="CurrentProductId" id="CurrentProductId" style="display: none">{{ CurrentProductId }}</textarea>
+            <button>上传</button>
+        </form>
+    </body>
+</html>

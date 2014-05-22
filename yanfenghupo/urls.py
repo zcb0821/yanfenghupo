@@ -13,13 +13,19 @@ urlpatterns = patterns('main.views',
     (r'^ProductDetail/$', 'ProductDetail'),
     (r'^SearchProduct/$', 'SearchProduct'),
     (r'^SearchResult/$', 'SearchResult'),
+
     (r'^SetProduct/$', 'SetProduct'),
     (r'^DelProduct/$', 'DelProduct'),
     (r'^AddProduct/$', 'AddProduct'),
+    (r'^GetProductId/$', 'GetProductId'),
+    (r'^UploadPicture/product/(\d{1,6})/$', 'UploadPicture'),
+    (r'^UploadPicture2/product/(\d{1,6})/$', 'UploadPicture2'),
+
     (r'^SetEvent/$', 'SetEvent'),
     (r'^DelEvent/$', 'DelEvent'),
     (r'^AddEvent/$', 'AddEvent'),
     (r'^GetEventId/$', 'GetEventId'),
+
     (r'^about/$', 'about'),
     (r'^contact/$', 'contact'),
     (r'^three-column/$', 'three_column'),
@@ -30,8 +36,6 @@ urlpatterns = patterns('main.views',
     (r'^logout/$', 'logout'),
     (r'^upload/$', 'upload'),
     (r'^cktest/event/(\d{1,3})/$', 'cktest'),
-
-    (r'^uploadHeadshot/$', 'uploadHeadshot'),
 )
 
 # serve media files

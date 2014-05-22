@@ -12,3 +12,7 @@
     background-size: 25px 25px;
     cursor: pointer;
 }
+.CurrentPicture {
+    width: 80px;
+    height: 80px;
+}
