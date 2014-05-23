@@ -554,3 +554,129 @@ $("#GotoEditPicHall").click(function(){
         }
     });
 })
+
+//选中系列之后，才展开功能的选择
+$("#myModal3").on('change', "#select_series2", function(){
+    var series = $("#select_series2").val();
+    if (series == "雕刻"){
+        var diaoke = "<option value=\"摆件\">摆件</option>"+
+                    "<option value=\"雕刻件\">雕刻件</option>"+
+                    "<option value=\"手把件\">手把件</option>";
+        $("#select_function2").append(diaoke);
+    }
+    else if(series == "饰品"){
+        var shipin = "<option value=\"编织特色\">编织特色</option>"+
+                    "<option value=\"吊坠\">吊坠</option>"+
+                    "<option value=\"戒指和耳钉\">戒指和耳钉</option>"+
+                    "<option value=\"手镯\">手镯</option>";
+        $("#select_function2").append(shipin);
+    }
+    else if (series == "珠串"){
+        var zhuchuan = "<option value=\"佛珠\">佛珠</option>"+
+                    "<option value=\"手串\">手串</option>";
+        $("#select_function2").append(zhuchuan);
+    }
+    $("#select_function2").val("");
+})
+
+//选中功能之后，才展开产地的选择
+$("#myModal3").on('change', "#select_function2", function(){
+    var fun = $("#select_function2").val();
+    var appendStr;
+    if (fun == "摆件"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>"+
+                    "<option value=\"缅甸\">缅甸</option>"+
+                    "<option value=\"墨西哥\">墨西哥</option>";
+    }
+    else if(fun == "雕刻件"){
+        appendStr = "<option value=\"多米尼加\">多米尼加</option>"+
+                    "<option value=\"缅甸\">缅甸</option>";
+    }
+    else if(fun == "手把件"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>";
+    }
+    else if(fun == "编织特色"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>";
+    }
+    else if (fun == "吊坠"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>"+
+                    "<option value=\"多米尼加\">多米尼加</option>"+
+                    "<option value=\"缅甸\">缅甸</option>";
+    }
+    else if (fun == "戒指和耳钉"){
+        appendStr = "<option value=\"多米尼加\">多米尼加</option>";
+    }
+    else if (fun == "佛珠"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>"+
+                    "<option value=\"多米尼加\">多米尼加</option>";
+    }
+    else if (fun == "手镯"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>"+
+                    "<option value=\"多米尼加\">多米尼加</option>";
+    }
+    $("#select_origin2").append(appendStr);
+    $("#select_origin2").val("");
+})
+
+//选中系列之后，才展开功能的选择
+$("#myModal2").on('change', "#select_series", function(){
+    var series = $("#select_series").val();
+    if (series == "雕刻"){
+        var diaoke = "<option value=\"摆件\">摆件</option>"+
+                    "<option value=\"雕刻件\">雕刻件</option>"+
+                    "<option value=\"手把件\">手把件</option>";
+        $("#select_function").append(diaoke);
+    }
+    else if(series == "饰品"){
+        var shipin = "<option value=\"编织特色\">编织特色</option>"+
+                    "<option value=\"吊坠\">吊坠</option>"+
+                    "<option value=\"戒指和耳钉\">戒指和耳钉</option>"+
+                    "<option value=\"手镯\">手镯</option>";
+        $("#select_function").append(shipin);
+    }
+    else if (series == "珠串"){
+        var zhuchuan = "<option value=\"佛珠\">佛珠</option>"+
+                    "<option value=\"手串\">手串</option>";
+        $("#select_function").append(zhuchuan);
+    }
+    $("#select_function").val("");
+})
+
+//选中功能之后，才展开产地的选择
+$("#myModal2").on('change', "#select_function", function(){
+    var fun = $("#select_function").val();
+    var appendStr;
+    if (fun == "摆件"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>"+
+                    "<option value=\"缅甸\">缅甸</option>"+
+                    "<option value=\"墨西哥\">墨西哥</option>";
+    }
+    else if(fun == "雕刻件"){
+        appendStr = "<option value=\"多米尼加\">多米尼加</option>"+
+                    "<option value=\"缅甸\">缅甸</option>";
+    }
+    else if(fun == "手把件"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>";
+    }
+    else if(fun == "编织特色"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>";
+    }
+    else if (fun == "吊坠"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>"+
+                    "<option value=\"多米尼加\">多米尼加</option>"+
+                    "<option value=\"缅甸\">缅甸</option>";
+    }
+    else if (fun == "戒指和耳钉"){
+        appendStr = "<option value=\"多米尼加\">多米尼加</option>";
+    }
+    else if (fun == "佛珠"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>"+
+                    "<option value=\"多米尼加\">多米尼加</option>";
+    }
+    else if (fun == "手镯"){
+        appendStr = "<option value=\"波罗的海\">波罗的海</option>"+
+                    "<option value=\"多米尼加\">多米尼加</option>";
+    }
+    $("#select_origin").append(appendStr);
+    $("#select_origin").val("");
+})
