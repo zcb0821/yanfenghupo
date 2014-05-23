@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>衍峰琥珀|编辑展会详情</title>
+        <title>衍峰琥珀|编辑公司简介</title>
         <!-- Make sure the path to CKEditor is correct. -->
         <script src="/static/ckeditor/ckeditor.js"></script>
         <link href="/static/css/cktest.css" rel="stylesheet">
@@ -10,17 +10,24 @@
     <body>
         <form action="/admin/" method="post">
             {% csrf_token %}
-            <textarea name="editor1" id="editor1" rows="10" cols="80">{{ CurrentEventDetail }}</textarea>
+            <textarea name="editor1CI" id="editor1CI" rows="10" cols="80" placeholder="请输入展会详情">{{ CurrentCIDetail }}</textarea>
             <iframe id="test" style="width: 400px; height: 600px;"></iframe>
             <a id="myPreview" onclick="preview()">预览</a>
-            <textarea name="editor2" id="editor2" style="display: none"></textarea>
-            <textarea name="CurrentEventIdE" id="CurrentEventIdE" style="display: none">{{ CurrentEventIdE }}</textarea>
+            <textarea name="editor2CI" id="editor2CI" style="display: none"></textarea>
             <input onclick="preview()" type="submit" value="保存此次编辑">
             <script>
-                // Replace the <textarea id="editor1"> with a CKEditor
+                // Replace the <textarea id="editor1CI"> with a CKEditor
                 // instance, using default configuration.
-                CKEDITOR.replace( 'editor1');
+                CKEDITOR.replace( 'editor1CI');
             </script>
         </form>
     </body>
+<script>
+    function preview(){
+        var h=document.getElementById("test").contentDocument.getElementsByTagName('html')[0];
+        var b=CKEDITOR.instances.editor1CI.document.getDocumentElement().getHtml();
+        h.innerHTML = b;
+        document.getElementById("editor2CI").innerHTML = b;
+    }
+</script>
 </html>

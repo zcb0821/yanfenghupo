@@ -10,7 +10,7 @@
     <body>
         <form action="/admin/" method="post">
             {% csrf_token %}
-            <textarea name="editor3" id="editor3" rows="10" cols="80" placeholder="请输入展厅活动详情">{{ CurrentHallDetail }}</textarea>
+            <textarea name="editor3" id="editor3" rows="10" cols="80">{{ CurrentHallDetail }}</textarea>
             <iframe id="test" style="width: 400px; height: 600px;"></iframe>
             <a id="myPreview" onclick="preview()">预览</a>
             <textarea name="editor4" id="editor4" style="display: none"></textarea>

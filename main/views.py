@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response, RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import auth
-from models import Product, Event, Hall
+from models import Product, Event, Hall, Aboutus
 from yanfenghupo import settings
 
 import datetime
@@ -621,7 +621,53 @@ def admin(request):
             if 'poster' in request.FILES:
                 poster_path = "static/images/hall/"+HallToEdit.title+".jpg"
                 poster = handle_uploaded_file(request.FILES['poster'], poster_path)
-    return render_to_response("html/admin.html", {'products': products, 'events': event_list, 'halls': hall_list}, context_instance=RequestContext(request))
+        #关于我们
+    AboutusContent = Aboutus.objects.all();
+    #编辑公司简介
+    if 'editor1CI' in request.POST:
+        CIDetail = request.POST['editor1CI']
+        if 'editor2CI' in request.POST:
+            CIDetailHTML = request.POST['editor2CI']
+            AboutusContent.filter(theme="公司简介").update(
+                detail=CIDetail,
+                detailHTML=CIDetailHTML
+            )
+    #编辑品牌简介
+    if 'editor1BI' in request.POST:
+        BIDetail = request.POST['editor1BI']
+        if 'editor2BI' in request.POST:
+            BIDetailHTML = request.POST['editor2BI']
+            AboutusContent.filter(theme="品牌简介").update(
+                detail=BIDetail,
+                detailHTML=BIDetailHTML
+            )
+    #编辑品牌特色
+    if 'editor1BSP' in request.POST:
+        BSPDetail = request.POST['editor1BSP']
+        if 'editor2BSP' in request.POST:
+            BSPDetailHTML = request.POST['editor2BSP']
+            AboutusContent.filter(theme="品牌特色").update(
+                detail=BSPDetail,
+                detailHTML=BSPDetailHTML
+            )
+    #编辑品牌服务
+    if 'editor1BSE' in request.POST:
+        BSEDetail = request.POST['editor1BSE']
+        if 'editor2BSE' in request.POST:
+            BSEDetailHTML = request.POST['editor2BSE']
+            AboutusContent.filter(theme="品牌服务").update(
+                detail=BSEDetail,
+                detailHTML=BSEDetailHTML
+            )
+    return render_to_response("html/admin.html", {
+        'products': products,
+        'events': event_list,
+        'halls': hall_list,
+        'ComIntro': AboutusContent[0].detail,
+        'BrandIntro': AboutusContent[1].detail,
+        'special': AboutusContent[2].detail,
+        'service': AboutusContent[3].detail
+    }, context_instance=RequestContext(request))
 
 @csrf_exempt
 def handle_uploaded_file(f, f_path):
@@ -671,3 +717,23 @@ def cktest2(request, hall):
     hallToEdit = Hall.objects.get(id=int(hall))
     #将原始Detail显示到编辑框
     return render(request, 'html/cktest2.html', {'CurrentHallIdE': hall, 'CurrentHallDetail': hallToEdit.detail})
+
+@csrf_exempt
+def cktestCI(request):
+    str = Aboutus.objects.get(theme="公司简介").detail
+    return render(request, 'html/cktestCI.html', {'CurrentCIDetail': str})
+
+@csrf_exempt
+def cktestBI(request):
+    str = Aboutus.objects.get(theme="品牌简介").detail
+    return render(request, 'html/cktestBI.html', {'CurrentBIDetail': str})
+
+@csrf_exempt
+def cktestBSP(request):
+    str = Aboutus.objects.get(theme="品牌特色").detail
+    return render(request, 'html/cktestBSP.html', {'CurrentBSPDetail': str})
+
+@csrf_exempt
+def cktestBSE(request):
+    str = Aboutus.objects.get(theme="品牌服务").detail
+    return render(request, 'html/cktestBSE.html', {'CurrentBSEDetail': str})

@@ -37,6 +37,11 @@ urlpatterns = patterns('main.views',
     (r'^UploadAddHall/hall/(\d{1,6})/$', 'UploadAddHall'),
     (r'^cktest2/hall/(\d{1,3})/$', 'cktest2'),
 
+    (r'^cktestCI/$', 'cktestCI'),
+    (r'^cktestBI/$', 'cktestBI'),
+    (r'^cktestBSP/$', 'cktestBSP'),
+    (r'^cktestBSE/$', 'cktestBSE'),
+
     (r'^about/$', 'about'),
     (r'^contact/$', 'contact'),
     (r'^three-column/$', 'three_column'),

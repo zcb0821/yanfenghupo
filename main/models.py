@@ -37,3 +37,12 @@ class Hall(models.Model):
 
     def __unicode__(self):
         return u'%s %s %s %s %s %s %s' % (self.title, self.date, self.introduction, self.address, self.telephone, self.detail, self.detailHTML)
+
+#"关于我们"数据库
+class Aboutus(models.Model):
+    theme = models.CharField(max_length=50)
+    detail = models.CharField(max_length=10000)
+    detailHTML = models.CharField(max_length=10000)
+
+    def __unicode__(self):
+        return u'%s %s %s' % (self.theme, self.detail, self.detailHTML)

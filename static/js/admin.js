@@ -2,14 +2,23 @@ $("#PRODUCT").click(function(){
     $("#PRODUCTROW").removeAttr("style");
     $("#EVENTROW").attr("style", "display: none");
     $("#HALLROW").attr("style", "display: none");
+    $("#ABOUTROW").attr("style", "display: none");
 })
 $("#EVENT").click(function(){
     $("#EVENTROW").removeAttr("style");
     $("#PRODUCTROW").attr("style", "display: none");
     $("#HALLROW").attr("style", "display: none");
+    $("#ABOUTROW").attr("style", "display: none");
 })
 $("#HALL").click(function(){
     $("#HALLROW").removeAttr("style");
+    $("#PRODUCTROW").attr("style", "display: none");
+    $("#EVENTROW").attr("style", "display: none");
+    $("#ABOUTROW").attr("style", "display: none");
+})
+$("#ABOUT").click(function(){
+    $("#ABOUTROW").removeAttr("style");
+    $("#HALLROW").attr("style", "display: none");
     $("#PRODUCTROW").attr("style", "display: none");
     $("#EVENTROW").attr("style", "display: none");
 })
@@ -680,3 +689,16 @@ $("#myModal2").on('change', "#select_function", function(){
     $("#select_origin").append(appendStr);
     $("#select_origin").val("");
 })
+
+//点击编辑"关于我们"的函数
+$(".SetTd4").click(function(){
+    var CurrentTheme = $(this).parent().children().eq(0).text();
+    if (CurrentTheme == "公司简介")
+        window.location.href="/cktestCI/"
+    else if (CurrentTheme == "品牌简介")
+        window.location.href="/cktestBI/"
+    else if (CurrentTheme == "品牌特色")
+        window.location.href="/cktestBSP/"
+    else if (CurrentTheme == "品牌服务")
+        window.location.href="/cktestBSE/"
+});
