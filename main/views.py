@@ -482,8 +482,8 @@ def event(request):
 @csrf_exempt
 @csrf_protect
 def admin(request):
-#    if not request.user.is_authenticated():
-#        return HttpResponseRedirect('/login/')
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/login/')
     #编辑展会详情
     if 'CurrentEventIdE' in request.POST:
         EventId = int(request.POST['CurrentEventIdE'])
