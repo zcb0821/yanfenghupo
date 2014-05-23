@@ -28,3 +28,11 @@
 	font-size: 18px;
 	color: #6e4d51;
 }
+
+#EditAbout{
+    width: 48px;
+    height: 16px;
+    text-decoration: none;
+    color: #9C9393;
+    cursor: pointer;
+}

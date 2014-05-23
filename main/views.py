@@ -26,7 +26,11 @@ def index(request):
 
 @csrf_exempt
 def about(request):
-    return render(request, 'html/about.html', {})
+    CItextHTML = Aboutus.objects.filter(theme="公司简介")[0].detail
+    BItextHTML = Aboutus.objects.filter(theme="品牌简介")[0].detail
+    BSPtextHTML = Aboutus.objects.filter(theme="品牌特色")[0].detail
+    BSEtextHTML = Aboutus.objects.filter(theme="品牌服务")[0].detail
+    return render(request, 'html/about.html', {'CItextHTML': CItextHTML, 'BItextHTML': BItextHTML, 'BSPtextHTML': BSPtextHTML, 'BSEtextHTML': BSEtextHTML})
 
 @csrf_exempt
 def contact(request):
