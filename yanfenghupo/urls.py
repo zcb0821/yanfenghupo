@@ -20,13 +20,22 @@ urlpatterns = patterns('main.views',
     (r'^GetProductId/$', 'GetProductId'),
     (r'^UploadEditPro/product/(\d{1,6})/$', 'UploadEditPro'),
     (r'^UploadAddPro/product/(\d{1,6})/$', 'UploadAddPro'),
-    (r'^UploadEditEve/event/(\d{1,6})/$', 'UploadEditEve'),
-    (r'^UploadAddEve/event/(\d{1,6})/$', 'UploadAddEve'),
 
     (r'^SetEvent/$', 'SetEvent'),
     (r'^DelEvent/$', 'DelEvent'),
     (r'^AddEvent/$', 'AddEvent'),
     (r'^GetEventId/$', 'GetEventId'),
+    (r'^UploadEditEve/event/(\d{1,6})/$', 'UploadEditEve'),
+    (r'^UploadAddEve/event/(\d{1,6})/$', 'UploadAddEve'),
+    (r'^cktest/event/(\d{1,3})/$', 'cktest'),
+
+    (r'^SetHall/$', 'SetHall'),
+    (r'^DelHall/$', 'DelHall'),
+    (r'^AddHall/$', 'AddHall'),
+    (r'^GetHallId/$', 'GetHallId'),
+    (r'^UploadEditHall/hall/(\d{1,6})/$', 'UploadEditHall'),
+    (r'^UploadAddHall/hall/(\d{1,6})/$', 'UploadAddHall'),
+    (r'^cktest2/hall/(\d{1,3})/$', 'cktest2'),
 
     (r'^about/$', 'about'),
     (r'^contact/$', 'contact'),
@@ -37,7 +46,6 @@ urlpatterns = patterns('main.views',
     (r'^django-admin/$', include(admin.site.urls)),
     (r'^logout/$', 'logout'),
     (r'^upload/$', 'upload'),
-    (r'^cktest/event/(\d{1,3})/$', 'cktest'),
 )
 
 # serve media files

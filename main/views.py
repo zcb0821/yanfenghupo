@@ -5,14 +5,21 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response, RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import auth
-from models import Product, Event
+from models import Product, Event, Hall
 from yanfenghupo import settings
 
+import datetime
 import sys, os, time
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
 # Create your views here.
+def str2date(str):
+    return datetime.datetime.strptime(str, '%Y-%m-%d')
+
+def date2str(date):
+    return date.strftime('%Y-%m-%d')
+
 @csrf_exempt
 def index(request):
     return render(request, 'html/index.html', {})
@@ -133,6 +140,23 @@ def SearchResult(request):
                 finalPro.append(item)
         products = finalPro
     return render_to_response("html/SearchResult.html", {'result_list': products})
+
+#########################################################################################################################################
+@csrf_exempt
+def UploadEditPro(request, product):
+    ProductToEdit = Product.objects.filter(id=int(product))[0]
+    #获取产品图片
+    LeftBracket = "【".decode('UTF-8')
+    RightBracket = "】·".decode('UTF-8')
+    displaySRC = "/static/images/product-catalog/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".png"
+    detailSRC = "/static/images/product-detail/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".jpg"
+    return render(request, 'html/UploadEditPro.html', {'displaySRC': displaySRC, 'detailSRC': detailSRC, 'CurrentProductIdU': product})
+
+@csrf_exempt
+def UploadAddPro(request, product):
+    ProductToEdit = Product.objects.filter(id=int(product))[0]
+    #获取产品图片
+    return render(request, 'html/UploadAddPro.html', {'CurrentProductId': product})
 
 #修改产品信息
 @csrf_exempt
@@ -265,20 +289,21 @@ def GetProductId(request):
     ProductToAdd = Product.objects.filter(display_name=CurrentProductName)
     return HttpResponse(ProductToAdd[0].id, mimetype="application/text")
 
+#########################################################################################################################################
 @csrf_exempt
 def UploadEditEve(request, event):
     EventToEdit = Event.objects.filter(id=int(event))[0]
-    #获取活动图片
+    #获取展会图片
     posterSRC = "/static/images/event/"+EventToEdit.name+".jpg"
     return render(request, 'html/UploadEditEve.html', {'posterSRC': posterSRC, 'CurrentEventIdU': event})
 
 @csrf_exempt
 def UploadAddEve(request, event):
-    ProductToEdit = Product.objects.filter(id=int(product))[0]
+    EventToEdit = Event.objects.filter(id=int(event))[0]
     #获取产品图片
-    return render(request, 'html/UploadAddPro.html', {'CurrentProductId': product})
+    return render(request, 'html/UploadAddEve.html', {'CurrentEventId':event})
 
-#修改活动信息
+#修改展会信息
 @csrf_exempt
 def SetEvent(request):
     if request.POST.has_key('origin_name'):
@@ -293,7 +318,7 @@ def SetEvent(request):
         introduction=NewIntro
     )
     if len(AlreadyExist) != 0:
-        #该产品已存在
+        #该展会已存在
         result="AlreadyExist"
         return HttpResponse(result, mimetype="application/text")
     event.update(
@@ -302,7 +327,7 @@ def SetEvent(request):
     )
     return HttpResponse(event, mimetype="application/text")
 
-#删除活动
+#删除展会
 @csrf_exempt
 def DelEvent(request):
     if request.POST.has_key('name'):
@@ -312,7 +337,7 @@ def DelEvent(request):
     events = Event.objects.all()
     return HttpResponse("1", mimetype="application/text")
 
-#新增活动
+#新增展会
 @csrf_exempt
 def AddEvent(request):
     if request.POST.has_key('name'):
@@ -321,7 +346,7 @@ def AddEvent(request):
         NewIntro = request.POST['introduction']
     AlreadyExist = Event.objects.filter(name=NewName)
     if len(AlreadyExist) != 0:
-        #该活动已存在
+        #该展会已存在
         result="AlreadyExist"
         return HttpResponse(result, mimetype="application/text")
     eventToAdd = Event(
@@ -332,7 +357,7 @@ def AddEvent(request):
     eventToAdd.save()
     return HttpResponse(eventToAdd.id,mimetype="application/text")
 
-#获取活动id
+#获取展会id
 @csrf_exempt
 def GetEventId(request):
     if request.POST.has_key('name'):
@@ -340,22 +365,104 @@ def GetEventId(request):
     EventToAdd = Event.objects.filter(name=CurrentEventName)
     return HttpResponse(EventToAdd[0].id, mimetype="application/text")
 
+#########################################################################################################################################
 @csrf_exempt
-def UploadEditPro(request, product):
-    ProductToEdit = Product.objects.filter(id=int(product))[0]
-    #获取产品图片
-    LeftBracket = "【".decode('UTF-8')
-    RightBracket = "】·".decode('UTF-8')
-    displaySRC = "/static/images/product-catalog/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".png"
-    detailSRC = "/static/images/product-detail/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".jpg"
-    return render(request, 'html/UploadEditPro.html', {'displaySRC': displaySRC, 'detailSRC': detailSRC, 'CurrentProductId': product})
+def UploadEditHall(request, hall):
+    HallToEdit = Hall.objects.filter(id=int(hall))[0]
+    #获取展会图片
+    posterSRC = "/static/images/hall/"+HallToEdit.title+".jpg"
+    return render(request, 'html/UploadEditHall.html', {'posterSRC': posterSRC, 'CurrentHallIdU': hall})
 
 @csrf_exempt
-def UploadAddPro(request, product):
-    ProductToEdit = Product.objects.filter(id=int(product))[0]
+def UploadAddHall(request, hall):
+    HallToEdit = Hall.objects.filter(id=int(hall))[0]
     #获取产品图片
-    return render(request, 'html/UploadAddPro.html', {'CurrentProductId': product})
+    return render(request, 'html/UploadAddHall.html', {'CurrentHallId':hall})
 
+#修改展厅活动信息
+@csrf_exempt
+def SetHall(request):
+    if request.POST.has_key('orig_title'):
+        OrigTitle = request.POST['orig_title']
+    hall = Hall.objects.filter(title=OrigTitle)
+    if request.POST.has_key('title'):
+        NewTitle = request.POST['title']
+    if request.POST.has_key('date'):
+        NewDate = request.POST['date']
+    if request.POST.has_key('introduction'):
+        NewIntro = request.POST['introduction']
+    if request.POST.has_key('address'):
+        NewAddress = request.POST['address']
+    if request.POST.has_key('telephone'):
+        NewTelephone = request.POST['telephone']
+    AlreadyExist = Hall.objects.filter(
+        title=NewTitle,
+        date=NewDate,
+        introduction=NewIntro,
+        address=NewAddress,
+        telephone=NewTelephone
+    )
+    if len(AlreadyExist) != 0:
+        #该展厅活动已存在
+        result="AlreadyExist"
+        return HttpResponse(result, mimetype="application/text")
+    hall.update(
+        title=NewTitle,
+        date=NewDate,
+        introduction=NewIntro,
+        address=NewAddress,
+        telephone=NewTelephone
+    )
+    return HttpResponse(hall, mimetype="application/text")
+
+#删除展厅活动
+@csrf_exempt
+def DelHall(request):
+    if request.POST.has_key('title'):
+        OrigTitle = request.POST['title']
+    hallToDel = Hall.objects.get(title=OrigTitle)
+    hallToDel.delete()
+    halls = Hall.objects.all()
+    return HttpResponse("1", mimetype="application/text")
+
+#新增展厅活动
+@csrf_exempt
+def AddHall(request):
+    if request.POST.has_key('title'):
+        NewTitle = request.POST['title']
+    if request.POST.has_key('date'):
+        NewDate = str2date(request.POST['date'])
+    if request.POST.has_key('introduction'):
+        NewIntroHall = request.POST['introduction']
+    if request.POST.has_key('address'):
+        NewAddress = request.POST['address']
+    if request.POST.has_key('telephone'):
+        NewTelephone = request.POST['telephone']
+    AlreadyExist = Hall.objects.filter(title=NewTitle)
+    if len(AlreadyExist) != 0:
+        #该展厅活动已存在
+        result="AlreadyExist"
+        return HttpResponse(result, mimetype="application/text")
+    hallToAdd = Hall(
+        title=NewTitle,
+        date=NewDate,
+        introduction=NewIntroHall,
+        address=NewAddress,
+        telephone=NewTelephone,
+        detail=""
+    )
+    hallToAdd.save()
+    return HttpResponse(hallToAdd.id,mimetype="application/text")
+
+#获取展厅活动id
+@csrf_exempt
+def GetHallId(request):
+    if request.POST.has_key('title'):
+        CurrentHallTitle= request.POST['title']
+    HallToAdd = Hall.objects.filter(title=CurrentHallTitle)
+    return HttpResponse(HallToAdd[0].id, mimetype="application/text")
+
+#########################################################################################################################################
 @csrf_exempt
 def three_column(request):
     return render(request, 'html/three-column.html', {})
@@ -373,15 +480,15 @@ def event(request):
 def admin(request):
 #    if not request.user.is_authenticated():
 #        return HttpResponseRedirect('/login/')
-    #可能接受到的活动ID
-    if 'CurrentEventId' in request.POST:
-        EventId = int(request.POST['CurrentEventId'])
+    #编辑展会详情
+    if 'CurrentEventIdE' in request.POST:
+        EventId = int(request.POST['CurrentEventIdE'])
         EventToEdit = Event.objects.filter(id=EventId)
-        #可能接受到活动详情的文本内容
+        #可能接受到展会详情的文本内容
         if 'editor1' in request.POST:
             EventDetail = request.POST['editor1']
             EventDetailToShow = EventDetail
-            #可能接受到活动详情的HTML
+            #可能接受到展会详情的HTML
         if 'editor2' in request.POST:
             EventDetailHTML = request.POST['editor2']
         #写入数据库
@@ -396,7 +503,7 @@ def admin(request):
             event_list.append({
                 'name': EventItem.name,
                 'introduction': EventItem.introduction,
-                'detailToShow': "点击右侧修改图标，继续编辑本活动"
+                'detailToShow': "点击右侧修改图标，继续编辑本展会"
             })
         elif len(EventItem.detail) <= 30:
             event_list.append({
@@ -411,6 +518,53 @@ def admin(request):
                 'introduction': EventItem.introduction,
                 'detailToShow': EventDetailToShow
             })
+    #编辑展厅活动详情
+    if 'CurrentHallIdE' in request.POST:
+        HallId = int(request.POST['CurrentHallIdE'])
+        HallToEdit = Hall.objects.filter(id=HallId)
+        #可能接受到展厅活动详情的文本内容
+        if 'editor3' in request.POST:
+            HallDetail = request.POST['editor3']
+            HallDetailToShow = HallDetail
+            #可能接受到展厅活动详情的HTML
+        if 'editor4' in request.POST:
+            HallDetailHTML = request.POST['editor4']
+        #写入数据库
+        HallToEdit.update(
+            detail=HallDetail,
+            detailHTML=HallDetailHTML
+        )
+    halls = Hall.objects.all()
+    hall_list = []
+    for HallItem in halls:
+        if HallItem.detail == "":
+            hall_list.append({
+                'title': HallItem.title,
+                'date': date2str(HallItem.date),
+                'introduction': HallItem.introduction,
+                'address': HallItem.address,
+                'telephone': HallItem.telephone,
+                'detailToShow': "点击右侧修改图标，继续编辑本展厅活动"
+            })
+        elif len(HallItem.detail) <= 30:
+            hall_list.append({
+                'title': HallItem.title,
+                'date': date2str(HallItem.date),
+                'introduction': HallItem.introduction,
+                'address': HallItem.address,
+                'telephone': HallItem.telephone,
+                'detailToShow': HallItem.detail
+            })
+        else:
+            HallDetailToShow = HallItem.detail[0:29]+"……"
+            hall_list.append({
+                'title': HallItem.title,
+                'date': date2str(HallItem.date),
+                'introduction': HallItem.introduction,
+                'address': HallItem.address,
+                'telephone': HallItem.telephone,
+                'detailToShow': HallDetailToShow
+            })
     products = Product.objects.all()
     from django import forms
     class UploadFileForm(forms.Form):
@@ -419,7 +573,18 @@ def admin(request):
     if request.method == "POST":
         LeftBracket = "【".decode('UTF-8')
         RightBracket = "】·".decode('UTF-8')
-        if 'CurrentProductId' in request.POST:
+        if 'CurrentProductIdU' in request.POST:
+        #“只修改产品图片”
+            ProductId = int(request.POST['CurrentProductIdU'])
+            ProductToEdit = Product.objects.filter(id=ProductId)[0]
+            if 'display_picture' in request.FILES:
+                display_path = "static/images/product-catalog/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".png"
+                display_picture = handle_uploaded_file(request.FILES['display_picture'], display_path)
+            if 'detail_picture' in request.FILES:
+                detail_path = "static/images/product-detail/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".jpg"
+                detail_picture = handle_uploaded_file(request.FILES['detail_picture'], detail_path)
+        elif 'CurrentProductId' in request.POST:
+        #“新增产品时上传产品图片”
             ProductId = int(request.POST['CurrentProductId'])
             ProductToEdit = Product.objects.filter(id=ProductId)[0]
             if 'display_picture' in request.FILES:
@@ -428,13 +593,35 @@ def admin(request):
             if 'detail_picture' in request.FILES:
                 detail_path = "static/images/product-detail/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".jpg"
                 detail_picture = handle_uploaded_file(request.FILES['detail_picture'], detail_path)
+        #“只修改展会海报”
         if 'CurrentEventIdU' in request.POST:
             EventId = int(request.POST['CurrentEventIdU'])
             EventToEdit = Event.objects.filter(id=EventId)[0]
             if 'poster' in request.FILES:
                 poster_path = "static/images/event/"+EventToEdit.name+".jpg"
                 poster = handle_uploaded_file(request.FILES['poster'], poster_path)
-    return render_to_response("html/admin.html", {'products': products, 'events': event_list}, context_instance=RequestContext(request))
+        #“新增展会时上传展会海报”
+        elif 'CurrentEventId' in request.POST:
+            EventId = int(request.POST['CurrentEventId'])
+            EventToEdit = Event.objects.filter(id=EventId)[0]
+            if 'poster' in request.FILES:
+                poster_path = "static/images/event/"+EventToEdit.name+".jpg"
+                poster = handle_uploaded_file(request.FILES['poster'], poster_path)
+        #“只修改展厅活动海报”
+        if 'CurrentHallIdU' in request.POST:
+            HallId = int(request.POST['CurrentHallIdU'])
+            HallToEdit = Hall.objects.filter(id=HallId)[0]
+            if 'poster' in request.FILES:
+                poster_path = "static/images/hall/"+HallToEdit.title+".jpg"
+                poster = handle_uploaded_file(request.FILES['poster'], poster_path)
+        #“新增展厅活动时上传展厅活动海报”
+        elif 'CurrentHallId' in request.POST:
+            HallId = int(request.POST['CurrentHallId'])
+            HallToEdit = Hall.objects.filter(id=HallId)[0]
+            if 'poster' in request.FILES:
+                poster_path = "static/images/hall/"+HallToEdit.title+".jpg"
+                poster = handle_uploaded_file(request.FILES['poster'], poster_path)
+    return render_to_response("html/admin.html", {'products': products, 'events': event_list, 'halls': hall_list}, context_instance=RequestContext(request))
 
 @csrf_exempt
 def handle_uploaded_file(f, f_path):
@@ -471,8 +658,16 @@ def upload(request):
 
 @csrf_exempt
 def cktest(request, event):
-    #编辑活动的时候可能活动详情本身就有原始输入
+    #编辑展会的时候可能展会详情本身就有原始输入
     #从数据库中读取原始Detail
     eventToEdit = Event.objects.get(id=int(event))
     #将原始Detail显示到编辑框
-    return render(request, 'html/cktest.html', {'CurrentEventId': event, 'CurrentEventDetail': eventToEdit.detail})
+    return render(request, 'html/cktest.html', {'CurrentEventIdE': event, 'CurrentEventDetail': eventToEdit.detail})
+
+@csrf_exempt
+def cktest2(request, hall):
+    #编辑展会的时候可能展厅活动详情本身就有原始输入
+    #从数据库中读取原始Detail
+    hallToEdit = Hall.objects.get(id=int(hall))
+    #将原始Detail显示到编辑框
+    return render(request, 'html/cktest2.html', {'CurrentHallIdE': hall, 'CurrentHallDetail': hallToEdit.detail})

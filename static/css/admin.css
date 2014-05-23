@@ -1,11 +1,11 @@
-.SetTd, .SetTd2 {
+.SetTd, .SetTd2, .SetTd3 {
     background-image: url("../images/product-catalog/Set.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 25px 25px;
     cursor: pointer;
 }
-.DelTd, .DelTd2 {
+.DelTd, .DelTd2, .DelTd3 {
     background-image: url("../images/product-catalog/Del.png");
     background-position: center;
     background-repeat: no-repeat;

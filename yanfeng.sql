@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version: 5.5.20)
-# Date: 2014-05-21 07:57:11
+# Date: 2014-05-23 19:17:52
 # Generator: MySQL-Front 5.3  (Build 4.121)
 
 /*!40101 SET NAMES utf8 */;
@@ -82,13 +82,13 @@ CREATE TABLE `django_content_type` (
   `model` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `app_label` (`app_label`,`model`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "django_content_type"
 #
 
-INSERT INTO `django_content_type` VALUES (1,'permission','auth','permission'),(2,'group','auth','group'),(3,'user','auth','user'),(4,'content type','contenttypes','contenttype'),(5,'session','sessions','session'),(6,'product','main','product'),(7,'log entry','admin','logentry'),(8,'event','main','event');
+INSERT INTO `django_content_type` VALUES (1,'permission','auth','permission'),(2,'group','auth','group'),(3,'user','auth','user'),(4,'content type','contenttypes','contenttype'),(5,'session','sessions','session'),(6,'product','main','product'),(7,'log entry','admin','logentry'),(8,'event','main','event'),(9,'hall','main','hall');
 
 #
 # Structure for table "django_admin_log"
@@ -130,13 +130,13 @@ CREATE TABLE `auth_permission` (
   UNIQUE KEY `content_type_id` (`content_type_id`,`codename`),
   KEY `auth_permission_37ef4eb4` (`content_type_id`),
   CONSTRAINT `content_type_id_refs_id_d043b34a` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "auth_permission"
 #
 
-INSERT INTO `auth_permission` VALUES (1,'Can add permission',1,'add_permission'),(2,'Can change permission',1,'change_permission'),(3,'Can delete permission',1,'delete_permission'),(4,'Can add group',2,'add_group'),(5,'Can change group',2,'change_group'),(6,'Can delete group',2,'delete_group'),(7,'Can add user',3,'add_user'),(8,'Can change user',3,'change_user'),(9,'Can delete user',3,'delete_user'),(10,'Can add content type',4,'add_contenttype'),(11,'Can change content type',4,'change_contenttype'),(12,'Can delete content type',4,'delete_contenttype'),(13,'Can add session',5,'add_session'),(14,'Can change session',5,'change_session'),(15,'Can delete session',5,'delete_session'),(16,'Can add product',6,'add_product'),(17,'Can change product',6,'change_product'),(18,'Can delete product',6,'delete_product'),(19,'Can add log entry',7,'add_logentry'),(20,'Can change log entry',7,'change_logentry'),(21,'Can delete log entry',7,'delete_logentry'),(22,'Can add event',8,'add_event'),(23,'Can change event',8,'change_event'),(24,'Can delete event',8,'delete_event');
+INSERT INTO `auth_permission` VALUES (1,'Can add permission',1,'add_permission'),(2,'Can change permission',1,'change_permission'),(3,'Can delete permission',1,'delete_permission'),(4,'Can add group',2,'add_group'),(5,'Can change group',2,'change_group'),(6,'Can delete group',2,'delete_group'),(7,'Can add user',3,'add_user'),(8,'Can change user',3,'change_user'),(9,'Can delete user',3,'delete_user'),(10,'Can add content type',4,'add_contenttype'),(11,'Can change content type',4,'change_contenttype'),(12,'Can delete content type',4,'delete_contenttype'),(13,'Can add session',5,'add_session'),(14,'Can change session',5,'change_session'),(15,'Can delete session',5,'delete_session'),(16,'Can add product',6,'add_product'),(17,'Can change product',6,'change_product'),(18,'Can delete product',6,'delete_product'),(19,'Can add log entry',7,'add_logentry'),(20,'Can change log entry',7,'change_logentry'),(21,'Can delete log entry',7,'delete_logentry'),(22,'Can add event',8,'add_event'),(23,'Can change event',8,'change_event'),(24,'Can delete event',8,'delete_event'),(25,'Can add hall',9,'add_hall'),(26,'Can change hall',9,'change_hall'),(27,'Can delete hall',9,'delete_hall');
 
 #
 # Structure for table "auth_user_user_permissions"
@@ -213,13 +213,36 @@ CREATE TABLE `main_event` (
   `detail` varchar(10000) NOT NULL DEFAULT '',
   `detailHTML` varchar(10000) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "main_event"
 #
 
 INSERT INTO `main_event` VALUES (1,'第四届北京国际珠宝首饰展','北京衍峰文化有限公司将于2014年4月13日，参加第四节北京国际珠宝首饰展览会，公司参展的产品主要以琥珀蜜蜡为主，为广大经销商和消费者提供更多更全的产品展示和选择。\r\n展会举办地点是中国国际展览中心（老国展），从4月13日到4月16日，为期4天。期待公司在展会中有一个完美的展现。','啦啦啦',''),(2,'2014第17届济南国际珠宝展暨首届济南电视台高端生活展览会','时间：2014年6月20日—23日<br>地点：济南舜耕国际会展中心（市中区舜耕路28号）<br>主办单位： 济南电视台；山东省珠宝玉石首饰行业协会；上海宝玉石行业协会；济南市贸促会\r\n<br>承办单位：济南海名纵横会展服务有限公司<br>协办单位：亚洲珠宝联合会；深圳市黄金珠宝首饰行业协会；中华全国工商业联合会金银珠宝业商会；国家黄金钻石制品质量监督检验中心','哈哈哈','');
+
+#
+# Structure for table "main_hall"
+#
+
+DROP TABLE IF EXISTS `main_hall`;
+CREATE TABLE `main_hall` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `date` date NOT NULL,
+  `introduction` varchar(1000) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `telephone` varchar(20) NOT NULL,
+  `detail` varchar(10000) NOT NULL DEFAULT '',
+  `detailHTML` varchar(10000) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+#
+# Data for table "main_hall"
+#
+
+INSERT INTO `main_hall` VALUES (1,'琥珀活动1','2014-03-11','在过去的这个周末，格但斯克琥珀展在波兰港口城市格但斯克隆重举行了，本版波兰特派员亲身前往并发回相关图片报道。','北京市东城区法华寺街91号天坛古玩城2号馆','010-52999181','1啦啦啦','1啦啦啦'),(2,'琥珀活动2','2014-03-12','在过去的这个周末，格但斯克琥珀展在波兰港口城市格但斯克隆重举行了，本版波兰特派员亲身前往并发回相关图片报道。','北京市东城区法华寺街91号天坛古玩城2号馆','010-52999181','2啦啦啦',''),(3,'琥珀活动3','2014-03-13','在过去的这个周末，格但斯克琥珀展在波兰港口城市格但斯克隆重举行了，本版波兰特派员亲身前往并发回相关图片报道。','北京市东城区法华寺街91号天坛古玩城2号馆','010-52999181','3啦啦啦',''),(4,'琥珀活动4','2014-03-14','在过去的这个周末，格但斯克琥珀展在波兰港口城市格但斯克隆重举行了，本版波兰特派员亲身前往并发回相关图片报道。','北京市东城区法华寺街91号天坛古玩城2号馆','010-52999181','4啦啦啦',''),(5,'琥珀活动5','2014-03-15','在过去的这个周末，格但斯克琥珀展在波兰港口城市格但斯克隆重举行了，本版波兰特派员亲身前往并发回相关图片报道。','北京市东城区法华寺街91号天坛古玩城2号馆','010-52999181','5啦啦啦',''),(6,'琥珀活动6','2014-03-16','在过去的这个周末，格但斯克琥珀展在波兰港口城市格但斯克隆重举行了，本版波兰特派员亲身前往并发回相关图片报道。','北京市东城区法华寺街91号天坛古玩城2号馆','010-52999181','6啦啦啦','');
 
 #
 # Structure for table "main_product"
@@ -235,7 +258,7 @@ CREATE TABLE `main_product` (
   `function` varchar(50) NOT NULL,
   `origin` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "main_product"

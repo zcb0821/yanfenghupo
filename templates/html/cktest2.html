@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>衍峰琥珀|编辑展会详情</title>
+        <title>衍峰琥珀|编辑展厅活动详情</title>
         <!-- Make sure the path to CKEditor is correct. -->
         <script src="/static/ckeditor/ckeditor.js"></script>
         <link href="/static/css/cktest.css" rel="stylesheet">
-        <script src="/static/js/cktest.js"></script>
+        <script src="/static/js/cktest2.js"></script>
     </head>
     <body>
         <form action="/admin/" method="post">
             {% csrf_token %}
-            <textarea name="editor1" id="editor1" rows="10" cols="80" placeholder="请输入展会详情">{{ CurrentEventDetail }}</textarea>
+            <textarea name="editor3" id="editor3" rows="10" cols="80" placeholder="请输入展厅活动详情">{{ CurrentHallDetail }}</textarea>
             <iframe id="test" style="width: 400px; height: 600px;"></iframe>
             <a id="myPreview" onclick="preview()">预览</a>
-            <textarea name="editor2" id="editor2" style="display: none"></textarea>
-            <textarea name="CurrentEventIdE" id="CurrentEventIdE" style="display: none">{{ CurrentEventIdE }}</textarea>
+            <textarea name="editor4" id="editor4" style="display: none"></textarea>
+            <textarea name="CurrentHallIdE" id="CurrentHallIdE" style="display: none">{{ CurrentHallIdE }}</textarea>
             <input onclick="preview()" type="submit" value="保存此次编辑">
             <script>
-                // Replace the <textarea id="editor1"> with a CKEditor
+                // Replace the <textarea id="editor3"> with a CKEditor
                 // instance, using default configuration.
-                CKEDITOR.replace( 'editor1');
+                CKEDITOR.replace( 'editor3');
             </script>
         </form>
     </body>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>衍峰琥珀|编辑展会海报</title>
+        <title>衍峰琥珀|编辑展厅活动海报</title>
     </head>
     <body>
-        {#上传展会海报#}
+        {#上传展厅活动海报#}
         <form action="/admin/" method="post" enctype="multipart/form-data" accept="image/*">
             {% csrf_token %}
-            <h3>展会的海报，是显示在展会首页，作为展会简介的图片</h3>
-            <h4>本展会的当前海报如下</h4>
+            <h3>展厅活动的海报，是显示在展厅活动首页，作为展厅活动简介的图片</h3>
+            <h4>本展厅活动的当前海报如下</h4>
             <img width="330px" height="248px" style="border:5px solid #ffCCCC" src={{ posterSRC }} />
             <h4>您可以上传其他图片代替该图</h4>
             <input type="file" name="poster" value="" />
-            <textarea name="CurrentEventIdU" id="CurrentEventIdU" style="display: none">{{ CurrentEventIdU }}</textarea>
+            <textarea name="CurrentHallIdU" id="CurrentHallIdU" style="display: none">{{ CurrentHallIdU }}</textarea>
             <button>上传</button>
         </form>
     </body>

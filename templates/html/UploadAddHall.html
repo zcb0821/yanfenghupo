@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>衍峰琥珀|编辑展厅活动海报</title>
+    </head>
+    <body>
+        {#上传展厅活动海报#}
+        <form action="/admin/" method="post" enctype="multipart/form-data" accept="image/*">
+            {% csrf_token %}
+            <h3>展厅活动的海报，是显示在展厅活动首页，作为展厅活动简介的图片</h3>
+            <h4>您可以上传一张图片，作为该展厅活动的海报</h4>
+            <input type="file" name="poster" value="" />
+            <textarea name="CurrentHallId" id="CurrentHallId" style="display: none">{{ CurrentHallId }}</textarea>
+            <button>上传</button>
+        </form>
+    </body>
+</html>

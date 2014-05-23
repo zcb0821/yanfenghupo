@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>衍峰琥珀|编辑产品图片</title>
+        <title>衍峰琥珀|编辑展会海报</title>
     </head>
     <body>
-        {#上传产品图片#}
+        {#上传展会海报#}
         <form action="/admin/" method="post" enctype="multipart/form-data" accept="image/*">
             {% csrf_token %}
-            <h3>产品的展示图片，是显示在产品目录页，作为产品简介的图片</h3>
-            <h4>您可以上传一张图片，作为该产品的展示图片</h4>
-            <input type="file" name="display_picture" value="" />
-            <h3>产品的详情图片，是显示在产品详情页，呈现产品详情的图片</h3>
-            <h4>您可以上传一张图片，作为该产品的详情图片</h4>
-            <input type="file" name="detail_picture" value="" />
-            <textarea name="CurrentProductId" id="CurrentProductId" style="display: none">{{ CurrentProductId }}</textarea>
+            <h3>展会的海报，是显示在展会首页，作为展会简介的图片</h3>
+            <h4>您可以上传一张图片，作为该展会的海报</h4>
+            <input type="file" name="poster" value="" />
+            <textarea name="CurrentEventId" id="CurrentEventId" style="display: none">{{ CurrentEventId }}</textarea>
             <button>上传</button>
         </form>
     </body>
