@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>衍峰琥珀|编辑产品图片</title>
+    </head>
+    <body>
+        {#上传产品图片#}
+        <form action="/admin/" method="post" enctype="multipart/form-data" accept="image/*">
+            {% csrf_token %}
+            <h3>活动的海报，是显示在活动首页，作为活动简介的图片</h3>
+            <h4>本活动的当前海报如下</h4>
+            <img width="330px" height="248px" style="border:5px solid #ffCCCC" src={{ posterSRC }} />
+            <h4>您可以上传其他图片代替该图</h4>
+            <input type="file" name="poster" value="" />
+            <textarea name="CurrentEventIdU" id="CurrentEventIdU" style="display: none">{{ CurrentEventIdU }}</textarea>
+            <button>上传</button>
+        </form>
+    </body>
+</html>

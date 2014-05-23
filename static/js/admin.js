@@ -184,9 +184,9 @@ $("#SaveChanges").click(function(){
         }
     });
 })
-//前往修改产品图片
+//只修改产品图片
 $("#GotoEditPicture").click(function(){
-    //查询数据库，获取当前所编辑的图片的id
+//查询数据库，获取当前所编辑的图片的id
     $.ajax({
         type: "POST",
         url: "/GetProductId/",
@@ -245,6 +245,31 @@ $("#SaveAddEve").click(function(){
         }
     });
 })
+//上传活动海报
+$("#GotoAddPicEve").click(function(){
+    var newName = $("#AddName").val()
+    var newIntro = $("#AddIntro").val()
+    var AjaxData="&name="+newName+
+        "&introduction="+newIntro;
+    $.ajax({
+        type: "POST",
+        url: "/AddEvent/",
+        data: AjaxData,
+        success: function(result) {
+            if(result=="AlreadyExist") {
+                alert("该活动信息已存在！新增失败！");
+            }
+            else {
+                NewEventInfo = "<tr class=\"odd gradeX\"><td>"+
+                    newName+"</td><td>"+
+                    newIntro+"</td><td><a class=\"GoToEditDetail\">点击编辑活动详情</a></td><td class=\"SetTd2\"></td><td data-toggle=\"modal\" data-target=\"#myModalEve\" class=\"DelTd2\"></td></tr>"
+                $("#EventList").append(NewEventInfo);
+            //将该id发到UploadEditEve页面，进行特定活动的海报上传
+            window.location.href="/UploadEditEve/event/"+result+"/"
+            }
+        }
+    });
+})
 
 //点击编辑活动详情的函数
 $("#EventList").on('click', '.GoToEditDetail', function(){
@@ -295,7 +320,7 @@ $("#SaveChangesEve").click(function(){
         }
     });
 })
-//前往编辑活动详情
+//只编辑活动详情
 $("#GotoEditDetail").click(function(){
     //查询数据库，获取当前所编辑的活动的id
     $.ajax({
@@ -305,6 +330,19 @@ $("#GotoEditDetail").click(function(){
         success: function(result) {
             //将该id发到cktest页面，进行特定活动的编辑
             window.location.href="/cktest/event/"+result+"/"
+        }
+    });
+})
+//只修改活动海报
+$("#GotoEditPicEve").click(function(){
+    //查询数据库，获取当前所编辑的图片的id
+    $.ajax({
+        type: "POST",
+        url: "/GetEventId/",
+        data: "name="+OrigNameEve,
+        success: function(result) {
+            //将该id发到UploadEditEve页面，进行特定活动的海报上传
+            window.location.href="/UploadEditEve/event/"+result+"/"
         }
     });
 })

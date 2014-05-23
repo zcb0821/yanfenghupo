@@ -33,27 +33,34 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yanfenghupo/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="59" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
+            <state line="24" column="0" selection-start="772" selection-end="890" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="223" column="13" selection-start="8221" selection-end="8221" vertical-scroll-proportion="-7.68">
-              <folding>
-                <element signature="e#24#76#0" expanded="true" />
-              </folding>
+            <state line="433" column="22" selection-start="16544" selection-end="16544" vertical-scroll-proportion="0.44708994">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="admin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="0" selection-start="4144" selection-end="4144" vertical-scroll-proportion="0.7037037">
+            <state line="322" column="3" selection-start="10848" selection-end="10848" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadEditEve.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/html/UploadEditEve.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="34" selection-start="447" selection-end="447" vertical-scroll-proportion="-8.142858">
               <folding />
             </state>
           </provider>
@@ -62,7 +69,7 @@
       <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/html/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="85" selection-start="888" selection-end="888" vertical-scroll-proportion="-0.6785714">
+            <state line="442" column="91" selection-start="21530" selection-end="21531" vertical-scroll-proportion="-2.1132076">
               <folding />
             </state>
           </provider>
@@ -81,8 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/html/EditEventDetail.html" />
-        <option value="$PROJECT_DIR$/main/models.py" />
         <option value="$PROJECT_DIR$/templates/html/product-catalog.html" />
         <option value="$PROJECT_DIR$/static/js/cktest.js" />
         <option value="$PROJECT_DIR$/static/css/admin.css" />
@@ -92,11 +97,13 @@
         <option value="$PROJECT_DIR$/templates/html/upload_file.html" />
         <option value="$PROJECT_DIR$/templates/html/cktest.html" />
         <option value="$PROJECT_DIR$/templates/html/UploadPicture.html" />
-        <option value="$PROJECT_DIR$/yanfenghupo/urls.py" />
         <option value="$PROJECT_DIR$/templates/html/UploadPicture2.html" />
+        <option value="$PROJECT_DIR$/yanfenghupo/urls.py" />
+        <option value="$PROJECT_DIR$/templates/html/event.html" />
+        <option value="$PROJECT_DIR$/templates/html/UploadEditEve.html" />
         <option value="$PROJECT_DIR$/templates/html/admin.html" />
-        <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/static/js/admin.js" />
+        <option value="$PROJECT_DIR$/main/views.py" />
       </list>
     </option>
   </component>
@@ -204,13 +211,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.25833333" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iCVSite-master" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iCVSite-master" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -300,25 +307,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="yanfenghupo" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -338,6 +326,25 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="yanfenghupo" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -500,8 +507,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7817259" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18712121" sideWeight="0.70558375" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993232" sideWeight="0.4939394" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19621213" sideWeight="0.70558375" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49069375" sideWeight="0.4939394" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49069375" sideWeight="0.5007576" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29441625" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
@@ -575,11 +582,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/main/views.py</url>
-          <line>257</line>
-          <option name="timeStamp" value="133" />
+          <line>151</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/static/js/admin.js</url>
+          <line>248</line>
+          <option name="timeStamp" value="140" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="134" />
+      <option name="time" value="143" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -635,32 +647,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yanfenghupo/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/html/event.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="59" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="85" column="138" selection-start="4551" selection-end="4551" vertical-scroll-proportion="0.054285713" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/views.py">
+    <entry file="file://$PROJECT_DIR$/yanfenghupo/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="13" selection-start="8221" selection-end="8221" vertical-scroll-proportion="-7.68">
-          <folding>
-            <element signature="e#24#76#0" expanded="true" />
-          </folding>
+        <state line="24" column="0" selection-start="772" selection-end="890" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/html/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="85" selection-start="888" selection-end="888" vertical-scroll-proportion="-0.6785714">
+        <state line="442" column="91" selection-start="21530" selection-end="21531" vertical-scroll-proportion="-2.1132076">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="0" selection-start="4144" selection-end="4144" vertical-scroll-proportion="0.7037037">
+        <state line="322" column="3" selection-start="10848" selection-end="10848" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/html/UploadEditEve.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="34" selection-start="447" selection-end="447" vertical-scroll-proportion="-8.142858">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="433" column="22" selection-start="16544" selection-end="16544" vertical-scroll-proportion="0.44708994">
           <folding />
         </state>
       </provider>

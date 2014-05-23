@@ -265,6 +265,19 @@ def GetProductId(request):
     ProductToAdd = Product.objects.filter(display_name=CurrentProductName)
     return HttpResponse(ProductToAdd[0].id, mimetype="application/text")
 
+@csrf_exempt
+def UploadEditEve(request, event):
+    EventToEdit = Event.objects.filter(id=int(event))[0]
+    #获取活动图片
+    posterSRC = "/static/images/event/"+EventToEdit.name+".jpg"
+    return render(request, 'html/UploadEditEve.html', {'posterSRC': posterSRC, 'CurrentEventIdU': event})
+
+@csrf_exempt
+def UploadAddEve(request, event):
+    ProductToEdit = Product.objects.filter(id=int(product))[0]
+    #获取产品图片
+    return render(request, 'html/UploadAddPro.html', {'CurrentProductId': product})
+
 #修改活动信息
 @csrf_exempt
 def SetEvent(request):
@@ -317,7 +330,7 @@ def AddEvent(request):
         detail=""
     )
     eventToAdd.save()
-    return HttpResponse(eventToAdd,mimetype="application/text")
+    return HttpResponse(eventToAdd.id,mimetype="application/text")
 
 #获取活动id
 @csrf_exempt
@@ -368,7 +381,7 @@ def admin(request):
         if 'editor1' in request.POST:
             EventDetail = request.POST['editor1']
             EventDetailToShow = EventDetail
-        #可能接受到活动详情的HTML
+            #可能接受到活动详情的HTML
         if 'editor2' in request.POST:
             EventDetailHTML = request.POST['editor2']
         #写入数据库
@@ -406,12 +419,21 @@ def admin(request):
     if request.method == "POST":
         LeftBracket = "【".decode('UTF-8')
         RightBracket = "】·".decode('UTF-8')
-        ProductId = int(request.POST['CurrentProductId'])
-        ProductToEdit = Product.objects.filter(id=ProductId)[0]
-        display_path = "static/images/product-catalog/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".png"
-        detail_path = "static/images/product-detail/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".jpg"
-        display_picture = handle_uploaded_file(request.FILES['display_picture'], display_path)
-        detail_picture = handle_uploaded_file(request.FILES['detail_picture'], detail_path)
+        if 'CurrentProductId' in request.POST:
+            ProductId = int(request.POST['CurrentProductId'])
+            ProductToEdit = Product.objects.filter(id=ProductId)[0]
+            if 'display_picture' in request.FILES:
+                display_path = "static/images/product-catalog/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".png"
+                display_picture = handle_uploaded_file(request.FILES['display_picture'], display_path)
+            if 'detail_picture' in request.FILES:
+                detail_path = "static/images/product-detail/product-display/"+ProductToEdit.series.encode()+"/"+ProductToEdit.function.encode()+"/"+ProductToEdit.origin.encode()+"/"+LeftBracket+ProductToEdit.display_name.encode()+RightBracket+ProductToEdit.material.encode()+".jpg"
+                detail_picture = handle_uploaded_file(request.FILES['detail_picture'], detail_path)
+        if 'CurrentEventIdU' in request.POST:
+            EventId = int(request.POST['CurrentEventIdU'])
+            EventToEdit = Event.objects.filter(id=EventId)[0]
+            if 'poster' in request.FILES:
+                poster_path = "static/images/event/"+EventToEdit.name+".jpg"
+                poster = handle_uploaded_file(request.FILES['poster'], poster_path)
     return render_to_response("html/admin.html", {'products': products, 'events': event_list}, context_instance=RequestContext(request))
 
 @csrf_exempt

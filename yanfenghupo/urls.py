@@ -20,6 +20,8 @@ urlpatterns = patterns('main.views',
     (r'^GetProductId/$', 'GetProductId'),
     (r'^UploadEditPro/product/(\d{1,6})/$', 'UploadEditPro'),
     (r'^UploadAddPro/product/(\d{1,6})/$', 'UploadAddPro'),
+    (r'^UploadEditEve/event/(\d{1,6})/$', 'UploadEditEve'),
+    (r'^UploadAddEve/event/(\d{1,6})/$', 'UploadAddEve'),
 
     (r'^SetEvent/$', 'SetEvent'),
     (r'^DelEvent/$', 'DelEvent'),
