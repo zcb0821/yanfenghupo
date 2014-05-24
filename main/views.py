@@ -10,8 +10,33 @@ from yanfenghupo import settings
 
 import datetime
 import sys, os, time
+import json
 reload(sys)
 sys.setdefaultencoding('utf-8')
+
+# Get Language
+zh_cn = json.loads(open(os.path.join(settings.LANGUAGE_ROOT, 'zh_cn.json')).read())
+us_en = json.loads(open(os.path.join(settings.LANGUAGE_ROOT, 'us_en.json')).read())
+
+#check language
+def check_language(request):
+    language = request.GET.get('language')
+    if language == 'English':
+        request.session['language'] = 'English'
+        return us_en
+    elif language == 'Chinese':
+        request.session['language'] = 'Chinese'
+        return zh_cn
+    else:
+        try:
+            if request.session['language'] == 'English':
+                return us_en
+            else:
+                return zh_cn
+        except:
+            request.session['language'] = 'Chinese'
+            return zh_cn
+
 
 # Create your views here.
 def str2date(str):
@@ -22,7 +47,9 @@ def date2str(date):
 
 @csrf_exempt
 def index(request):
-    return render(request, 'html/index.html', {})
+    return render(request, 'html/index.html', {'L': check_language(request)})
+
+
 
 @csrf_exempt
 def about(request):
