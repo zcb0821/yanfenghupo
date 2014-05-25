@@ -1,11 +1,16 @@
+var mode;
+
 $(function(){
+    //操作左导航，点击左导航“展会”
 	$("#zhanhui").click(function(){
 		$("#zhanhui").removeClass("level2").addClass("level2chosen");
 		$("#zhantinghuodong").removeClass("level2chosen").addClass("level2");
 		$("#CurrentTheme").text("展会");
+
 		$('#leftward').addClass("hide");
 		$('#rightward').addClass("hide");
 		$('#HallCata').addClass("hide");
+
 		$('#Event1replace').removeClass("hide");
 		$('#Event2replace').removeClass("hide");
 		$('#EventReplace11').addClass("hide");
@@ -23,13 +28,17 @@ $(function(){
 		$('#EventReplace28').addClass("hide");
 		$('#EventReplace29').addClass("hide");
 	})
+    //操作左导航，点击左导航“展厅活动”
 	$("#zhantinghuodong").click(function(){
+        mode = 3;
 		$("#zhantinghuodong").removeClass("level2").addClass("level2chosen");
 		$("#zhanhui").removeClass("level2chosen").addClass("level2");
 		$("#CurrentTheme").text("展厅活动");
+
 		$('#leftward').removeClass("hide");
 		$('#rightward').removeClass("hide");
-		$('#HallCata').removeClass("hide");
+        $('#HallCata').removeClass("hide");
+
 		$('#Event1replace').addClass("hide");
 		$('#Event2replace').addClass("hide");
 		$('#EventReplace11').addClass("hide");
@@ -46,9 +55,17 @@ $(function(){
 		$('#EventReplace27').addClass("hide");
 		$('#EventReplace28').addClass("hide");
 		$('#EventReplace29').addClass("hide");
+
+        if ($("#HallCata").children(".HallCataWrapper").length > 3) {
+            enableRight();
+        }
+        else {
+            disableRight();
+        }
 	})
+
 	$("#Event1replace").click(function(){
-		mode = 1;
+        mode = 1;
 		$('#leftward').removeClass("hide");
 		$('#rightward').removeClass("hide");
 		enableRight();
@@ -71,7 +88,7 @@ $(function(){
 		$('#EventReplace29').addClass("hide");
 	})
 	$("#Event2replace").click(function(){
-		mode = 2;
+        mode = 2;
 		$('#leftward').removeClass("hide");
 		$('#rightward').removeClass("hide");
 		enableRight();
@@ -96,79 +113,98 @@ $(function(){
 	//点击左右小三角，滑动查看
 	//点击左边按钮
 	$('#btnLeft').click(function(){
-	        if ($('#btnLeft').attr("class")=="btnLeft2") {
-	            return;
-	        };
-	        var flag = 0;
-	        //已保证可以向左滑动
-	        if (mode == 1) {
-		        var first = $("#EventReplace11").css("left").replace(/px/, "");
-		        if (Number(first) == -440) {
-		        	flag = 1;
-		        }
-		        $("#EventReplace11").animate({left:'+=440px'});
-		        $("#EventReplace12").animate({left:'+=440px'});
-		        $("#EventReplace13").animate({left:'+=440px'});
-		        $("#EventReplace14").animate({left:'+=440px'});
-		        $("#EventReplace15").animate({left:'+=440px'});
-	        }
-	        else {
-		        var first = $("#EventReplace21").css("left").replace(/px/, "");
-		        if (Number(first) == -440) {
-		        	flag = 1;
-		        }
-		        $("#EventReplace21").animate({left:'+=440px'});
-		        $("#EventReplace22").animate({left:'+=440px'});
-		        $("#EventReplace23").animate({left:'+=440px'});
-		        $("#EventReplace24").animate({left:'+=440px'});
-		        $("#EventReplace25").animate({left:'+=440px'});
-		        $("#EventReplace26").animate({left:'+=440px'});
-		        $("#EventReplace27").animate({left:'+=440px'});
-		        $("#EventReplace28").animate({left:'+=440px'});
-		        $("#EventReplace29").animate({left:'+=440px'});
-	        }
-	        enableRight();
-	        if (flag == 1) {
-	        	disableLeft();
-	        }
+        if ($('#btnLeft').attr("class")=="btnLeft2") {
+            return;
+        };
+        var flag = 0;
+        //已保证可以向左滑动
+        if (mode == 1) {
+            var first = $("#EventReplace11").css("left").replace(/px/, "");
+            if (Number(first) == -440) {
+               flag = 1;
+            }
+            $("#EventReplace11").animate({left:'+=440px'});
+            $("#EventReplace12").animate({left:'+=440px'});
+            $("#EventReplace13").animate({left:'+=440px'});
+            $("#EventReplace14").animate({left:'+=440px'});
+            $("#EventReplace15").animate({left:'+=440px'});
+        }
+        else if (mode == 2){
+            var first = $("#EventReplace21").css("left").replace(/px/, "");
+            if (Number(first) == -440) {
+               flag = 1;
+            }
+            $("#EventReplace21").animate({left:'+=440px'});
+            $("#EventReplace22").animate({left:'+=440px'});
+            $("#EventReplace23").animate({left:'+=440px'});
+            $("#EventReplace24").animate({left:'+=440px'});
+            $("#EventReplace25").animate({left:'+=440px'});
+            $("#EventReplace26").animate({left:'+=440px'});
+            $("#EventReplace27").animate({left:'+=440px'});
+            $("#EventReplace28").animate({left:'+=440px'});
+            $("#EventReplace29").animate({left:'+=440px'});
+        }
+        else if (mode == 3){
+            var first = $("#HallCata").children(".HallCataWrapper").eq(0).css("left").replace(/px/, "");
+            if (Number(first) == -280) {
+               flag = 1;
+            }
+            for (var HallIndex = 0; HallIndex < $("#HallCata").children(".HallCataWrapper").length; HallIndex++) {
+                $("#HallCata").children(".HallCataWrapper").eq(HallIndex).animate({left:'+=280px'});
+            }
+        }
+        enableRight();
+        if (flag == 1) {
+            disableLeft();
+        }
 	});
 	//点击右边按钮
 	$('#btnRight').click(function(){
-	        if ($('#btnRight').attr("class")=="btnRight2") {
-	            return;
-	        };
-	        var flag = 0;
-	        //已保证可以向右滑动
-	        if (mode == 1) {
-		        var fifth = $("#EventReplace15").css("left").replace(/px/, "");
-		        if (Number(fifth) == 440) {
-		        	flag = 1;
-		        }
-		        $("#EventReplace11").animate({left:'-=440px'});
-		        $("#EventReplace12").animate({left:'-=440px'});
-		        $("#EventReplace13").animate({left:'-=440px'});
-		        $("#EventReplace14").animate({left:'-=440px'});
-		        $("#EventReplace15").animate({left:'-=440px'});
-	        }
-	        else {
-		        var ninth = $("#EventReplace29").css("left").replace(/px/, "");
-		        if (Number(ninth) == 440) {
-		        	flag = 1;
-		        }
-		        $("#EventReplace21").animate({left:'-=440px'});
-		        $("#EventReplace22").animate({left:'-=440px'});
-		        $("#EventReplace23").animate({left:'-=440px'});
-		        $("#EventReplace24").animate({left:'-=440px'});
-		        $("#EventReplace25").animate({left:'-=440px'});
-		        $("#EventReplace26").animate({left:'-=440px'});
-		        $("#EventReplace27").animate({left:'-=440px'});
-		        $("#EventReplace28").animate({left:'-=440px'});
-		        $("#EventReplace29").animate({left:'-=440px'});
-	        }
-	        enableLeft();
-	        if (flag == 1) {
-	        	disableRight();
-	        }
+        if ($('#btnRight').attr("class")=="btnRight2") {
+            return;
+        };
+        var flag = 0;
+        //已保证可以向右滑动
+        if (mode == 1) {
+            var fifth = $("#EventReplace15").css("left").replace(/px/, "");
+            if (Number(fifth) == 440) {
+               flag = 1;
+            }
+            $("#EventReplace11").animate({left:'-=440px'});
+            $("#EventReplace12").animate({left:'-=440px'});
+            $("#EventReplace13").animate({left:'-=440px'});
+            $("#EventReplace14").animate({left:'-=440px'});
+            $("#EventReplace15").animate({left:'-=440px'});
+        }
+        else if (mode == 2){
+            var ninth = $("#EventReplace29").css("left").replace(/px/, "");
+            if (Number(ninth) == 440) {
+               flag = 1;
+            }
+            $("#EventReplace21").animate({left:'-=440px'});
+            $("#EventReplace22").animate({left:'-=440px'});
+            $("#EventReplace23").animate({left:'-=440px'});
+            $("#EventReplace24").animate({left:'-=440px'});
+            $("#EventReplace25").animate({left:'-=440px'});
+            $("#EventReplace26").animate({left:'-=440px'});
+            $("#EventReplace27").animate({left:'-=440px'});
+            $("#EventReplace28").animate({left:'-=440px'});
+            $("#EventReplace29").animate({left:'-=440px'});
+        }
+        else if (mode == 3){
+            var total = $("#HallCata").children(".HallCataWrapper").length;
+            var last = $("#HallCata").children(".HallCataWrapper").eq(total-1).css("left").replace(/px/, "");
+            if (Number(last) == 280) {
+               flag = 1;
+            }
+            for (var HallIndex = 0; HallIndex < total; HallIndex++) {
+                $("#HallCata").children(".HallCataWrapper").eq(HallIndex).animate({left:'-=280px'});
+            }
+        }
+        enableLeft();
+        if (flag == 1) {
+            disableRight();
+        }
 	});
 });
 

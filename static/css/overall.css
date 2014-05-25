@@ -81,16 +81,15 @@ img{border:0 none;}
 	right: 150px;
 	font-family: "SimHei";
 	font-size: 13px;
-	color: #9a9a9a;
 }
 #AdminLogin{
+    position: absolute;
+    top: 51px;
+    right: 40px;
     font-family: "SimHei";
     font-size: 13px;
-    position: absolute;
-    right: 40px;
-    top: 51px;
 }
-#AdminLogin a{
+#AdminLogin a, #language a{
     color: #9A9A9A;
     text-decoration: none;
 }

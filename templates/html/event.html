@@ -46,18 +46,21 @@
 				<div id="leftward" style="margin-left: -20px" class="hide"><a class="btnLeft2" id="btnLeft"></a></div>
 				<div id="rightward" class="hide"><a class="btnRight2" id="btnRight"></a></div>
 				<div class="box">
-			    <!-- 展厅活动列表 -->
+			    <!-- 展厅活动目录页 -->
                 <div id="HallCata" class="hide">
                     {%  for h in hall_list %}
-					<div style={{ h.HallStyle }}>
+					<div class="HallCataWrapper" style={{ h.HallStyle }}>
 						<div class="EventWrapperSmall">
-							<img style="position: absolute; left: 10px; top: 10px; width: 230px; height: 180px" src={{ h.HallSrc }}>
+							<img class="Hallimg" style="position: absolute; left: 10px; top: 10px; width: 230px; height: 180px" src={{ h.HallSrc }}>
 						</div>
 						<div class="EventNameSmall" style="left: 10px; top: 215px">{{ h.hall.title }}</div>
 						<div class="EventDateSmall" style="left: 10px; top: 254px">{{ h.date }}</div>
 						<div class="EventContentSmall" style="left: 10px; top: 282px">{{ h.hall.introduction }}<br/><br/>展厅地址：{{ h.hall.address }}<br/>电话：{{ h.hall.telephone }}</div>
 					</div>
                     {% endfor %}
+                </div>
+			    <!-- 展厅活动详情页 -->
+                <div id="HallDeta" class="hide">
                 </div>
                 <div class="EventCata">
 					<!-- Column1替换为展会页面 -->
