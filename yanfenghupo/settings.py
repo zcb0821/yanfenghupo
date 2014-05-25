@@ -99,3 +99,5 @@ TEMPLATE_DIRS = (
 MEDIA_ROOT = os.path.join(BASE_DIR, "media").replace('\\', '/')
 
 MEDIA_URL = '/media/'
+
+LANGUAGE_ROOT = os.path.join(BASE_DIR, "static/localization").replace('\\', '/')

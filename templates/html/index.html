@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>衍峰琥珀</title>
+		<title>{{ L.title }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lt IE 9]> <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> <![endif]-->
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -18,15 +18,15 @@
 						<a href="/index/"><img src="/static/images/logo.png" width="150px" height="73px" /></a>
 					</div>
 					<ul class="menu">
-						<li><a class="sink" href="/three-column/">产品<br /><span>Our Products</span></a></li>
-						<li><a class="sink" href="/event/">活动<br /><span>Our Events</span></a></li>
-						<li class="li-last"><a class="sink" href="about/">关于我们<br /><span>About us</span></a></li>
+						<li><a class="sink" href="/three-column/">{{ L.product }}{% comment %}<br /><span>Our Products</span>{% endcomment %}</a></li>
+						<li><a class="sink" href="/event/">{{ L.event }}{% comment %}<br /><span>Our Events</span>{% endcomment %}</a></li>
+						<li class="li-last"><a class="sink" href="about/">{{ L.about }}{% comment %}<br /><span>About us</span>{% endcomment %}</a></li>
 					</ul>
-					<div id="language">
-						<a>中文/English</a>
+					<div id="language" lang="{{ L.lang }}">
+						<a href="?language={% if L.lang == "English" %}{{ "Chinese" }}{% else %}{{ "English" }}{% endif %}">中文/English</a>
 					</div>
 					<div id="AdminLogin">
-						<a href="/login/">管理员登录</a>
+						<a href="/login/">{{ L.adminLogin }}</a>
 					</div>
 				</div>
 			</div>
@@ -47,8 +47,8 @@
 			<!-- footer starts -->
 			<div id="footer">
 				<ul class="info">
-					<li><a href="/contact/" target= "_blank ">联系我们</a></li>
-					<li><a href="/weixin/" target= "_blank ">关注我们</a><img src="/static/images/weixin.png" width="18px" height="13px"></li>
+					<li><a href="/contact/" target= "_blank ">{{ L.contactUs }}</a></li>
+					<li><a href="/weixin/" target= "_blank ">{{ L.followUs }}</a><img src="/static/images/weixin.png" width="18px" height="13px"></li>
 					<li class="li-last"><a href="http://shop109278676.taobao.com/?spm=a230r.7195193.1997079397.2.gCCOiJ" target= "_blank ">衍峰琥珀淘宝店</a></li>
 				</ul>
 			</div>

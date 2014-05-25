@@ -75,4 +75,13 @@ $(function(){
 	}
 	clearInt();
 	setInt();
+
+    $('#language').click(function(){
+        var $this = $(this);
+        if ($this.attr('lang') == 'Chinese'){
+
+        } else if ($this.attr('lang') == 'Chinese'){
+
+        }
+    })
 })
