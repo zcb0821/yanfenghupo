@@ -477,7 +477,21 @@ def weixin(request):
 
 @csrf_exempt
 def event(request):
-    return render(request, 'html/event.html', {})
+    hall_list = []
+    HallStyles = []
+    HallSrcs = []
+    halls = Hall.objects.all();
+    for i in range(len(halls)):
+        HallStyles.append("position:absolute;left:"+ str(i*280) + "px")
+        HallSrcs.append("/static/images/hall/" + halls[i].title + ".jpg")
+    for i in range(len(halls)):
+        hall_list.append({
+            'hall': halls[i],
+            'HallStyle': HallStyles[i],
+            'HallSrc': HallSrcs[i],
+            'date': date2str(halls[i].date)
+        })
+    return render_to_response('html/event.html', {'hall_list': hall_list})
 
 @csrf_exempt
 @csrf_protect

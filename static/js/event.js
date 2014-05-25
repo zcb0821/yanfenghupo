@@ -5,9 +5,7 @@ $(function(){
 		$("#CurrentTheme").text("展会");
 		$('#leftward').addClass("hide");
 		$('#rightward').addClass("hide");
-		$('#Event1').addClass("hide");
-		$('#Event2').addClass("hide");
-		$('#Event3').addClass("hide");
+		$('#HallCata').addClass("hide");
 		$('#Event1replace').removeClass("hide");
 		$('#Event2replace').removeClass("hide");
 		$('#EventReplace11').addClass("hide");
@@ -31,9 +29,7 @@ $(function(){
 		$("#CurrentTheme").text("展厅活动");
 		$('#leftward').removeClass("hide");
 		$('#rightward').removeClass("hide");
-		$('#Event1').removeClass("hide");
-		$('#Event2').removeClass("hide");
-		$('#Event3').removeClass("hide");
+		$('#HallCata').removeClass("hide");
 		$('#Event1replace').addClass("hide");
 		$('#Event2replace').addClass("hide");
 		$('#EventReplace11').addClass("hide");
@@ -56,9 +52,7 @@ $(function(){
 		$('#leftward').removeClass("hide");
 		$('#rightward').removeClass("hide");
 		enableRight();
-		$('#Event1').addClass("hide");
-		$('#Event2').addClass("hide");
-		$('#Event3').addClass("hide");
+		$('#HallCata').addClass("hide");
 		$('#Event1replace').addClass("hide");
 		$('#Event2replace').addClass("hide");
 		$('#EventReplace11').removeClass("hide");
@@ -81,9 +75,7 @@ $(function(){
 		$('#leftward').removeClass("hide");
 		$('#rightward').removeClass("hide");
 		enableRight();
-		$('#Event1').addClass("hide");
-		$('#Event2').addClass("hide");
-		$('#Event3').addClass("hide");
+		$('#HallCata').addClass("hide");
 		$('#Event1replace').addClass("hide");
 		$('#Event2replace').addClass("hide");
 		$('#EventReplace11').addClass("hide");

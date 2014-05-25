@@ -29,7 +29,52 @@
     <favorites_list name="yanfenghupo" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="event.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/event.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="1" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.7982301">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/html/event.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="254" column="27" selection-start="12528" selection-end="12528" vertical-scroll-proportion="-5.428571">
+              <folding>
+                <element signature="tag#head#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#3;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#4;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#5;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#6;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#7;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#8;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#9;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#10;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#11;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#12;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#13;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#14;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#15;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#3;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -42,9 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/main/models.py" />
-        <option value="$PROJECT_DIR$/static/css/admin.css" />
-        <option value="$PROJECT_DIR$/templates/html/admin.html" />
         <option value="$PROJECT_DIR$/yanfenghupo/urls.py" />
         <option value="$PROJECT_DIR$/templates/html/cktest.html" />
         <option value="$PROJECT_DIR$/templates/html/cktest2.html" />
@@ -56,14 +98,17 @@
         <option value="$PROJECT_DIR$/static/js/admin.js" />
         <option value="$PROJECT_DIR$/static/css/about.css" />
         <option value="$PROJECT_DIR$/templates/html/about.html" />
-        <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/static/js/about.js" />
+        <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/static/js/event.js" />
+        <option value="$PROJECT_DIR$/templates/html/event.html" />
+        <option value="$PROJECT_DIR$/static/css/event.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-111" />
+    <option name="y" value="70" />
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
@@ -129,70 +174,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yanfenghupo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yanfenghupo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yanfenghupo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yanfenghupo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yanfenghupo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yanfenghupo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yanfenghupo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yanfenghupo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -201,13 +182,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.25833333" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../iCVSite-master" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -299,6 +280,25 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="yanfenghupo" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -318,25 +318,6 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="yanfenghupo" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -492,15 +473,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <frame x="-111" y="70" width="1382" height="754" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7817259" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20227273" sideWeight="0.70558375" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32318106" sideWeight="0.4939394" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21136364" sideWeight="0.70558375" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5245347" sideWeight="0.4939394" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49069375" sideWeight="0.5007576" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29441625" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
@@ -571,145 +552,63 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/main/views.py</url>
-          <line>188</line>
-          <option name="timeStamp" value="152" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="159" />
+      <option name="time" value="163" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/css/admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="247" selection-end="247" vertical-scroll-proportion="0.23539823">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yanfenghupo/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="35" selection-start="1481" selection-end="1481" vertical-scroll-proportion="0.69734514">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/cktest2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="69" selection-start="475" selection-end="475" vertical-scroll-proportion="0.41713223">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/html/cktestCI.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1073" selection-end="1386" vertical-scroll-proportion="0.9292365">
-          <folding />
-        </state>
+        <state line="32" column="0" selection-start="1073" selection-end="1386" vertical-scroll-proportion="0.9292365" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/cktest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="1" selection-start="0" selection-end="265" vertical-scroll-proportion="0.16814159">
-          <folding />
-        </state>
+        <state line="5" column="1" selection-start="0" selection-end="265" vertical-scroll-proportion="0.16814159" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/html/cktestBSP.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="43" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.8049281">
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="29" column="43" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.8049281" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/html/cktestBSE.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="43" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.8049281">
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="289" column="64" selection-start="14854" selection-end="14859" vertical-scroll-proportion="-4.754717">
-          <folding>
-            <element signature="n#for#0;n#!!top" expanded="false" />
-            <element signature="n#for#1;n#!!top" expanded="false" />
-            <element signature="n#for#2;n#!!top" expanded="false" />
-          </folding>
-        </state>
+        <state line="29" column="43" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.8049281" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="694" column="31" selection-start="23608" selection-end="23608" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#979#1012#0" expanded="false" />
-            <element signature="e#1047#1721#0" expanded="false" />
-            <element signature="e#1561#1717#0" expanded="false" />
-            <element signature="e#1672#1711#0" expanded="false" />
-            <element signature="e#2789#2845#0" expanded="false" />
-            <element signature="e#4086#4142#0" expanded="false" />
-            <element signature="e#4950#5664#0" expanded="false" />
-            <element signature="e#5711#7288#0" expanded="false" />
-            <element signature="e#6751#7284#0" expanded="false" />
-            <element signature="e#6862#7278#0" expanded="false" />
-            <element signature="e#6903#6963#0" expanded="false" />
-            <element signature="e#6981#7268#0" expanded="false" />
-            <element signature="e#7713#7747#0" expanded="false" />
-            <element signature="e#7785#8022#0" expanded="false" />
-            <element signature="e#7852#8018#0" expanded="false" />
-            <element signature="e#7972#8012#0" expanded="false" />
-            <element signature="e#8062#8237#0" expanded="false" />
-            <element signature="e#8272#9044#0" expanded="false" />
-            <element signature="e#8433#9040#0" expanded="false" />
-            <element signature="e#8542#9034#0" expanded="false" />
-            <element signature="e#8583#8639#0" expanded="false" />
-            <element signature="e#8657#9024#0" expanded="false" />
-            <element signature="e#9402#9458#0" expanded="false" />
-            <element signature="e#10523#10845#0" expanded="false" />
-            <element signature="e#10896#11497#0" expanded="false" />
-            <element signature="e#11084#11493#0" expanded="false" />
-            <element signature="e#11254#11487#0" expanded="false" />
-            <element signature="e#11295#11355#0" expanded="false" />
-            <element signature="e#11373#11477#0" expanded="false" />
-            <element signature="e#11546#11828#0" expanded="false" />
-            <element signature="e#11585#11824#0" expanded="false" />
-            <element signature="e#11707#11818#0" expanded="false" />
-            <element signature="e#11877#12175#0" expanded="false" />
-            <element signature="e#11916#12171#0" expanded="false" />
-            <element signature="e#12038#12165#0" expanded="false" />
-            <element signature="e#12248#12282#0" expanded="false" />
-            <element signature="e#12321#12554#0" expanded="false" />
-            <element signature="e#12386#12550#0" expanded="false" />
-            <element signature="e#12504#12544#0" expanded="false" />
-            <element signature="e#12596#13032#0" expanded="false" />
-            <element signature="e#13469#14216#0" expanded="false" />
-            <element signature="e#13577#14210#0" expanded="false" />
-            <element signature="e#13618#13676#0" expanded="false" />
-            <element signature="e#13694#14200#0" expanded="false" />
-            <element signature="e#15627#15995#0" expanded="false" />
-            <element signature="e#15744#15991#0" expanded="false" />
-            <element signature="e#15871#15985#0" expanded="false" />
-            <element signature="e#16137#16836#0" expanded="false" />
-            <element signature="e#16889#18241#0" expanded="false" />
-            <element signature="e#17743#18237#0" expanded="false" />
-            <element signature="e#17851#18231#0" expanded="false" />
-            <element signature="e#17892#17954#0" expanded="false" />
-            <element signature="e#17972#18221#0" expanded="false" />
-            <element signature="e#18296#18580#0" expanded="false" />
-            <element signature="e#18337#18576#0" expanded="false" />
-            <element signature="e#18457#18570#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="694" column="31" selection-start="23608" selection-end="23608" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/html/cktest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="109" selection-start="815" selection-end="836" vertical-scroll-proportion="0.5289256" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/html/cktestBI.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="59" selection-start="1296" selection-end="1347" vertical-scroll-proportion="0.6060606" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/about.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="1" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/about.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="28" selection-start="2209" selection-end="2209" vertical-scroll-proportion="0.4283186" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/html/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="43" selection-start="2281" selection-end="2281" vertical-scroll-proportion="0.04809619" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/html/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="0" selection-start="5595" selection-end="5664" vertical-scroll-proportion="0.92578125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/models.py">
@@ -719,67 +618,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/cktest.html">
+    <entry file="file://$PROJECT_DIR$/static/js/event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="109" selection-start="815" selection-end="836" vertical-scroll-proportion="0.5289256">
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/cktestBI.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="59" selection-start="1296" selection-end="1347" vertical-scroll-proportion="0.6060606">
+        <state line="78" column="0" selection-start="3004" selection-end="3004" vertical-scroll-proportion="-3.237168">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/about.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="1" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/about.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="28" selection-start="2209" selection-end="2209" vertical-scroll-proportion="0.4283186">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/html/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="43" selection-start="2281" selection-end="2281" vertical-scroll-proportion="0.04809619">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#4;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#6;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#8;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#2;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#3;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="154" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.3786232">
+        <state line="15" column="25" selection-start="512" selection-end="512" vertical-scroll-proportion="0.17210145">
           <folding>
-            <element signature="e#24#76#0" expanded="true" />
+            <element signature="e#536#586#0" expanded="false" />
+            <element signature="e#612#644#0" expanded="false" />
+            <element signature="e#683#728#0" expanded="false" />
+            <element signature="e#767#1176#0" expanded="false" />
+            <element signature="e#1217#1264#0" expanded="false" />
+            <element signature="e#3396#3926#0" expanded="false" />
+            <element signature="e#3973#4284#0" expanded="false" />
+            <element signature="e#4331#4384#0" expanded="false" />
+            <element signature="e#4430#5757#0" expanded="false" />
+            <element signature="e#5951#6775#0" expanded="false" />
+            <element signature="e#6830#6984#0" expanded="false" />
+            <element signature="e#7036#9022#0" expanded="false" />
+            <element signature="e#9072#9942#0" expanded="false" />
+            <element signature="e#9992#11207#0" expanded="false" />
+            <element signature="e#11261#11507#0" expanded="false" />
+            <element signature="e#11699#11933#0" expanded="false" />
+            <element signature="e#11986#12129#0" expanded="false" />
+            <element signature="e#12179#12859#0" expanded="false" />
+            <element signature="e#12907#13144#0" expanded="false" />
+            <element signature="e#13192#13742#0" expanded="false" />
+            <element signature="e#13794#14006#0" expanded="false" />
+            <element signature="e#14198#14427#0" expanded="false" />
+            <element signature="e#14480#14619#0" expanded="false" />
+            <element signature="e#14670#15771#0" expanded="false" />
+            <element signature="e#15820#16057#0" expanded="false" />
+            <element signature="e#16106#17012#0" expanded="false" />
+            <element signature="e#17065#17276#0" expanded="false" />
+            <element signature="e#17460#17512#0" expanded="false" />
+            <element signature="e#17552#17598#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/html/event.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="254" column="27" selection-start="12528" selection-end="12528" vertical-scroll-proportion="-5.428571">
+          <folding>
+            <element signature="tag#head#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#4;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#5;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#6;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#7;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#8;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#9;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#10;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#11;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#12;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#13;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#14;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#15;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/event.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="1" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.7982301">
+          <folding />
         </state>
       </provider>
     </entry>

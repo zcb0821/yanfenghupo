@@ -46,33 +46,20 @@
 				<div id="leftward" style="margin-left: -20px" class="hide"><a class="btnLeft2" id="btnLeft"></a></div>
 				<div id="rightward" class="hide"><a class="btnRight2" id="btnRight"></a></div>
 				<div class="box">
-					<!-- Column1 -->
-					<div id="Event1" class="hide" style="position: absolute; left: 0">
+			    <!-- 展厅活动列表 -->
+                <div id="HallCata" class="hide">
+                    {%  for h in hall_list %}
+					<div style={{ h.HallStyle }}>
 						<div class="EventWrapperSmall">
-							<img style="position: absolute; left: 10px; top: 10px; width: 230px; height: 180px" src="">
+							<img style="position: absolute; left: 10px; top: 10px; width: 230px; height: 180px" src={{ h.HallSrc }}>
 						</div>
-						<div class="EventNameSmall" style="left: 10px; top: 215px">琥珀活动</div>
-						<div class="EventDateSmall" style="left: 10px; top: 254px">2014-3-13</div>
-						<div class="EventContentSmall" style="left: 10px; top: 282px">在过去的这个周末，格但斯克琥珀展在波兰港口城市格但斯克隆重举行了，本版波兰特派员亲身前往并发回相关图片报道。<br/><br/>展厅地址：北京市东城区法华寺街91号天坛古玩城2号馆<br/>电话：010-52999181</div>
+						<div class="EventNameSmall" style="left: 10px; top: 215px">{{ h.hall.title }}</div>
+						<div class="EventDateSmall" style="left: 10px; top: 254px">{{ h.date }}</div>
+						<div class="EventContentSmall" style="left: 10px; top: 282px">{{ h.hall.introduction }}<br/><br/>展厅地址：{{ h.hall.address }}<br/>电话：{{ h.hall.telephone }}</div>
 					</div>
-					<!-- Column2 -->
-					<div id="Event2" class="hide" style="position: absolute; left: 280px">
-						<div class="EventWrapperSmall">
-							<img style="position: absolute; left: 10px; top: 10px; width: 230px; height: 180px" src="">
-						</div>
-						<div class="EventNameSmall" style="left: 10px; top: 215px">琥珀活动</div>
-						<div class="EventDateSmall" style="left: 10px; top: 254px">2014-3-13</div>
-						<div class="EventContentSmall" style="left: 10px; top: 282px">在过去的这个周末，格但斯克琥珀展在波兰港口城市格但斯克隆重举行了，本版波兰特派员亲身前往并发回相关图片报道。</div>
-					</div>
-					<!-- Column3 -->
-					<div id="Event3" class="hide" style="position: absolute; left: 560px">
-						<div class="EventWrapperSmall">
-							<img style="position: absolute; left: 10px; top: 10px; width: 230px; height: 180px" src="">
-						</div>
-						<div class="EventNameSmall" style="left: 10px; top: 215px">琥珀活动</div>
-						<div class="EventDateSmall" style="left: 10px; top: 254px">2014-3-13</div>
-						<div class="EventContentSmall" style="left: 10px; top: 282px">在过去的这个周末，格但斯克琥珀展在波兰港口城市格但斯克隆重举行了，本版波兰特派员亲身前往并发回相关图片报道。</div>
-					</div>
+                    {% endfor %}
+                </div>
+                <div class="EventCata">
 					<!-- Column1替换为展会页面 -->
 					<div id="Event1replace" style="position: absolute; left: 0">
 						<div class="EventWrapper">
@@ -81,6 +68,7 @@
 						<div class="EventName" style="left: 0; top: 270px">第四届北京国际珠宝首饰展</div>
 						<div class="EventContent" style="left: 0; top: 300px">北京衍峰文化有限公司将于2014年4月13日，参加第四节北京国际珠宝首饰展览会，公司参展的产品主要以琥珀蜜蜡为主，为广大经销商和消费者提供更多更全的产品展示和选择。<br/>展会举办地点是中国国际展览中心（老国展），从4月13日到4月16日，为期4天。期待公司在展会中有一个完美的展现。</div>
 					</div>
+					<!-- Column2替换为展会页面 -->
 					<div id="Event2replace" style="position: absolute; left: 440px">
 						<div class="EventWrapper">
 							<img style="position: absolute; left: 10px; top: 10px; width: 330px; height: 248px" src="/static/images/event/2014第17届济南国际珠宝展暨首届济南电视台高端生活展览会.jpg">
@@ -248,18 +236,19 @@
 						</div>
 					</div>
 				</div>
+                </div>
 			</div>
-			<!-- banner ends -->
-			<!-- footer starts -->
-			<div id="footer">
-				<ul class="info">
-					<li><a href="/contact/" target= "_blank ">联系我们</a></li>
-					<li><a href="/weixin/" target= "_blank ">关注我们</a><img src="/static/images/weixin.png" width="18px" height="13px"></li>
-					<li class="li-last"><a href="/http://shop109278676.taobao.com/?spm=a230r.7195193.1997079397.2.gCCOiJ" target= "_blank ">衍峰琥珀淘宝店</a></li>
-				</ul>
-			</div>
-			<!-- footer ends -->
-		</div>
+            <!-- banner ends -->
+            <!-- footer starts -->
+            <div id="footer">
+                <ul class="info">
+                    <li><a href="/contact/" target= "_blank ">联系我们</a></li>
+                    <li><a href="/weixin/" target= "_blank ">关注我们</a><img id="weixinImg" src="/static/images/weixin.png" width="18px" height="13px"></li>
+                    <li class="li-last"><a href="/http://shop109278676.taobao.com/?spm=a230r.7195193.1997079397.2.gCCOiJ" target= "_blank ">衍峰琥珀淘宝店</a></li>
+                </ul>
+            </div>
+            <!-- footer ends -->
+        </div>
 	</body>
 	<script src="/static/js/jquery.js"></script>
 	<script src="/static/js/event.js"></script>
